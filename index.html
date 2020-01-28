@@ -15,16 +15,44 @@
         </div>
         <nav>
           <ul class="main-nav">
-            <li><a href="gllacy-catalog.html" title="Переход на страницу каталога">Каталог</a></li>
-            <li><a href="#" title="Переход на страницу Доставки и оплаты">Доставка и оплата</a></li>
-            <li><a href="#" title="Переход на страницу О компании">О Компании</a></li>
+            <!-- Раскрывающееся меню Каталога -->
+            <li>
+              <div class="dropdown-main">
+                <a href="gllacy-catalog.html" title="Переход на страницу каталога">Каталог</a>
+                <div class="dropdown-menu">
+                  <a href="#" title="Переход на страницу каталога">Новинки</a>
+                  <a href="gllacy-catalog.html">Сливочное</a>
+                  <a href="#">Щербеты</a>
+                  <a href="#">Фруктовый лед</a>
+                  <a href="#">Мелорин</a>
+                </div>
+              </div>
+            </li>
+            <li><a href="#" title="Переход на страницу Доставки и оплаты">Доставка и оплата</a>
+            </li>
+            <li><a href="#" title="Переход на страницу О компании">О Компании</a>
+            </li>
           </ul>
       </nav>
       </div>
 
       <div class="top-nav">
-        <button class="search-btn"><img src="img/search.png" alt="Картинка поиска" width="17" height="17"></button>
-        <button class="entrance-btn"><img src="img/entrance.png" alt="Картинка входа" width="21" height="19">Вход</button>
+        <form>
+          <input type="text" placeholder="Крем-брюле">
+          <button type="search" class="search-btn">
+          <img src="img/search.png" alt="Картинка поиска" width="17" height="17">
+          </button>
+        </form>
+        <form>
+          <input type="email" placeholder="email@example.com" name="e-mail" required>
+          <input type="password" name="password" required>
+          <button type="submit">Войти</button>
+          <a href="#">Забыли пароль?</a>
+          <a href="#">Новая регистрация</a>
+          <button type="button" class="entrance-btn">
+          <img src="img/entrance.png" alt="Картинка входа" width="21" height="19">Вход
+          </button>
+        </form>
       </div>
         <!-- ТЕГ КНОПКА НИЖЕ СПЕЦИАЛЬНО ДОБАВЛЕНА, ЧТОБЫ УВИДЕТЬ КОРЗИНУ. -->
         <button>
@@ -145,7 +173,8 @@
             <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно <span>&equals;&rpar;</span>
             </p>
             <form>
-
+              <input type="email" placeholder="email@example.com" name="e-mail" required>
+              <button type="submit">Войти</button>
             </form>
           </div>
     </div>
@@ -156,7 +185,16 @@
         <p><b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
         <p>Для заказов по телефону:</p>
         <p><b>8 812 450-25-25</b> (с 10 до 20 ежедневно)</p>
-        <a href="#" title="Переход в форму обратной связи">Форма обратной связи</a>
+        <!-- Форма обратной связи при нажатии кнопки -->
+        <form action="#" method="post" name="form-post" class="form-post">
+          <p>Мы обязательно вам ответим!</p>
+          <input type="text" name="name">
+          <input type="email" placeholder="email@example.com" name="e-mail" required>
+          <textarea name="information" placeholder="В свободной форме" rows="10"></textarea>
+          <input type="submit" value="Отправить">
+          <span class="close"></span>
+          <button type="button">Форма обратной связи</button>
+        </form>
       </article>
     </div>
 

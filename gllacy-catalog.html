@@ -18,7 +18,18 @@
         </div>
         <nav>
           <ul class="main-nav">
-            <li><a href="gllacy-catalog.html" title="Переход на страницу каталога">Каталог</a>
+            <!-- Раскрывающееся меню Каталога -->
+            <li>
+              <div class="dropdown-main">
+                <a href="gllacy-catalog.html" title="Переход на страницу каталога">Каталог</a>
+                <div class="dropdown-menu">
+                  <a href="#" title="Переход на страницу каталога">Новинки</a>
+                  <a href="gllacy-catalog.html">Сливочное</a>
+                  <a href="#">Щербеты</a>
+                  <a href="#">Фруктовый лед</a>
+                  <a href="#">Мелорин</a>
+                </div>
+              </div>
             </li>
             <li><a href="#" title="Переход на страницу Доставки и оплаты">Доставка и оплата</a>
             </li>
@@ -29,13 +40,13 @@
       </div>
 
       <div class="top-nav">
-        <form>
+        <form action="#" method="post" name="search" class="search">
           <input type="text" placeholder="Крем-брюле">
           <button type="search" class="search-btn">
           <img src="img/search.png" alt="Картинка поиска" width="17" height="17">
           </button>
         </form>
-        <form>
+        <form action="#" method="post" name="entrance" class="entrance">
           <input type="email" placeholder="email@example.com" name="e-mail" required>
           <input type="password" name="password" required>
           <button type="submit">Войти</button>
@@ -66,15 +77,14 @@
     <h2>Сливочное мороженое</h2>
     <!-- Большой блок формы-->
     <form action="#" method="post" name="choice" class="form-menu">
-    <!-- Блок сортировки на дивах? / select?-->
-      <div class="sorting">
-        <p>Сортировать по:</p>
-        <p><a href="#">популярности <img src="img/icon-down-dir.png" alt="Стрелка сортировки"></a></p>
-        <p><a href="#">Новинки</a></p>
-        <p><a href="gllacy-catalog.html">Сливочное</a></p>
-        <p><a href="#">Новинки</a></p>
-        <p><a href="#">Щербеты</a></p>
-      </div>
+    <!-- Блок сортировки select-->
+      <p>Сортировка:</p>
+      <select name="sorting" class="sorting">
+        <option value="popular" selected>по популярности</option>
+        <option value="min-price">сначала недорогие</option>
+        <option value="max-price">сначала дорогие</option>
+        <option value="fat">по жирности</option>
+      </select>
       <div class="price">
         <label for="price">Цена: 100 руб. - 500 руб.</label>
         <label>100<input type="range" id="price" name="price" min="100" max="500" step="50">500</label>
@@ -190,7 +200,7 @@
     </div>
      <!-- Переключатели слайдера -->
       <nav class="pagination-catalog">
-        <a> <!-- Переключатель 1 страницы -->
+        <a href="gllacy-catalog.html"> <!-- Переключатель 1 страницы -->
           &lt; 1
         </a>
         <a href="#"><!-- Переключатель 2 картинки -->
