@@ -29,12 +29,22 @@
       </div>
 
       <div class="top-nav">
-        <button type="button" class="search-btn">
+        <form>
+          <input type="text" placeholder="Крем-брюле">
+          <button type="search" class="search-btn">
           <img src="img/search.png" alt="Картинка поиска" width="17" height="17">
-        </button>
-        <button type="button" class="entrance-btn">
+          </button>
+        </form>
+        <form>
+          <input type="email" placeholder="email@example.com" name="e-mail" required>
+          <input type="password" name="password" required>
+          <button type="submit">Войти</button>
+          <a href="#">Забыли пароль?</a>
+          <a href="#">Новая регистрация</a>
+          <button type="button" class="entrance-btn">
           <img src="img/entrance.png" alt="Картинка входа" width="21" height="19">Вход
-        </button>
+          </button>
+        </form>
       </div>
         <!-- ТЕГ КНОПКА НИЖЕ СПЕЦИАЛЬНО ДОБАВЛЕНА, ЧТОБЫ УВИДЕТЬ КОРЗИНУ. -->
         <button type="button">
@@ -43,8 +53,9 @@
           </a>
         </button>
 
+
       <ul>
-        <li><a href="index.html" title="Переход на  Главную страницу">Главная</a>  »  <a href="gllacy-catalog.html" title="Переход на страницу Каталога">Каталог</a>  »  Сливочное
+        <li><a href="index.html" title="Переход на  Главную страницу">Главная</a>  &Gt;  <a href="gllacy-catalog.html" title="Переход на страницу Каталога">Каталог</a>  &Gt;  Сливочное
         </li>
       </ul>
       <aside>
@@ -52,9 +63,45 @@
         <p>8 812 450-25-25</p>
       </aside>
     </header>
+    <h2>Сливочное мороженое</h2>
+    <!-- Большой блок формы-->
+    <form action="#" method="post" name="choice" class="form-menu">
+    <!-- Блок сортировки на дивах? / select?-->
+      <div class="sorting">
+        <p>Сортировать по:</p>
+        <p><a href="#">популярности <img src="img/icon-down-dir.png" alt="Стрелка сортировки"></a></p>
+        <p><a href="#">Новинки</a></p>
+        <p><a href="gllacy-catalog.html">Сливочное</a></p>
+        <p><a href="#">Новинки</a></p>
+        <p><a href="#">Щербеты</a></p>
+      </div>
+      <div class="price">
+        <label for="price">Цена: 100 руб. - 500 руб.</label>
+        <label>100<input type="range" id="price" name="price" min="100" max="500" step="50">500</label>
+      </div>
+      <div class="fat">
+        <label for="fat_s">Жирность:
+          <label><input type="radio" name="fat" value="0" id="fat_s">0%</label>
+          <label><input type="radio" name="fat" value="10" id="fat_s" checked>до 10%</label>
+          <label><input type="radio" name="fat" value="30" id="fat_s">до 30%</label>
+          <label><input type="radio" name="fat" value="40" id="fat_s">свыше 30%</label>
+        </label>
+      </div>
+      <div class="filler">
+        <label for="filler">Наполнители:
+          <input type="checkbox" name="chocolate" id="chocolate" checked><label for="chocolate">шоколадные</label>
+          <input type="checkbox" name="sugar" id="sugar" checked><label for="sugar">сахарные присыпки</label>
+          <input type="checkbox" name="fruits" id="fruits"><label for="fruits">фрукты</label>
+          <input type="checkbox" name="syrup" id="syrup"><label for="syrup">сиропы</label>
+          <input type="checkbox" name="jam" id="jam"><label for="jam">джемы</label>
+        </label>
+      </div>
+      <div class="button-form">
+        <input type="submit" value="Применить">
+      </div>
+    </form>
 
-
-
+    <!-- СЛАЙДЕР - 1 Страница каталога мороженого -->
     <div class="catalog">
       <div class="catalog-item">
         <img src="img/1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
@@ -141,6 +188,24 @@
             </a>
           </div>
     </div>
+     <!-- Переключатели слайдера -->
+      <nav class="pagination-catalog">
+        <a> <!-- Переключатель 1 страницы -->
+          &lt; 1
+        </a>
+        <a href="#"><!-- Переключатель 2 картинки -->
+          2
+        </a>
+        <a href="#"><!-- Переключатель 3 картинки -->
+          3
+        </a>
+        <a href="#"><!-- Переключатель 3 картинки -->
+          4
+        </a>
+        <a href="#"><!-- Переключатель 3 картинки -->
+          5 &gt;
+        </a>
+      </nav>
 
     <div class="footer">
           <div class="footer-top-social">
