@@ -8,23 +8,28 @@
   <body>
     <header class="page-header">
       <div class="header-top">
+
+        <!-- контейнер для логотипа, в нем только изображение -->
         <div class="header-logo">
           <!-- ТЕГ КНОПКА СПЕЦИАЛЬНО ДОБАВЛЕНА НИЖЕ, ЧТОБЫ УВИДЕТЬ ЛОГОТИП. -->
-          <button><img src="img/gllacy.png" alt="Логотип gllacy" width="154" height="64">
+          <button><img src="img/gllacy.svg" alt="Логотип gllacy" width="154" height="64">
           </button>
         </div>
+
         <nav>
           <ul class="main-nav">
-            <!-- Раскрывающееся меню Каталога -->
+            <!-- Раскрывающееся меню Каталога. Верно так или нет? -->
             <li>
               <div class="dropdown-main">
                 <a href="gllacy-catalog.html" title="Переход на страницу каталога">Каталог</a>
                 <div class="dropdown-menu">
-                  <a href="#" title="Переход на страницу каталога">Новинки</a>
-                  <a href="gllacy-catalog.html">Сливочное</a>
-                  <a href="#">Щербеты</a>
-                  <a href="#">Фруктовый лед</a>
-                  <a href="#">Мелорин</a>
+                  <ul>
+                    <li><a href="#" title="Переход на страницу Новинки">Новинки</a></li>
+                    <li><a href="gllacy-catalog.html" title="Переход на страницу Сливочное">Сливочное</a></li>
+                    <li><a href="#" title="Переход на страницу Щербеты">Щербеты</a></li>
+                    <li><a href="#" title="Переход на страницу Фруктовый лед">Фруктовый лед</a></li>
+                    <li><a href="#" title="Переход на страницу Мелорин">Мелорин</a></li>
+                  </ul>
                 </div>
               </div>
             </li>
@@ -40,7 +45,7 @@
         <form>
           <input type="text" placeholder="Крем-брюле">
           <button type="search" class="search-btn">
-          <img src="img/search.png" alt="Картинка поиска" width="17" height="17">
+          <img src="img/search.svg" alt="Картинка поиска" width="17" height="17">
           </button>
         </form>
         <form>
@@ -50,14 +55,15 @@
           <a href="#">Забыли пароль?</a>
           <a href="#">Новая регистрация</a>
           <button type="button" class="entrance-btn">
-          <img src="img/entrance.png" alt="Картинка входа" width="21" height="19">Вход
+          <img src="img/entrance.svg" alt="Картинка входа" width="21" height="19">Вход
           </button>
         </form>
       </div>
         <!-- ТЕГ КНОПКА НИЖЕ СПЕЦИАЛЬНО ДОБАВЛЕНА, ЧТОБЫ УВИДЕТЬ КОРЗИНУ. -->
         <button>
-          <a class="basket" href="#" title="Переход в корзину"><img src="img/basket.png" alt="Картинка корзины" width="21" height="20">Пусто</a>
+          <a class="basket" href="#" title="Переход в корзину"><img src="img/basket.svg" alt="Картинка корзины" width="21" height="20">Пусто</a>
         </button>
+
         <!-- ТЕГ ASIDE НИЖЕ ДОБАВЛЕН ВЕРНО ИЛИ НЕТ, НЕ ЗНАЮ -->
         <aside>
           <p>С 10 до 20, ежедневно</p>
@@ -83,18 +89,15 @@
               <h1>Пломбир с помадкой и клубничный щербет</h1>
               <a href="#" title="Переход в корзину">Давайте оба!</a>
             </div>
-             <!-- Переключатели слайдера -->
-            <nav class="pagination">
-              <a> <!-- Переключатель 1 картинки -->
-                <svg><circle r="10" cx="50" cy="50%" fill="gray"/></svg>
-              </a>
-              <a href="#"><!-- Переключатель 2 картинки -->
-                <svg><circle r="10" cx="50" cy="50%" fill="gray"/></svg>
-              </a>
-              <a href="#"><!-- Переключатель 3 картинки -->
-                <svg><circle r="10" cx="50" cy="50%" fill="gray"/></svg>
-              </a>
-            </nav>
+             <!-- Переключатели слайдера без перехода на другую страницу-просто кнопки -->
+            <div class="controls">
+              <button> <!-- Переключатель 1 картинки,стилями нарисовать кружки -->
+              </button>
+              <button><!-- Переключатель 2 картинки, ,стилями нарисовать кружки -->
+              </button>
+              <button><!-- Переключатель 3 картинки, ,стилями нарисовать кружки -->
+              </button>
+            </div>
           </div>
         </div>
 
@@ -102,40 +105,40 @@
         <div class="raspberries">
           <h2>Малинка даром!</h2>
           <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <button type="button">Хочу варенье!</button>
+          <a href="#">Хочу варенье!</a>
         <div>
         <div class="choco">
           <h2>Шоколадки даром!</h2>
           <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <button type="button">Хочу шоколадки!</button>
+          <a href="#">Хочу шоколадки!</a>
         </div>
       </section>
 
       <div class="catalog">
         <div class="catalog-item">
-          <img src="img/1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
-          <img src="img/hit-card.png" alt="хит продаж" width="61" height="61">
+          <img src="img/1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
+          <img src="img/hit-card.svg" alt="хит продаж" width="61" height="61">
           <p>310 ₽<span>/кг</span></p>
           <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
           <a href="#" title="Переход на страницу Карточки товара">Быстрый просмотр</a>
         </div>
         <div class="catalog-item">
-          <img src="img/2.png" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
-          <img src="img/hit-card.png" alt="хит продаж" width="61" height="61">
+          <img src="img/2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
+          <img src="img/hit-card.svg" alt="хит продаж" width="61" height="61">
           <p>380 ₽<span>/кг</span></p>
           <p>Сливочно-кофейное с кусочками шоколада</p>
           <a href="#" title="Переход на страницу Карточки товара">Быстрый просмотр</a>
         </div>
         <div class="catalog-item">
-          <img src="img/3.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
-          <img src="img/hit-card.png" alt="хит продаж" width="61" height="61">
+          <img src="img/3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
+          <img src="img/hit-card.svg" alt="хит продаж" width="61" height="61">
           <p>355 ₽<span>/кг</span></p>
           <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
           <a href="#" title="Переход на страницу Карточки товара">Быстрый просмотр</a>
         </div>
         <div class="catalog-item">
-          <img src="img/4.png" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
-          <img src="img/hit-card.png" alt="хит продаж" width="61" height="61">
+          <img src="img/4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
+          <img src="img/hit-card.svg" alt="хит продаж" width="61" height="61">
           <p>415 ₽<span>/кг</span></p>
           <p>Сливочное крем-брюле с карамельной подливкой</p>
           <a href="#" title="Переход на страницу Карточки товара">Быстрый просмотр</a>
@@ -145,16 +148,16 @@
     <section class="advantage">
       <h3>Магазин Глейси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h3>
       <ul>
-        <li class="advantage-1">
+        <li class="advantage techology">
           <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
         </li>
-        <li class="advantage-2">
+        <li class="advantage milk">
           <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
         </li>
-        <li class="advantage-3">
+        <li class="advantage ferm">
           <p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
         </li>
-        <li class="advantage-4">
+        <li class="advantage delivery">
           <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
         </li>
       </ul>
@@ -178,24 +181,25 @@
             </form>
           </div>
     </div>
-
+    <!-- Контейнер для изображения карты и блока адреса с кнопкой "Форма обратной связи" -->
     <div class="map">
       <article>
         <p>Адрес главного офиса и оф-лайн магазина:</p>
         <p><b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
         <p>Для заказов по телефону:</p>
-        <p><b>8 812 450-25-25</b> (с 10 до 20 ежедневно)</p>
-        <!-- Форма обратной связи при нажатии кнопки -->
+        <a href="#"><b>8 812 450-25-25</b></a>
+        <p>(с 10 до 20 ежедневно)</p>
+        <a href="#">Форма обратной связи</a>
+      </article>
+        <!-- Форма при нажатии на "Форма обратной связи" внутри дива или нет? -->
         <form action="#" method="post" name="form-post" class="form-post">
           <p>Мы обязательно вам ответим!</p>
           <input type="text" name="name">
           <input type="email" placeholder="email@example.com" name="e-mail" required>
           <textarea name="information" placeholder="В свободной форме" rows="10"></textarea>
-          <input type="submit" value="Отправить">
-          <span class="close"></span>
-          <button type="button">Форма обратной связи</button>
+          <button type="submit" value="Отправить"></button>
+          <button type="image" class="close"></button>
         </form>
-      </article>
     </div>
 
 
@@ -208,8 +212,7 @@
           </div>
 
           <div class="footer-middle">
-            <!-- div class="heart" ДЛЯ ФОНОВОЙ КАРТИНКИ-СЕРДЕЧКО -->
-            <div class="heart"></div>
+            <!-- СЕРДЕЧКО -->
             <div class="footer-menu">
               <ul>
                 <li><a href="#" title="Переход на страницу Для поставщиков">Для поставщиков</a></li>
@@ -224,7 +227,7 @@
             </div>
           </div>
           <div class="footer-bottom">
-            <img src="img/logo-htmlacademy-small.png" alt="Логотип академии" width="108" height="39">
+            <img src="img/logo-htmlacademy-small.svg" alt="Логотип академии" width="108" height="39">
             Сделано в <a href="https://htmlacademy.ru" title="Переход на страницу HTML Academy">HTML Academy</a> © 2019
           </div>
         </div>

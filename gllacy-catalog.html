@@ -8,26 +8,26 @@
   <body>
     <header class="page-header">
       <div class="header-top">
-        <div class="header-logo">
           <!-- ТЕГ КНОПКА НИЖЕ СПЕЦИАЛЬНО ДОБАВЛЕНА, ЧТОБЫ УВИДЕТЬ ЛОГОТИП. -->
-          <button type="button">
-            <a class="header-logo" href="index.html" title="Переход на Главную страницу">
-              <img src="img/gllacy.png" alt="Логотип gllacy" width="154" height="64">
-            </a>
-          </button>
-        </div>
+        <button type="button">
+          <a class="header-logo" href="index.html" title="Переход на Главную страницу">
+            <img src="img/gllacy.svg" alt="Логотип gllacy" width="154" height="64">
+          </a>
+        </button>
         <nav>
           <ul class="main-nav">
-            <!-- Раскрывающееся меню Каталога -->
+             <!-- Раскрывающееся меню Каталога. Верно так или нет? -->
             <li>
               <div class="dropdown-main">
                 <a href="gllacy-catalog.html" title="Переход на страницу каталога">Каталог</a>
                 <div class="dropdown-menu">
-                  <a href="#" title="Переход на страницу каталога">Новинки</a>
-                  <a href="gllacy-catalog.html">Сливочное</a>
-                  <a href="#">Щербеты</a>
-                  <a href="#">Фруктовый лед</a>
-                  <a href="#">Мелорин</a>
+                  <ul>
+                    <li><a href="#" title="Переход на страницу Новинки">Новинки</a></li>
+                    <li><a href="gllacy-catalog.html" title="Переход на страницу Сливочное">Сливочное</a></li>
+                    <li><a href="#" title="Переход на страницу Щербеты">Щербеты</a></li>
+                    <li><a href="#" title="Переход на страницу Фруктовый лед">Фруктовый лед</a></li>
+                    <li><a href="#" title="Переход на страницу Мелорин">Мелорин</a></li>
+                  </ul>
                 </div>
               </div>
             </li>
@@ -43,7 +43,7 @@
         <form action="#" method="post" name="search" class="search">
           <input type="text" placeholder="Крем-брюле">
           <button type="search" class="search-btn">
-          <img src="img/search.png" alt="Картинка поиска" width="17" height="17">
+          <img src="img/search.svg" alt="Картинка поиска" width="17" height="17">
           </button>
         </form>
         <form action="#" method="post" name="entrance" class="entrance">
@@ -53,21 +53,22 @@
           <a href="#">Забыли пароль?</a>
           <a href="#">Новая регистрация</a>
           <button type="button" class="entrance-btn">
-          <img src="img/entrance.png" alt="Картинка входа" width="21" height="19">Вход
+          <img src="img/entrance.svg" alt="Картинка входа" width="21" height="19">Вход
           </button>
         </form>
       </div>
         <!-- ТЕГ КНОПКА НИЖЕ СПЕЦИАЛЬНО ДОБАВЛЕНА, ЧТОБЫ УВИДЕТЬ КОРЗИНУ. -->
         <button type="button">
           <a class="basket" href="#" title="Переход в Корзину">
-            <img src="img/basket.png" alt="Картинка корзины" width="21" height="20">2 товара
+            <img src="img/basket.svg" alt="Картинка корзины" width="21" height="20">2 товара
           </a>
         </button>
 
-
-      <ul>
-        <li><a href="index.html" title="Переход на  Главную страницу">Главная</a>  &Gt;  <a href="gllacy-catalog.html" title="Переход на страницу Каталога">Каталог</a>  &Gt;  Сливочное
-        </li>
+      <!-- хлебные крошки сделаны пунктами списка, <-убрала -->
+      <ul class="tosts">
+        <li><a href="index.html" title="Переход на  Главную страницу">Главная</a></li>
+        <li><a href="gllacy-catalog.html" title="Переход на страницу Каталога">Каталог</li>
+        <li><a title="Переход на страницу Каталога - Сливочное">Сливочное</a></li>
       </ul>
       <aside>
         <p>С 10 до 20, ежедневно</p>
@@ -97,126 +98,127 @@
           <label><input type="radio" name="fat" value="40" id="fat_s">свыше 30%</label>
         </label>
       </div>
+      <!-- добавлено каждому одинаковое name и значение value -->
       <div class="filler">
-        <label for="filler">Наполнители:
-          <input type="checkbox" name="chocolate" id="chocolate" checked><label for="chocolate">шоколадные</label>
-          <input type="checkbox" name="sugar" id="sugar" checked><label for="sugar">сахарные присыпки</label>
-          <input type="checkbox" name="fruits" id="fruits"><label for="fruits">фрукты</label>
-          <input type="checkbox" name="syrup" id="syrup"><label for="syrup">сиропы</label>
-          <input type="checkbox" name="jam" id="jam"><label for="jam">джемы</label>
-        </label>
+        <legend>Наполнители:
+          <input type="checkbox" value="chocolate" name="filler" id="chocolate" checked><label for="chocolate">шоколадные</label>
+          <input type="checkbox" value="sugar" name="filler" id="sugar" checked><label for="sugar">сахарные присыпки</label>
+          <input type="checkbox" name="filler" value="fruits" id="fruits"><label for="fruits">фрукты</label>
+          <input type="checkbox" name="filler" value="syrup" id="syrup"><label for="syrup">сиропы</label>
+          <input type="checkbox" name="filler" value="jam" id="jam"><label for="jam">джемы</label>
+        </legend>
       </div>
       <div class="button-form">
         <input type="submit" value="Применить">
       </div>
     </form>
 
-    <!-- СЛАЙДЕР - 1 Страница каталога мороженого -->
+    <!-- 1 Страница каталога мороженого -->
     <div class="slider-catalog">
       <div class="catalog">
         <div class="catalog-item">
-          <img src="img/1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
+          <img src="img/1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
           <p>310 ₽<span>/кг</span></p>
           <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
           <a href="#" title="Переход на страницу Карточки товара">Быстрый просмотр
           </a>
         </div>
         <div class="catalog-item">
-          <img src="img/2.png" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
+          <img src="img/2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
           <p>380 ₽<span>/кг</span></p>
           <p>Сливочно-кофейное с кусочками шоколада</p>
           <a href="#" title="Переход на страницу Карточки товара">Быстрый просмотр
           </a>
         </div>
         <div class="catalog-item">
-          <img src="img/3.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
+          <img src="img/3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
           <p>355 ₽<span>/кг</span></p>
           <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
           <a href="#" title="Переход на страницу Карточки товара">Быстрый просмотр
           </a>
         </div>
         <div class="catalog-item">
-          <img src="img/4.png" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
+          <img src="img/4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
           <p>415 ₽<span>/кг</span></p>
           <p>Сливочное крем-брюле с карамельной подливкой</p>
           <a href="#" title="Переход на страницу Карточки товара">Быстрый просмотр
           </a>
         </div>
           <div class="catalog-item">
-            <img src="img/5.png" alt="Сливочное с брусничным джемом" width="267" height="267">
+            <img src="img/5.jpg" alt="Сливочное с брусничным джемом" width="267" height="267">
             <p>325 ₽<span>/кг</span></p>
             <p>Сливочное с брусничным джемом</p>
             <a href="#" title="Переход на страницу Карточки товара">Быстрый просмотр
             </a>
           </div>
           <div class="catalog-item">
-            <img src="img/6.png" alt="Сливочно-черничное с цельными ягодами черники" width="267" height="267">
+            <img src="img/6.jpg" alt="Сливочно-черничное с цельными ягодами черники" width="267" height="267">
             <p>410 ₽<span>/кг</span></p>
             <p>Сливочно-черничное с цельными ягодами черники</p>
             <a href="#" title="Переход на страницу Карточки товара">Быстрый просмотр
             </a>
           </div>
           <div class="catalog-item">
-            <img src="img/7.png" alt="Сливочно-лимонное с карамельной присыпкой" width="267" height="267">
+            <img src="img/7.jpg" alt="Сливочно-лимонное с карамельной присыпкой" width="267" height="267">
             <p>375 ₽<span>/кг</span></p>
             <p>Сливочно-лимонное с карамельной присыпкой</p>
             <a href="#" title="Переход на страницу Карточки товара">Быстрый просмотр
             </a>
           </div>
           <div class="catalog-item">
-            <img src="img/8.png" alt="Сливочное с шоколадной стружкой" width="267" height="267">
+            <img src="img/8.jpg" alt="Сливочное с шоколадной стружкой" width="267" height="267">
             <p>320 ₽<span>/кг</span></p>
             <p>Сливочное с шоколадной стружкой</p>
             <a href="#" title="Переход на страницу Карточки товара">Быстрый просмотр
             </a>
           </div>
           <div class="catalog-item">
-            <img src="img/9.png" alt="Сливочно-ванильное с кусочками шоколада" width="267" height="267">
+            <img src="img/9.jpg" alt="Сливочно-ванильное с кусочками шоколада" width="267" height="267">
             <p>440 ₽<span>/кг</span></p>
             <p>Сливочно-ванильное с кусочками шоколада</p>
             <a href="#" title="Переход на страницу Карточки товара">Быстрый просмотр
             </a>
           </div>
           <div class="catalog-item">
-            <img src="img/10.png" alt="Сливочноe с ментоловым сиропом" width="267" height="267">
+            <img src="img/10.jpg" alt="Сливочноe с ментоловым сиропом" width="267" height="267">
             <p>435 ₽<span>/кг</span></p>
             <p>Сливочноe с ментоловым сиропом</p>
             <a href="#" title="Переход на страницу Карточки товара">Быстрый просмотр
             </a>
           </div>
           <div class="catalog-item">
-            <img src="img/11.png" alt="Сливочное с кусочками черного шоколада" width="267" height="267">
+            <img src="img/11.jpg" alt="Сливочное с кусочками черного шоколада" width="267" height="267">
             <p>355 ₽<span>/кг</span></p>
             <p>Сливочное с кусочками черного шоколада</p>
             <a href="#" title="Переход на страницу Карточки товара">Быстрый просмотр
             </a>
           </div>
           <div class="catalog-item">
-            <img src="img/12.png" alt="Сливочное с мятным сиропом" width="267" height="267">
+            <img src="img/12.jpg" alt="Сливочное с мятным сиропом" width="267" height="267">
             <p>420 ₽<span>/кг</span></p>
             <p>Сливочное с мятным сиропом</p>
             <a href="#" title="Переход на страницу Карточки товара">Быстрый просмотр
             </a>
           </div>
       </div>
-     <!-- Переключатели слайдера -->
-      <nav class="pagination-catalog">
-        <a href="gllacy-catalog.html"> <!-- Переключатель 1 страницы -->
+     <!-- Переключатели исправлены -->
+      <ul class="pagination-catalog">
+        <li><a href="gllacy-catalog.html"> <!-- Переключатель 1 страницы -->
           &lt; 1
-        </a>
-        <a href="#"><!-- Переключатель 2 картинки -->
+        </a></li>
+        <li><a href="#"><!-- Переключатель 2 картинки -->
           2
-        </a>
-        <a href="#"><!-- Переключатель 3 картинки -->
+        </a></li>
+        <li><a href="#"><!-- Переключатель 3 картинки -->
           3
-        </a>
-        <a href="#"><!-- Переключатель 3 картинки -->
+        </a></li>
+        <li><a href="#"><!-- Переключатель 3 картинки -->
           4
-        </a>
-        <a href="#"><!-- Переключатель 3 картинки -->
+        </a></li>
+        <li><a href="#"><!-- Переключатель 3 картинки -->
           5 &gt;
-        </a>
-      </nav>
+        </a></li>
+      </ul>
     </div>
 
     <div class="footer">
@@ -228,8 +230,7 @@
           </div>
 
           <div class="footer-middle">
-            <div class="heart">фоновая картинка-сердечко
-            </div>
+            <!-- фоновая картинка-сердечко  -->
             <div class="footer-menu">
             <ul>
               <li>
@@ -252,11 +253,9 @@
             </div>
           </div>
           <div class="footer-bottom">
-            <img src="img/logo-htmlacademy-small.png" alt="Логотип академии" width="108" height="39">
+            <img src="img/logo-htmlacademy-small.svg" alt="Логотип академии" width="108" height="39">
             Сделано в <a href="https://htmlacademy.ru" title="Переход на страницу HTML Academy">HTML Academy</a> © 2019
           </div>
     </div>
-
-
   </body>
  </html>
