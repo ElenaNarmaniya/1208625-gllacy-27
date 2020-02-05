@@ -1,1 +1,106 @@
+body { /*обнуляем внешние и внутренние отступы браузеров,
+ задаем глобальные параметры текста*/
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Arial", Georgia, sans-serif;
+  color: #404040;
+  background-color: #90ee90;
+}
+.page-header {
+  color: white;
+}
+
+/*СТИЛИ ДЛЯ МЕНЮ*/
+.main-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.main-nav > li {
+  position: relative;
+  display: inline-block;
+  margin-right: -1px;
+}
+.main-nav a {
+  display: block;
+  margin-left: -1px;
+  padding: 8px 10px;
+  text-decoration: none;
+  color: white;
+  text-decoration: underline;
+}
+.main-nav a:hover { /*добавить стилей*/
+  color: black;
+  background-color: #E0FFFF;
+  border-radius: 30%;
+}
+.main-nav a:active { /*добавить стили*/
+  color: black;
+  background-color: #E0FFFF;
+  box-shadow: ;
+}
+.main-nav .sub-menu {
+  display: none;/*скрыли подменю*/
+  position: absolute;
+  left: 0px;
+  width: 160px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #fcf8e3;
+}
+.main-nav .sub-menu a {
+  margin-bottom: 0px;
+  border: 0px;
+  color:  black;
+}
+.main-nav > li:hover .sub-menu {
+  display: block;/*при наведении на пункт главного меню открыть подменю*/
+}
+ /*СТИЛИ ДЛЯ КНОПОК ВХОДА И ФОРМЫ*/
+
+form {
+  position: relative;
+  width: 300px;
+  margin: 50px auto; /*ниже/выше */
+  height: 42px;
+}
+input {
+  height: 72px; /*высота поля*/
+  width: 0px; /*0- скрывает поле под кнопку*/
+  padding: 0 22px 0 15px; /*размеры поля*/
+  border: 2px solid black;/*ставить none*/
+  border-bottom: 2px solid transparent; /*нижняя граница*/
+  outline: none; /*внешняя рамка*/
+  background: transparent;
+  transition: .4s cubic-bezier(0, 0.8, 0, 1);
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  z-index: 2;
+}
+input:hover {
+  width: 300px; /*ширина поля*/
+  z-index: 1;
+  border-bottom: 5px solid #F9F0DA;/*высота нижней границы*/
+}
+button {
+  border: none;
+  height: 42px;
+  width: 42px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.search-btn, .entrance-btn {
+  background-color: #98FB98;
+  border:  none;
+  border-radius: 40%; /*поменять*/
+}
+
+/*СТИЛИ ДЛЯ КОРЗИНЫ*/
+
 
