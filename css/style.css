@@ -136,19 +136,14 @@ body { /*обнуляем внешние и внутренние отступы 
   position: absolute;
   top: 10px;
   right: 0px;
-  opacity: 0.2;
-  background-color: #ffffff;
   border: none;
+  background: rgba(0, 0, 0, 0.2);
 }
 .search-btn img { /*не видно изображение кнопки*/
   top: 7px;
   left: 5px;
-  object-fit: contain;
-  background-color: #ffffff;
-  z-index: 1;
 }
 .search:hover .search-btn:hover {
-  background-image: url("img/black-search.svg"); /*не видно изображение кнопки*/
   background-color: #323232;
 }
 .search:hover input[type="search"] {
@@ -158,16 +153,23 @@ body { /*обнуляем внешние и внутренние отступы 
 .search input[type="search"]:focus, .search input[type="search"]:active {
   width: 311px;
 }
-/*СТИЛИ ДЛЯ КНОПКИ ФОРМЫ*/
+
+/*СТИЛИ ДЛЯ КНОПКИ ФОРМЫ АВТОРИЗАЦИИ*/
 .entrance  {
+  position: relative;
   width: 277px;
   height: 214px;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
+  padding: 17px; /*внешний отступ от края формы до поля ввода*/
+  padding-top: 19px;
+  border-radius: 5px;
 }
-.search input {
+.entrance input[type="email"], input[type="password"] {
   width: 241px;
   height: 44px; /*высота поля*/
+  margin-bottom: 20px;
+  padding: 1px 15px;
   color: #999999;
   line-height: 1.71px;
   font-size: 14px;
@@ -176,9 +178,50 @@ body { /*обнуляем внешние и внутренние отступы 
   background-color: #ffffff;
   border-radius: 5px;
 }
-/* остались стили для конкретных форм*/
+.entrance .entrance-btn { /* кнопка ВХОД главного меню*/
+  position: relative;
+  display: inline-block;
+  border-radius: 20px;
+  top: -240px; /*отступ кнопки*/
+  left: 70px; /*внутр. отступ кнопки*/
+  height: 32px;
+  width: 92px;
+  padding: 3px 15px;
+  border: none;
+  color:#ffffff;
+  line-height: 1.14px;
+  text-align: right;
+  vertical-align: top;
+  font-weight: 500;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.entrance-btn img {
+  position: relative;
+  left: -5px;
+  top: 0px;
+  }
+.entrance a {
+  position: relative;
+  display: inline-block;
+  padding-left: 15px;
+  top: -10px;
+  left: 0px;
+  color: #323232;
+  line-height: 1.85px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 13px;
+  text-decoration: underline;
+}
+.entrance a:nth-of-type(2) {
+  position: relative;
+  display: inline-block;
+  top: -20px;
+  left: 105px;
+}
 
-.entrance button[type="submit"] { /*Войти*/
+ button[type="submit"] { /*кнопка "Войти" в форме*/
   border-radius: 20px;
   width: 100px;
   height: 44px;
@@ -190,36 +233,55 @@ body { /*обнуляем внешние и внутренние отступы 
   font-weight: bold;
   font-size: 18px;
 }
-.entrance .entrance-btn { /*ВХОД*/
-  border-radius: 20px;
-  height: 32px;
-  width: 93px;
-  opacity: 0.2;
-  object-fit: contain;
-  background-color: #ffffff;
-  border: none;
-  color: #ffffff;
-  line-height: 1.14px;
-  text-align: right;
-  font-weight: 500;
-  font-size: 14px;
-}
 .entrance button[type="submit"]:hover {
   box-shadow: 0px 2px 2px 0 #ac1000;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(to top, #e74a35, #f26843);
 }
 .entrance button[type="submit"]:active {
+  outline: none;
   box-shadow: inset 0px 2px 2px 0 #942718;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to top, #e74a35, #f26843);
 }
-.entrance a {
-  color: #323232;
-  line-height: 1.85px;
-  text-align: left;
-  font-weight: 500;
-  font-size: 13px;
-  text-decoration: underline;
-}
 /*СТИЛИ ДЛЯ КОРЗИНЫ*/
+.basket {
+  position: relative;
+  display: inline-block;
+  margin: 20px 20px;
+  height: 32px;
+  padding: 3px 14px;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  line-height: 1.14px;
+  text-align: right;
+  font-weight: 500;
+  font-size: 14px;
+}
+.basket img {
+ position: relative;
+ left: -5px;
+ top: 5px;
+}
+.basket-full {
+  background-color: #ffffff;
+  color: #323232;
+}
+.basket-full p {
+  font-weight: bold;
+  text-align: right;
+}
+.basket-full a {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 20px;
+  background-image: linear-gradient(to top, #e74a35, #f26843);
+  box-shadow: 0px 1px 2px 0 #ac1000;
+  height: 44px;
+  border: none;
+  color: #fefefe;
+  line-height: 1.33px;
+  font-weight: bold;
+  font-size: 18px;
 
-
+}
