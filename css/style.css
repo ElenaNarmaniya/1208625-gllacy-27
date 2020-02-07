@@ -156,13 +156,14 @@ body { /*обнуляем внешние и внутренние отступы 
 
 /*СТИЛИ ДЛЯ КНОПКИ ФОРМЫ АВТОРИЗАЦИИ*/
 .entrance  {
+  display:  block;
   position: relative;
   width: 277px;
   height: 214px;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
-  padding: 17px; /*внешний отступ от края формы до поля ввода*/
-  padding-top: 19px;
+  padding: 19px; /*внешний отступ от края формы до поля ввода*/
+  padding-top: 20px;
   border-radius: 5px;
 }
 .entrance input[type="email"], input[type="password"] {
@@ -178,15 +179,15 @@ body { /*обнуляем внешние и внутренние отступы 
   background-color: #ffffff;
   border-radius: 5px;
 }
-.entrance .entrance-btn { /* кнопка ВХОД главного меню*/
+.entrance-btn { /* кнопка ВХОД главного меню*/
   position: relative;
   display: inline-block;
   border-radius: 20px;
   top: -240px; /*отступ кнопки*/
   left: 70px; /*внутр. отступ кнопки*/
   height: 32px;
-  width: 92px;
-  padding: 3px 15px;
+  width: 93px;
+  padding: 5px 15px;
   border: none;
   color:#ffffff;
   line-height: 1.14px;
@@ -194,13 +195,17 @@ body { /*обнуляем внешние и внутренние отступы 
   vertical-align: top;
   font-weight: 500;
   font-size: 14px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
 }
 .entrance-btn img {
   position: relative;
   left: -5px;
   top: 0px;
   }
+.entrance-btn:hover {
+  color: #323232;
+  background-color: #f8f7f4;
+}
 .entrance a {
   position: relative;
   display: inline-block;
@@ -215,8 +220,6 @@ body { /*обнуляем внешние и внутренние отступы 
   text-decoration: underline;
 }
 .entrance a:nth-of-type(2) {
-  position: relative;
-  display: inline-block;
   top: -20px;
   left: 105px;
 }
@@ -242,9 +245,12 @@ body { /*обнуляем внешние и внутренние отступы 
   box-shadow: inset 0px 2px 2px 0 #942718;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to top, #e74a35, #f26843);
 }
+
 /*СТИЛИ ДЛЯ КОРЗИНЫ*/
 .basket {
   position: relative;
+  top: 32px;
+  right:  -417px;
   display: inline-block;
   margin: 20px 20px;
   height: 32px;
@@ -263,25 +269,97 @@ body { /*обнуляем внешние и внутренние отступы 
  left: -5px;
  top: 5px;
 }
+.basket:hover {
+  color: #323232;
+  background-color: #f8f7f4;
+  background-image: url('img/basket-full') no-repeat;
+}
 .basket-full {
+  width: 539px;
+  height: 242px;
   background-color: #ffffff;
   color: #323232;
 }
 .basket-full p {
   font-weight: bold;
   text-align: right;
+  font-size: 15px;
+  line-height: 1.2px;
+  color: #323232;
+  padding-right: 13px;
 }
 .basket-full a {
   display: inline-block;
+  position:  relative;
+  top: 14px;
+  left: 340px;
+  padding-top: 22px;
+  padding-right: 15px;
+  margin: 0;
   text-decoration: none;
   border-radius: 20px;
+  width: 170px;
+  height: 22px;
   background-image: linear-gradient(to top, #e74a35, #f26843);
   box-shadow: 0px 1px 2px 0 #ac1000;
-  height: 44px;
   border: none;
   color: #fefefe;
+  text-align: right;
   line-height: 1.33px;
   font-weight: bold;
   font-size: 18px;
-
 }
+table {
+  border-collapse: collapse;
+  margin: 21px;
+}
+
+td {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.23;
+  text-align: left;
+  color: #323232;
+}
+.text {
+  width: 226px;
+}
+.text-wrap {
+  white-space: normal;
+}
+.price {
+  width: 102px;
+}
+.full-price {
+  width: 58px;
+}
+.close span { /*не видно крестика??*/
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  font-size: 0;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-image: url('img/close.png');
+}
+tr:nth-child(2) {
+  border-bottom: 1px solid gray;
+}
+
+/*время работы*/
+.time-work {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.14;
+  text-align: right;
+  color: #ffffff;
+}
+.time-work a {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.09;
+  text-align: right;
+  color: #ffffff;
+  text-decoration: none;
+}
+
