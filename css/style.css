@@ -11,28 +11,28 @@ body { /*обнуляем внешние и внутренние отступы 
   letter-spacing: normal;
   text-align: left;
   color: #ffffff;
-  width: 100%;
-  height: 2416px;
+  width: 1200px;
   background-color: #849d8f;
+}
+
+.header-top { /*контейнер для хедера с размерами*/
   display: flex;
   flex-wrap: wrap;
-}
-.page-header {
-  color: white;
-}
-.header-top {
-  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 9px 27px;
 }
 .header-logo {
-  padding-top: 9px;
-  padding-left: 27px;
+  width: 154px;
+  height: 64px;
 }
 /*СТИЛИ ДЛЯ МЕНЮ*/
 
 .main-nav {
   list-style: none;
-  width: 440px;
-  margin-left: 20px; /*убрать после*/
+  margin-left: 10px; /*убрать после*/
   padding: 0;
   border: 1px solid #e5e5e5;/*убрать после*/
 }
@@ -43,9 +43,8 @@ body { /*обнуляем внешние и внутренние отступы 
 }
 .main-nav a {
   display: block;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding: 3px 14px;
+  margin: 0px;
+  padding: 7px 14px;
   text-align: center;
   color: #ffffff;
   text-decoration: underline;
@@ -58,7 +57,7 @@ body { /*обнуляем внешние и внутренние отступы 
   border-radius: 20px;
   font-weight: bold;
 }
-.main-nav a:active { /*добавить стили*/
+.main-nav a:active {
   color: #323232;
   background-color: #ededed;
   box-shadow: inset 0px 2px 1px 0 #696969;
@@ -67,8 +66,9 @@ body { /*обнуляем внешние и внутренние отступы 
 .main-nav .sub-menu {
   display: none;/*скрыли подменю*/
   position: absolute;
+  z-index: 10;
   left: -7px;
-  top: 25px;
+  top: 33px;
   width: 143px;
   height: 171px;
   padding: 0;
@@ -105,21 +105,29 @@ body { /*обнуляем внешние и внутренние отступы 
 .main-nav > li:hover .sub-menu {
   display: block;/*при наведении на пункт главного меню открыть подменю*/
 }
- /*СТИЛИ ДЛЯ КНОПОК ВХОДА И ФОРМЫ*/
+ /*СТИЛИ ДЛЯ КНОПОК ВХОДА, ФОРМЫ, КОРЗИНЫ*/
+.right-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
 
 /*СТИЛИ ДЛЯ КНОПКИ ВХОДА*/
-.search {
+.search-button {
   width: 341px;
   height: 84px;
   vertical-align: middle;
   white-space: nowrap;
+  position: relative;
 }
 .search input[type="search"] {
   display: none;
-  position:  relative;
-  top: 95px;
-  left: 15px;
-  width: 311px;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  z-index: 15;
+  width: 281px;
   height: 44px; /*высота поля*/
   padding: 15px; /*размеры поля*/
   color: #999999;
@@ -132,11 +140,10 @@ body { /*обнуляем внешние и внутренние отступы 
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   transition: 1s;
 }
-.search button {
+.search-button button {
   border-radius: 60%;
   height: 33px;
   width: 33px;
-  position:  relative;
   border: none;
   background: rgba(0, 0, 0, 0.2);
 }
@@ -144,15 +151,15 @@ body { /*обнуляем внешние и внутренние отступы 
   top: 7px;
   left: 5px;
 }
-.search:hover .search-btn:hover {
+.search-btn:hover {
   background-color: #323232;
 }
-.search:hover input[type="search"] {
+.search-button:hover input[type="search"] {
   display: block;
-  width: 311px; /*ширина поля*/
+  width: 281px; /*ширина поля*/
 }
-.search input[type="search"]:focus, .search input[type="search"]:active {
-  width: 311px;
+.search-button input[type="search"]:focus, .search-button input[type="search"]:active {
+  width: 281px;
 }
 
 /*СТИЛИ ДЛЯ КНОПКИ ФОРМЫ АВТОРИЗАЦИИ*/
