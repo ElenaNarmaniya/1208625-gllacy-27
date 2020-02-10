@@ -11,12 +11,17 @@ body { /*обнуляем внешние и внутренние отступы 
   letter-spacing: normal;
   text-align: left;
   color: #ffffff;
-  width: 1200px;
+  width: 100%;
   height: 2416px;
   background-color: #849d8f;
+  display: flex;
+  flex-wrap: wrap;
 }
 .page-header {
   color: white;
+}
+.header-top {
+  display: flex;
 }
 .header-logo {
   padding-top: 9px;
@@ -108,7 +113,6 @@ body { /*обнуляем внешние и внутренние отступы 
   height: 84px;
   vertical-align: middle;
   white-space: nowrap;
-  position: relative;
 }
 .search input[type="search"] {
   display: none;
@@ -136,7 +140,7 @@ body { /*обнуляем внешние и внутренние отступы 
   border: none;
   background: rgba(0, 0, 0, 0.2);
 }
-.search-btn img { /*не видно изображение кнопки*/
+.search-btn img {
   top: 7px;
   left: 5px;
 }
@@ -259,7 +263,7 @@ input[type="email"]:focus, input[type="password"]:focus {
 .basket {
   position: relative;
   display: inline-block;
-  margin: 20px 20px;
+  margin: 0;
   height: 26px;
   padding: 3px 14px;
   color: #ffffff;
@@ -332,6 +336,7 @@ table {
 }
 
 td {
+  margin: 0;
   font-size: 13px;
   font-weight: normal;
   line-height: 1.23;
@@ -350,21 +355,19 @@ td {
 .full-price {
   width: 58px;
 }
-.close span { /*не видно крестика??*/
-  width: 11px;
-  height: 11px;
-  font-size: 0;
-  vertical-align: middle;
-  background: url('img/close.svg') no-repeat 0px 0px;
-}
+
 tr:nth-child(2) {
   border-bottom: 1px solid gray;
 }
 .basket:hover ~ .basket-full {
   display: block;
+  margin-top: 4px;
 }
 /*время работы*/
 .time-work {
+  display: inline-block;
+  position: relative;
+  left: 125%;
   font-size: 14px;
   font-weight: bold;
   line-height: 1.14;
@@ -386,26 +389,20 @@ tr:nth-child(2) {
   margin: 0px auto;
   width: 1249px; /*ширина*/
   height: 893px; /*высота секции*/
-  /*background-color: white; фон за фото=фон самой страницы*/
 }
-
-
 .slider { /*стиль для конт. с фото и кнопками*/
   position: relative;
 }
-
 .slider input[type="radio"] {
   display: none; /*скрыть радио-кнопки*/
 }
-
 .slider-inner { /*оставить только текущую картинку, остальное-скрыть*/
   display: flex; /*фото в одну линию*/
   overflow: hidden;
 }
-
 .slider-slides {
   padding: 6px 102px; /*отступ блока фото*/
-  width: 1249px; /*ширина=сумме 3 фото*/
+  width: 1249px; /*ширина=сумме 1 фото c паддингами слева и справа=1045+102+102*/
   transition: transform 0.8s ease; /*появление с задержкой 0,8 секунды*/
 }
 figure {
@@ -430,14 +427,12 @@ figcaption {
   font-size:30px;
   text-decoration: none;
   }
-
 .slider-slides img {
   display: flex;
   flex-wrap: wrap;
-  width: 1045px; /*ширина 1 фото 410*/
+  width: 1045px; /*ширина 1 фото*/
   height: 881px;
 }
-
 .slider-controls { /*контейнер для подписей к радио-кнопкам. мы видим только их!!*/
   margin-bottom: 0px;
   padding-top: 0px; /*отступ сверху для кнопок*/
@@ -447,7 +442,6 @@ figcaption {
   left: 27px;
   z-index: 10;
 }
-
 .slider-controls label {/*подписи*/
   display: inline-block;/*ракладка*/
   margin: 0 3px;
@@ -458,26 +452,49 @@ figcaption {
   cursor: pointer; /*вид курсора - рука*/
   transition: background-color 0.2s; /*время переключения со светлой на темную кнопку*/
 }
-
 #btn-1:checked ~ .slider-controls label[for="btn-1"],
 #btn-2:checked ~ .slider-controls label[for="btn-2"],
 #btn-3:checked ~ .slider-controls label[for="btn-3"] {
   background-color: #ffffff; /*цвет кнопки на теекущей картинке. Для радио-кнопки с id- btn-1:checked - нажатой подключаем подпись-кнопку с соответстующим for="btn-1"*/
 }
-
-
 #btn-1:checked ~ .slider-inner .slider-slides {
-  transform: translate(0); /*если нажата эта кнопка-label, то переходим в контейнер с фото и листаем на нужное через transform: translate(0); 1 фото шириной 450=410ширина фото+20+20паддинги с 2-х сторон- начинается с 0 до 450*/
+  transform: translate(0); /*если нажата эта кнопка-label, то переходим в контейнер с фото и листаем на нужное через transform: translate(0); 1 фото шириной 1249=1045ширина фото+102+102паддинги с 2-х сторон- начинается с 0 до 1249*/
 }
-
 #btn-2:checked ~ .slider-inner .slider-slides {
-  transform: translate(-1249px); /*2 фото по счету, ширина фото - 450, второе фото начинается с 450 по 900, листаем влево, поэтому знак"-" */
+  transform: translate(-1249px); /*2 фото по счету, второе фото начинается с 1249 по 2498, листаем влево, поэтому знак"-" */
   background-color: #8996a6;
 }
-
-
 #btn-3:checked ~ .slider-inner .slider-slides {
-  transform: translate(-2498px); /*3 фото по счету, ширина фото - 450, третье фото начинается с 900*/
+  transform: translate(-2498px); /*3 фото по счету, третье фото начинается с 2498*/
   background-color: #9d8b84;
 }
-
+.slider-slides a {
+  display: inline-block;
+  position:  relative;
+  top: -350px;
+  left: 400px;
+  padding-top: 25px;
+  padding-right: 80px;
+  margin: 0;
+  text-decoration: none;
+  border-radius: 40px;
+  width: 220px;
+  height: 32px;
+  background-image: linear-gradient(to top, #e74a35, #f26843);
+  box-shadow: 0px 1px 2px 0 #ac1000;
+  border: none;
+  color: #fefefe;
+  text-align: right;
+  line-height: 1.33px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.slider-slides a:hover {
+  box-shadow: 0px 2px 2px 0 #ac1000;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(to top, #e74a35, #f26843);
+}
+.slider-slides a:active {
+  outline: none;
+  box-shadow: inset 0px 2px 2px 0 #942718;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to top, #e74a35, #f26843);
+}
