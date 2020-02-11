@@ -33,7 +33,7 @@ body { /*обнуляем внешние и внутренние отступы 
   min-width: 400px;
   height: 64px;
   position: relative;
-  left: -150px;
+  left: -200px;
 }
 .main-nav {
   list-style: none;
@@ -117,20 +117,18 @@ body { /*обнуляем внешние и внутренние отступы 
   justify-content: center;
   align-items: center;
   position: relative;
-  left: 640px;
-  width: 232px;
+  left: -50px;
+  width: 245px;
   height: 64px;
 }
 
-/*СТИЛИ ДЛЯ КНОПКИ ВХОДА*/
+/*СТИЛИ ДЛЯ КНОПКИ ПОИСКА*/
 .search-button {
   position: relative;
   top: 16px;
   width: 341px;
   height: 84px;
   vertical-align: middle;
-  white-space: nowrap;
-  position: relative;
 }
 .search input[type="search"] {
   display: none;
@@ -203,7 +201,7 @@ input[type="email"], input[type="password"] {
   margin-bottom: 20px;
   padding: 1px 15px;
   color: #999999;
-  line-height: 1.71px;
+  line-height: 1.71;
   font-size: 14px;
   border: 1px solid rgba(178, 178, 178, 0.52);
   outline: none; /*внешняя рамка*/
@@ -217,14 +215,14 @@ input[type="email"]:focus, input[type="password"]:focus {
   border: 2px solid rgba(46, 136, 228, 0.52);
 }
 .entrance-btn { /* кнопка ВХОД главного меню*/
-  display: inline;
+  display: inline-block;
   border-radius: 20px;
   height: 33px;
   width: 93px;
   padding: 5px 15px;
   border: none;
   color:#ffffff;
-  line-height: 1.14px;
+  line-height: 1.14;
   text-align: center;
   vertical-align: top;
   font-weight: 500;
@@ -288,21 +286,21 @@ input[type="email"]:focus, input[type="password"]:focus {
 /*СТИЛИ ДЛЯ КОРЗИНЫ*/
 .basket-buttons {
   position: relative;
-  width: 539px;
+  width: 540px;
   top: -99px;
   left: 142px;
 }
 .basket {
   display: inline-block;
-  height: 17px;
-  padding: 8px 14px;
+  padding: 5px 20px;
   color: #ffffff;
   text-decoration: none;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 20px;
-  line-height: 1.14px;
+  border: none;
+  line-height: 1.14;
   text-align: right;
-  vertical-align: middle;
+  vertical-align: top;
   font-weight: 500;
   font-size: 14px;
 }
@@ -310,7 +308,7 @@ input[type="email"]:focus, input[type="password"]:focus {
 .basket img {
  position: relative;
  left: -5px;
- top: -2px;
+ top: 0px;
 }
 .basket:hover {
   color: #323232;
@@ -319,8 +317,8 @@ input[type="email"]:focus, input[type="password"]:focus {
 .basket-table {
   display: none;
   position: relative;
-  left: -451px;
-  width: 539px;
+  left: -445px;
+  width: 540px;
   z-index: 30;
   min-height: 242px;
   background-color: #ffffff;
@@ -401,6 +399,8 @@ tr:nth-child(2) {
 }
 .basket-buttons:hover .basket-table {
   display: block;
+  position: absolute;
+  border-top: 4px solid #849d8f;
 }
 
 
@@ -408,14 +408,21 @@ tr:nth-child(2) {
 .time-work {
   display: inline-block;
   position: relative;
-  left: 1700px;
+  top: -11px;
+  left: 1008px;
   font-size: 14px;
   font-weight: bold;
   line-height: 1.14;
   text-align: right;
   color: #ffffff;
 }
+.time-work p {
+margin: 0;
+padding: 8px;
+}
 .time-work a {
+  margin: 0;
+  padding: 0;
   font-size: 22px;
   font-weight: bold;
   line-height: 1.09;
@@ -433,6 +440,7 @@ tr:nth-child(2) {
 }
 .slider { /*стиль для конт. с фото и кнопками*/
   position: relative;
+  top: -143px;
 }
 .slider input[type="radio"] {
   display: none; /*скрыть радио-кнопки*/
@@ -454,20 +462,13 @@ figure {
 figcaption {
   position: absolute;
   top: 391px;
-  left: 160px;
-  width: 780px;
+  left: 190px;
+  width: 670px;
   font-size: 60px;
   font-weight: bold;
-  line-height: 1.01;
+  line-height: 1;
   text-align: center;
 }
-.mis-container {
-  position: absolute;
-  top: 250px;
-  left: 160px;
-  font-size:30px;
-  text-decoration: none;
-  }
 .slider-slides img {
   display: flex;
   flex-wrap: wrap;
@@ -509,26 +510,24 @@ figcaption {
   transform: translate(-2498px); /*3 фото по счету, третье фото начинается с 2498*/
   background-color: #9d8b84;
 }
-.slider-slides a {
+.slider-btn {
   display: inline-block;
   position:  relative;
   top: -350px;
   left: 400px;
-  padding-top: 25px;
-  padding-right: 80px;
-  margin: 0;
+  padding: 10px 41px;
   text-decoration: none;
-  border-radius: 40px;
-  width: 220px;
-  height: 32px;
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  border-radius: 50px;
   background-image: linear-gradient(to top, #e74a35, #f26843);
-  box-shadow: 0px 1px 2px 0 #ac1000;
+  box-shadow: 0px 2px 2px 0 var(--deep-red-64);
   border: none;
-  color: #fefefe;
-  text-align: right;
-  line-height: 1.33px;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: top;
+  line-height: 1.38;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 32px;
 }
 .slider-slides a:hover {
   box-shadow: 0px 2px 2px 0 #ac1000;
