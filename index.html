@@ -12,7 +12,6 @@
 
       <!-- контейнер для хедера с фиксированной шириной из макета -->
       <div class="header-top">
-
         <!-- контейнер для логотипа, в нем только изображение -->
         <div class="header-logo">
           <img src="img/gllacy.svg" alt="Логотип gllacy" width="154" height="64">
@@ -51,7 +50,7 @@
             </form>
           </div>
           <!-- блок входа -->
-          <div class="entrance-button">
+          <div class="entrance-form">
             <button type="button" class="entrance-btn">
               <img src="img/entrance.svg" alt="Картинка входа" width="21" height="19">Вход
             </button>
@@ -67,25 +66,28 @@
           <div class="basket-buttons">
             <a class="basket" href="#" title="Переход в корзину"><img src="img/basket.svg" alt="Картинка корзины" width="21" height="20">Пусто</a>
             <!-- выпадающая таблица полной корзины -->
-            <table cellpadding="9" class="basket-full">
-              <tr class="table-rows">
-                <td class="close"><img src="img/close.svg" alt="Крестик-закрытие" width="11" height="11"></td>
-                <td class="image"><img src="img/1.png" alt="Картинка товара" width="21" height="20"></td>
-                <td class="text">Пломбир с апельсиновым джемом</td>
-                <td class=price>1,5 кг * 200 руб.</td>
-                <td class="full-price">300 руб.</td>
-              </tr>
-              <tr class="table-rows">
-                <td class="close"><img src="img/close.svg" alt="Крестик-закрытие" width="11" height="11"></td>
-                <td class="image"><img src="img/3.png" alt="Картинка товара" width="21" height="20"></td>
-                <td class="text-wrap">Клубничный пломбир с присыпкой из белого шоколада</td>
-                <td class="price">1,5 кг * 300 руб.</td>
-                <td class="full-price">450 руб.</td>
-              </tr>
-            </table>
-            <p>Итого: 750 руб.</p>
-            <a href="#" title="Переход на страницы Оформления заказа">Оформить заказ</a>
+            <div class="basket-table">
+              <table cellpadding="9" class="basket-full">
+                <tr class="table-rows">
+                  <td class="close"></td>
+                  <td class="image"><img src="img/1.png" alt="Картинка товара" width="21" height="20"></td>
+                  <td class="text">Пломбир с апельсиновым джемом</td>
+                  <td class=price>1,5 кг * 200 руб.</td>
+                  <td class="full-price">300 руб.</td>
+                </tr>
+                <tr class="table-rows">
+                  <td class="close"><img src="img/close.svg" alt="Крестик-закрытие" width="11" height="11"></td>
+                  <td class="image"><img src="img/3.png" alt="Картинка товара" width="21" height="20"></td>
+                  <td class="text-wrap">Клубничный пломбир с присыпкой из белого шоколада</td>
+                  <td class="price">1,5 кг * 300 руб.</td>
+                  <td class="full-price">450 руб.</td>
+                </tr>
+              </table>
+              <p>Итого: 750 руб.</p>
+              <a href="#" title="Переход на страницы Оформления заказа">Оформить заказ</a>
+            </div>
           </div>
+        </div>
       </div>
     </header>
 

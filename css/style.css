@@ -29,12 +29,17 @@ body { /*обнуляем внешние и внутренние отступы 
   height: 64px;
 }
 /*СТИЛИ ДЛЯ МЕНЮ*/
-
+.navigation {
+  min-width: 400px;
+  height: 64px;
+  position: relative;
+  left: -150px;
+}
 .main-nav {
   list-style: none;
-  margin-left: 10px; /*убрать после*/
+  margin-left: 10px;
   padding: 0;
-  border: 1px solid #e5e5e5;/*убрать после*/
+  /* border: 1px solid #e5e5e5; */
 }
 .main-nav > li {
   position: relative;
@@ -49,7 +54,7 @@ body { /*обнуляем внешние и внутренние отступы 
   color: #ffffff;
   text-decoration: underline;
   font-weight: bold;
-  border-left: 1px solid #e5e5e5; /*убрать после*/
+  /* border-left: 1px solid #e5e5e5; */
 }
 .main-nav a:hover {
   color: #323232;
@@ -76,7 +81,7 @@ body { /*обнуляем внешние и внутренние отступы 
   list-style: none;
   background-color: #f8f7f4;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
-  border-top: 5px solid #849d8f;
+  border-top: 8px solid #849d8f;
 }
 .main-nav .sub-menu a {
   padding: 0;
@@ -109,12 +114,18 @@ body { /*обнуляем внешние и внутренние отступы 
 .right-buttons {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  position: relative;
+  left: 640px;
+  width: 232px;
+  height: 64px;
 }
 
 /*СТИЛИ ДЛЯ КНОПКИ ВХОДА*/
 .search-button {
+  position: relative;
+  top: 16px;
   width: 341px;
   height: 84px;
   vertical-align: middle;
@@ -125,9 +136,9 @@ body { /*обнуляем внешние и внутренние отступы 
   display: none;
   position: absolute;
   top: 50px;
-  left: 10px;
+  left: -291px;
   z-index: 15;
-  width: 281px;
+  width: 311px;
   height: 44px; /*высота поля*/
   padding: 15px; /*размеры поля*/
   color: #999999;
@@ -154,30 +165,38 @@ body { /*обнуляем внешние и внутренние отступы 
 .search-btn:hover {
   background-color: #323232;
 }
-.search-button:hover input[type="search"] {
+.search-button:hover .search input[type="search"] {
   display: block;
-  width: 281px; /*ширина поля*/
+  width: 311px; /*ширина поля input[type="search"]*/
 }
 .search-button input[type="search"]:focus, .search-button input[type="search"]:active {
-  width: 281px;
+  width: 311px;
 }
 
 /*СТИЛИ ДЛЯ КНОПКИ ФОРМЫ АВТОРИЗАЦИИ*/
 .entrance-form {
-  display: none;
-}
-.entrance  {
-  display:  block;
   position: relative;
   width: 277px;
+  top: -67px;
+  left:  40px;
+}
+
+.entrance  {
+  display:  none;
+  position: absolute;
+  width: 277px;
   height: 214px;
+  top: 33px;
+  left: -220px;
+  z-index: 20;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
   padding: 19px; /*внешний отступ от края формы до поля ввода*/
   padding-top: 20px;
   border-radius: 5px;
-
+  border-top: 3px solid #849d8f;
 }
+
 input[type="email"], input[type="password"] {
   width: 241px;
   height: 44px; /*высота поля*/
@@ -198,17 +217,16 @@ input[type="email"]:focus, input[type="password"]:focus {
   border: 2px solid rgba(46, 136, 228, 0.52);
 }
 .entrance-btn { /* кнопка ВХОД главного меню*/
-  position: relative;
-  display: inline-block;
+  display: inline;
   border-radius: 20px;
-  height: 32px;
+  height: 33px;
   width: 93px;
   padding: 5px 15px;
   border: none;
   color:#ffffff;
   line-height: 1.14px;
-  text-align: right;
-  vertical-align: middle;
+  text-align: center;
+  vertical-align: top;
   font-weight: 500;
   font-size: 14px;
   background: rgba(0, 0, 0, 0.2);
@@ -261,45 +279,57 @@ input[type="email"]:focus, input[type="password"]:focus {
   box-shadow: inset 0px 2px 2px 0 #942718;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to top, #e74a35, #f26843);
 }
-.entrance-btn:hover ~ .entrance-form {
+
+.entrance-form:hover .entrance {
   display: block;
-  margin-top: 4px;
 }
 
+
 /*СТИЛИ ДЛЯ КОРЗИНЫ*/
-.basket {
+.basket-buttons {
   position: relative;
+  width: 539px;
+  top: -99px;
+  left: 142px;
+}
+.basket {
   display: inline-block;
-  margin: 0;
-  height: 26px;
-  padding: 3px 14px;
+  height: 17px;
+  padding: 8px 14px;
   color: #ffffff;
   text-decoration: none;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   line-height: 1.14px;
   text-align: right;
+  vertical-align: middle;
   font-weight: 500;
   font-size: 14px;
 }
+
 .basket img {
  position: relative;
  left: -5px;
- top: 5px;
+ top: -2px;
 }
 .basket:hover {
   color: #323232;
   background-color: #f8f7f4;
-  background-image: url('img/basket-full') no-repeat;
 }
-.basket-full {
+.basket-table {
   display: none;
+  position: relative;
+  left: -451px;
   width: 539px;
-  height: 242px;
+  z-index: 30;
+  min-height: 242px;
   background-color: #ffffff;
   color: #323232;
 }
-.basket-full p {
+.basket-full {
+
+}
+.basket-table p {
   font-weight: bold;
   text-align: right;
   font-size: 15px;
@@ -307,7 +337,7 @@ input[type="email"]:focus, input[type="password"]:focus {
   color: #323232;
   padding-right: 13px;
 }
-.basket-full a {
+.basket-table a {
   display: inline-block;
   position:  relative;
   top: 14px;
@@ -328,11 +358,11 @@ input[type="email"]:focus, input[type="password"]:focus {
   font-weight: bold;
   font-size: 18px;
 }
-.basket-full a:hover {
+.basket-table a:hover {
   box-shadow: 0px 2px 2px 0 #ac1000;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(to top, #e74a35, #f26843);
 }
-.basket-full a:active {
+.basket-table a:active {
   outline: none;
   box-shadow: inset 0px 2px 2px 0 #942718;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to top, #e74a35, #f26843);
@@ -350,6 +380,9 @@ td {
   text-align: left;
   color: #323232;
 }
+.table-rows .close {
+  background: url('img/close') no-repeat 0 0;
+}
 .text {
   width: 226px;
 }
@@ -366,15 +399,16 @@ td {
 tr:nth-child(2) {
   border-bottom: 1px solid gray;
 }
-.basket:hover ~ .basket-full {
+.basket-buttons:hover .basket-table {
   display: block;
-  margin-top: 4px;
 }
+
+
 /*время работы*/
 .time-work {
   display: inline-block;
   position: relative;
-  left: 125%;
+  left: 1700px;
   font-size: 14px;
   font-weight: bold;
   line-height: 1.14;
