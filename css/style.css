@@ -14,6 +14,10 @@ body { /*обнуляем внешние и внутренние отступы 
   width: 1200px;
   background-color: #849d8f;
 }
+.page-header {
+  position: relative;
+  z-index: 50;
+}
 
 .header-top { /*контейнер для хедера с размерами*/
   display: flex;
@@ -408,6 +412,7 @@ tr:nth-child(2) {
 .time-work {
   display: inline-block;
   position: relative;
+  z-index: 40;
   top: -11px;
   left: 1008px;
   font-size: 14px;
@@ -432,10 +437,10 @@ padding: 8px;
 }
 
 /*Слайдер */
-
-.promo { /* стиль для всей секции*/
+.promo {
+  position: relative;
   margin: 0px auto;
-  width: 1249px; /*ширина*/
+  width: 1200px; /*ширина*/
   height: 893px; /*высота секции*/
 }
 .slider { /*стиль для конт. с фото и кнопками*/
@@ -506,6 +511,7 @@ figcaption {
   transform: translate(-1249px); /*2 фото по счету, второе фото начинается с 1249 по 2498, листаем влево, поэтому знак"-" */
   background-color: #8996a6;
 }
+#btn-2:checked body {background-color: #8996a6;}
 #btn-3:checked ~ .slider-inner .slider-slides {
   transform: translate(-2498px); /*3 фото по счету, третье фото начинается с 2498*/
   background-color: #9d8b84;
