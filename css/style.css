@@ -14,6 +14,9 @@ body { /*обнуляем внешние и внутренние отступы 
   width: 1200px;
   background-color: #849d8f;
 }
+.gllacy-wrapper {
+  background-color: #849d8f;
+}
 .page-header {
   position: relative;
   z-index: 50;
@@ -56,9 +59,26 @@ body { /*обнуляем внешние и внутренние отступы 
   padding: 7px 14px;
   text-align: center;
   color: #ffffff;
-  text-decoration: underline;
+  text-decoration:  none;
   font-weight: bold;
+  box-sizing: border-box;
   /* border-left: 1px solid #e5e5e5; */
+}
+.under-line::after {
+  position: absolute;
+  box-sizing: border-box;
+  content: "";
+  top: 25px;
+  width: 68px;
+  left: 10px;
+  height: 2px;
+  background-color: #e5e5e5;
+}
+.main-nav li:nth-child(2) .under-line::after {
+  width: 148px;
+}
+.main-nav li:nth-child(3) .under-line::after {
+  width: 98px;
 }
 .main-nav a:hover {
   color: #323232;
@@ -72,6 +92,7 @@ body { /*обнуляем внешние и внутренние отступы 
   box-shadow: inset 0px 2px 1px 0 #696969;
   border-radius: 20px;
 }
+
 .main-nav .sub-menu {
   display: none;/*скрыли подменю*/
   position: absolute;
@@ -85,7 +106,7 @@ body { /*обнуляем внешние и внутренние отступы 
   list-style: none;
   background-color: #f8f7f4;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
-  border-top: 8px solid #849d8f;
+  border-top: 2px solid #849d8f;
 }
 .main-nav .sub-menu a {
   padding: 0;
@@ -102,13 +123,21 @@ body { /*обнуляем внешние и внутренние отступы 
   vertical-align:  middle;
   box-shadow: none;
   border-radius: 0px;
+  box-sizing: border-box;
 }
 .sub-menu li:first-child a {
   font-weight: bold;
 }
-.main-nav .sub-menu li:first-child {
-  border-bottom: 1px solid gray;
+.sub-menu li:first-child a::after {
+  position: absolute;
+  content: "";
+  top: 26px;
+  width: 120px;
+  left: 10px;
+  height: 1px;
+  background-color: gray;
 }
+
 .main-nav .sub-menu a:hover {background-color: #fdded8;}
 .main-nav .sub-menu a:active {background-color: #f6b5a5;}
 .main-nav > li:hover .sub-menu {
@@ -129,7 +158,7 @@ body { /*обнуляем внешние и внутренние отступы 
 /*СТИЛИ ДЛЯ КНОПКИ ПОИСКА*/
 .search-button {
   position: relative;
-  top: 16px;
+  top: 17px;
   width: 341px;
   height: 84px;
   vertical-align: middle;
@@ -152,6 +181,7 @@ body { /*обнуляем внешние и внутренние отступы 
   border-radius: 5px;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   transition: 1s;
+  box-sizing: border-box;
 }
 .search-button button {
   border-radius: 60%;
@@ -160,12 +190,23 @@ body { /*обнуляем внешние и внутренние отступы 
   border: none;
   background: rgba(0, 0, 0, 0.2);
 }
-.search-btn img {
+.search-btn svg {
+  position: absolute;
   top: 7px;
-  left: 5px;
+  left: 7px;
+}
+
+.icon path {
+  fill:inherit;
+  stroke:inherit;
+  stroke-width:inherit;
+}
+
+.icon:hover g {
+  fill: black;
 }
 .search-btn:hover {
-  background-color: #323232;
+   background-color: #f8f7f4;
 }
 .search-button:hover .search input[type="search"] {
   display: block;
@@ -211,6 +252,7 @@ input[type="email"], input[type="password"] {
   outline: none; /*внешняя рамка*/
   background-color: #ffffff;
   border-radius: 5px;
+  box-sizing: border-box;
 }
 input[type="email"]:hover, input[type="password"]:hover {
   border: 2px solid rgba(154, 154, 154, 0.52);
@@ -233,7 +275,7 @@ input[type="email"]:focus, input[type="password"]:focus {
   font-size: 14px;
   background: rgba(0, 0, 0, 0.2);
 }
-.entrance-btn img {
+.entrance-btn svg {
   position: relative;
   left: -5px;
   top: 0px;
@@ -271,6 +313,7 @@ input[type="email"]:focus, input[type="password"]:focus {
   line-height: 1.33px;
   font-weight: bold;
   font-size: 18px;
+  box-sizing: border-box;
 }
 .entrance button[type="submit"]:hover {
   box-shadow: 0px 2px 2px 0 #ac1000;
@@ -309,7 +352,7 @@ input[type="email"]:focus, input[type="password"]:focus {
   font-size: 14px;
 }
 
-.basket img {
+.basket svg {
  position: relative;
  left: -5px;
  top: 0px;
@@ -447,9 +490,9 @@ padding: 8px;
   position: relative;
   top: -143px;
 }
-.slider input[type="radio"] {
-  display: none; /*скрыть радио-кнопки*/
-}
+/* .slider input[type="radio"] {
+  display: none; /*скрыть радио-кнопки* } */
+
 .slider-inner { /*оставить только текущую картинку, остальное-скрыть*/
   display: flex; /*фото в одну линию*/
   overflow: hidden;
@@ -468,12 +511,13 @@ figcaption {
   position: absolute;
   top: 391px;
   left: 190px;
-  width: 670px;
+  width: 690px;
   font-size: 60px;
   font-weight: bold;
   line-height: 1;
   text-align: center;
 }
+
 .slider-slides img {
   display: flex;
   flex-wrap: wrap;
@@ -499,23 +543,26 @@ figcaption {
   cursor: pointer; /*вид курсора - рука*/
   transition: background-color 0.2s; /*время переключения со светлой на темную кнопку*/
 }
-#btn-1:checked ~ .slider-controls label[for="btn-1"],
-#btn-2:checked ~ .slider-controls label[for="btn-2"],
-#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+.visually-hidden {display: none;} /*скрыли радио-кнопки*/
+
+#btn-1:checked ~ .gllacy-wrapper label[for="btn-1"],
+#btn-2:checked ~ .gllacy-wrapper label[for="btn-2"],
+#btn-3:checked ~ .gllacy-wrapper label[for="btn-3"] {
   background-color: #ffffff; /*цвет кнопки на теекущей картинке. Для радио-кнопки с id- btn-1:checked - нажатой подключаем подпись-кнопку с соответстующим for="btn-1"*/
 }
-#btn-1:checked ~ .slider-inner .slider-slides {
+#btn-1:checked ~ .gllacy-wrapper .slider-slides {
   transform: translate(0); /*если нажата эта кнопка-label, то переходим в контейнер с фото и листаем на нужное через transform: translate(0); 1 фото шириной 1249=1045ширина фото+102+102паддинги с 2-х сторон- начинается с 0 до 1249*/
 }
-#btn-2:checked ~ .slider-inner .slider-slides {
+#btn-2:checked ~ .gllacy-wrapper .slider-slides {
   transform: translate(-1249px); /*2 фото по счету, второе фото начинается с 1249 по 2498, листаем влево, поэтому знак"-" */
-  background-color: #8996a6;
 }
-#btn-2:checked body {background-color: #8996a6;}
-#btn-3:checked ~ .slider-inner .slider-slides {
+#btn-2:checked ~ .gllacy-wrapper {background-color: #8996a6;}
+
+#btn-3:checked ~ .gllacy-wrapper .slider-slides {
   transform: translate(-2498px); /*3 фото по счету, третье фото начинается с 2498*/
-  background-color: #9d8b84;
 }
+#btn-3:checked ~ .gllacy-wrapper {background-color: #9d8b84;}
+
 .slider-btn {
   display: inline-block;
   position:  relative;
