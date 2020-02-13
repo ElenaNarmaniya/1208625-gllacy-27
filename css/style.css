@@ -68,17 +68,18 @@ body { /*обнуляем внешние и внутренние отступы 
   position: absolute;
   box-sizing: border-box;
   content: "";
-  top: 25px;
-  width: 68px;
-  left: 10px;
-  height: 2px;
+  top: 24px;
+  width: 65px;
+  left: 12px;
+  height: 1px;
   background-color: #e5e5e5;
+  opacity: 0.2;
 }
 .main-nav li:nth-child(2) .under-line::after {
-  width: 148px;
+  width: 145px;
 }
 .main-nav li:nth-child(3) .under-line::after {
-  width: 98px;
+  width: 93px;
 }
 .main-nav a:hover {
   color: #323232;
@@ -99,21 +100,20 @@ body { /*обнуляем внешние и внутренние отступы 
   z-index: 10;
   left: -7px;
   top: 33px;
-  width: 143px;
-  height: 171px;
+  min-width: 143px;
+  min-height: 171px;
   padding: 0;
   margin: 0;
   list-style: none;
   background-color: #f8f7f4;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   border-top: 2px solid #849d8f;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 .main-nav .sub-menu a {
-  padding: 0;
   margin: 0;
-  padding-top: 7px;
-  padding-left: 20px;
-  height: 28px;
+  padding: 9px 18px;
   color: #323232;
   font-size: 14px;
   line-height: 1.14;
@@ -123,19 +123,18 @@ body { /*обнуляем внешние и внутренние отступы 
   vertical-align:  middle;
   box-shadow: none;
   border-radius: 0px;
-  box-sizing: border-box;
-}
+  }
 .sub-menu li:first-child a {
   font-weight: bold;
 }
 .sub-menu li:first-child a::after {
   position: absolute;
   content: "";
-  top: 26px;
+  top: 33px;
   width: 120px;
   left: 10px;
   height: 1px;
-  background-color: gray;
+  background-color: #e5e5e5;
 }
 
 .main-nav .sub-menu a:hover {background-color: #fdded8;}
@@ -392,7 +391,7 @@ input[type="email"]:focus, input[type="password"]:focus {
   margin: 0;
   text-decoration: none;
   border-radius: 20px;
-  width: 170px;
+  min-width: 170px;
   height: 22px;
   background-image: linear-gradient(to top, #e74a35, #f26843);
   box-shadow: 0px 1px 2px 0 #ac1000;
@@ -483,15 +482,13 @@ padding: 8px;
 .promo {
   position: relative;
   margin: 0px auto;
-  width: 1200px; /*ширина*/
+  width: inherit; /*наследуемая ширина*/
   height: 893px; /*высота секции*/
 }
 .slider { /*стиль для конт. с фото и кнопками*/
   position: relative;
   top: -143px;
 }
-/* .slider input[type="radio"] {
-  display: none; /*скрыть радио-кнопки* } */
 
 .slider-inner { /*оставить только текущую картинку, остальное-скрыть*/
   display: flex; /*фото в одну линию*/
@@ -510,14 +507,19 @@ figure {
 figcaption {
   position: absolute;
   top: 391px;
-  left: 190px;
+  left: 175px;
   width: 690px;
   font-size: 60px;
   font-weight: bold;
   line-height: 1;
   text-align: center;
 }
-
+.slider-slides:nth-of-type(2) figcaption,
+.slider-slides:last-of-type figcaption {
+  width: 643px;
+  top: 408px;
+  left: 309px;
+}
 .slider-slides img {
   display: flex;
   flex-wrap: wrap;
@@ -590,4 +592,34 @@ figcaption {
   outline: none;
   box-shadow: inset 0px 2px 2px 0 #942718;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to top, #e74a35, #f26843);
+}
+
+
+/* секция предложений */
+.promo-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: inherit;
+  padding: 41px 27px;
+  border: 1px solid green; /*убрать после*/
+  position: relative;
+  top: -435px;
+}
+.view {
+  padding: 23px 20px;
+  margin-left: 26px;
+  border: none;
+  border-radius: 15px;
+  min-width: 560px;
+  min-height: 229px;
+  box-sizing: border-box;
+}
+.raspberries {
+  margin-left: 0px;
+  background: #dc143c url('img/raspberries-background.png') no-repeat;
+}
+
+.choco {
+  background: #370202 url('img/choco-background.png') no-repeat;
 }

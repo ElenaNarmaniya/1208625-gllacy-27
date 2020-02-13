@@ -11,6 +11,7 @@
     <input class="visually-hidden" type="radio" id="btn-1" name="toggle" checked>
     <input class="visually-hidden" type="radio" id="btn-2" name="toggle">
     <input class="visually-hidden" type="radio" id="btn-3" name="toggle">
+
     <div class="gllacy-wrapper">
     <header class="page-header"> <!--обертка всей  страницы-->
       <!-- контейнер для хедера с фиксированной шириной из макета -->
@@ -52,7 +53,7 @@
               </svg>
             </button>
             <form action="#" method="post" class="search">
-              <input type="search" placeholder="Крем-брюле" name="search">
+              <input type="search" placeholder="Крем-брюле" name="search" autocomplete="on">
             </form>
           </div>
           <!-- блок входа -->
@@ -66,7 +67,7 @@
               </svg>Вход
             </button>
             <form action="#" method="post" class="entrance">
-              <input type="email" placeholder="email@example.com" name="e-mail" required>
+              <input type="email" placeholder="email@example.com" name="e-mail" required autocomplete="on">
               <input type="password" name="password" placeholder="........" required>
               <button type="submit">Войти</button>
               <a href="javascript: void(0)">Забыли пароль?</a>
@@ -146,19 +147,19 @@
       </div>
     </section>
 
-      <!--секция предложений-->
-      <section class="promo-view">
-        <div class="raspberries">
-          <h2>Малинка даром!</h2>
-          <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <a href="javascript: void(0)">Хочу варенье!</a>
-        <div>
-        <div class="choco">
-          <h2>Шоколадки даром!</h2>
-          <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <a href="javascript: void(0)">Хочу шоколадки!</a>
-        </div>
-      </section>
+    <!--секция предложений-->
+    <section class="promo-view">
+      <div class="view raspberries">
+        <h2>Малинка даром!</h2>
+        <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+        <a href="javascript: void(0)">Хочу варенье!</a>
+      </div>
+      <div class="view choco">
+        <h2>Шоколадки даром!</h2>
+        <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+        <a href="javascript: void(0)">Хочу шоколадки!</a>
+      </div>
+    </section>
 
       <div class="catalog">
         <div class="catalog-item">
