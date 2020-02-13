@@ -11,7 +11,7 @@ body { /*обнуляем внешние и внутренние отступы 
   letter-spacing: normal;
   text-align: left;
   color: #ffffff;
-  width: 1200px;
+  width: 100%;
   background-color: #849d8f;
 }
 .gllacy-wrapper {
@@ -617,9 +617,9 @@ figcaption {
 }
 .raspberries {
   margin-left: 0px;
-  background: #dc143c url('img/raspberries-background.png') no-repeat top center;
+  background: #dc143c url('../img/raspberries-background.png') no-repeat top center;
 }
 
 .choco {
-  background: #370202 url('img/choco-background.png') no-repeat top center;
+  background: #370202 url('../img/choco-background.png') no-repeat top center;
 }
