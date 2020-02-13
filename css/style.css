@@ -617,9 +617,9 @@ figcaption {
 }
 .raspberries {
   margin-left: 0px;
-  background: #dc143c url('img/raspberries-background.png') no-repeat;
+  background: #dc143c url('img/raspberries-background.png') no-repeat top center;
 }
 
 .choco {
-  background: #370202 url('img/choco-background.png') no-repeat;
+  background: #370202 url('img/choco-background.png') no-repeat top center;
 }
