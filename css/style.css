@@ -54,7 +54,7 @@ body { /*обнуляем внешние и внутренние отступы 
   margin-right: 0px;
 }
 .main-nav a {
-  display: block;
+  display: inline-block;
   margin: 0px;
   padding: 7px 14px;
   text-align: center;
@@ -64,23 +64,7 @@ body { /*обнуляем внешние и внутренние отступы 
   box-sizing: border-box;
   /* border-left: 1px solid #e5e5e5; */
 }
-.under-line::after {
-  position: absolute;
-  box-sizing: border-box;
-  content: "";
-  top: 24px;
-  width: 65px;
-  left: 12px;
-  height: 1px;
-  background-color: #e5e5e5;
-  opacity: 0.2;
-}
-.main-nav li:nth-child(2) .under-line::after {
-  width: 145px;
-}
-.main-nav li:nth-child(3) .under-line::after {
-  width: 93px;
-}
+
 .main-nav a:hover {
   color: #323232;
   background-color: #f7f6f3;
@@ -107,7 +91,7 @@ body { /*обнуляем внешние и внутренние отступы 
   list-style: none;
   background-color: #f8f7f4;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
-  border-top: 4px solid transparent;
+  border-top: 6px solid #849d8f;
   border-radius: 5px;
   box-sizing: border-box;
 }
@@ -672,13 +656,101 @@ figcaption {
 .catalog {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 1200px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0px 27px;
   border: 1px solid red; /*убрать после*/
   position: relative;
   top: -466px;
   box-sizing: border-box;
 }
 
+.catalog-item {
+  position: relative;
+  padding: 0;
+  padding-top: 6px;
+  margin-left: 26px;
+  box-sizing: border-box;
+  max-width: 293px;
+  min-height: 323px;
+}
+.catalog-item:first-child {
+  margin-left: 0px;
+}
+.ice {
+  padding: 0;
+  margin: 0;
+  width: 267px;
+  height: 267px;
+  position: relative;
+}
+.cream1 {
+  background: url('../img/hit-card.svg') no-repeat, url('../img/1.png') no-repeat top center;
+}
+.cream2 {
+  background: url('../img/hit-card.svg') no-repeat, url('../img/2.png') no-repeat top center;
+}
+.cream3 {
+  background: url('../img/hit-card.svg') no-repeat, url('../img/3.png') no-repeat top center;
+}
+.cream4 {
+  background: url('../img/hit-card.svg') no-repeat, url('../img/4.png') no-repeat top center;
+}
+
+.cost1  {
+  position: absolute;
+  top: 165px;
+  text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 1;
+  color: var(--white-four);
+}
+.cost1 span {
+  font-size: 30px;
+  line-height: 1.5;
+}
+.profile {
+  position: relative;
+  font-weight: 500;
+  line-height: 1.38;
+  text-align: center;
+  color: var(--white-four);
+  margin-top: 15px;
+}
+.under {
+  background-image: linear-gradient(to bottom,  rgba(229,229,229, 0.2) 50%, transparent 50%);
+  background-position: 0px 18px;
+  background-repeat: repeat-x;
+  background-size: 1px 2px;
+}
+.catalog-item:hover {
+  width: 293px;
+  height: 405px;
+  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  background-color: rgba(229,229,229, 0.2);
+}
+.catalog-item:hover a {
+  display: inline-block;
+}
+
+.catalog-item a {
+  display: none;
+  position: relative;
+  bottom: 7px;
+  left: 33px;
+  padding: 13px 17px;
+  text-decoration: none;
+  border-radius: 50px;
+  background-image: linear-gradient(to top, #e74a35, #f26843);
+  box-shadow: 0px 1px 2px 0 #ac1000;
+  border: none;
+  color: #ffffff;
+  opacity: 0.99;
+  text-align: center;
+  vertical-align: top;
+  line-height: 1.33;
+  font-weight: bold;
+  font-size: 18px;
+}
