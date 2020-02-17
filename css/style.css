@@ -593,7 +593,7 @@ figcaption {
   width: 1200px;
   margin: 0 auto;
   padding: 41px 27px;
-  border: 1px solid green; /*убрать после*/
+  /*border: 1px solid green; /*убрать после*/
   position: relative;
   top: -465px;
   box-sizing: border-box;
@@ -660,7 +660,7 @@ figcaption {
   width: 1200px;
   margin: 0 auto;
   padding: 0px 27px;
-  border: 1px solid red; /*убрать после*/
+  /*border: 1px solid red; /*убрать после*/
   position: relative;
   top: -466px;
   box-sizing: border-box;
@@ -673,7 +673,7 @@ figcaption {
   margin-left: 26px;
   box-sizing: border-box;
   max-width: 293px;
-  min-height: 323px;
+  max-height: 405px;
 }
 .catalog-item:first-child {
   margin-left: 0px;
@@ -725,9 +725,8 @@ figcaption {
   background-repeat: repeat-x;
   background-size: 1px 2px;
 }
+
 .catalog-item:hover {
-  width: 293px;
-  height: 405px;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   background-color: rgba(229,229,229, 0.2);
 }
