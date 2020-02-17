@@ -753,3 +753,68 @@ figcaption {
   font-weight: bold;
   font-size: 18px;
 }
+.catalog-item a:hover {
+  box-shadow: 0px 2px 2px 0 #ac1000;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(to top, #e74a35, #f26843);
+}
+.catalog-item a:active {
+  outline: none;
+  box-shadow: inset 0px 2px 2px 0 #942718;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to top, #e74a35, #f26843);
+}
+
+/* секция преимуществ*/
+
+.advantage-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0px 27px;
+  border: 1px solid red; /*убрать после*/
+  position: relative;
+  top: -480px;
+  color: #323232;
+  box-sizing: border-box;
+  background: #849d8f url('../img/wafer.png') no-repeat center center;
+}
+
+.shop {
+  position: relative;
+  top: 29px;
+  left: 21px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: left;
+}
+.advantage {
+  list-style: none;
+  margin-left: 21px;
+  padding: 0;
+}
+.icon {
+  padding: 0;
+  margin: 0;
+  width: 49px;
+  height: 49px;
+  position: relative;
+  border: 1px solid green;
+}
+.iconcream {
+  background: url('../img/cream-advantage.png') no-repeat top center;
+}
+.iconmilk {
+  background: url('../img/milk.png') no-repeat top center;
+}
+.iconferm {
+  background: url('../img/ferm.png') no-repeat top center;
+}.icondelivery {
+  background: url('../img/delivery.png') no-repeat top center;
+}
+.text-advantage {
+  line-height: 1.38;
+  border: 1px solid green;
+}
