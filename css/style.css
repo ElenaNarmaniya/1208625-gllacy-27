@@ -476,12 +476,15 @@ tr:nth-child(2) {
 .promo {
   position: relative;
   margin: 0px auto;
+  margin-top: -172px;
   width: 1200px; /*наследуемая ширина*/
   height: 893px; /*высота секции*/
 }
 .slider { /*стиль для конт. с фото и кнопками*/
   position: relative;
-  top: -172px;
+  /*top: -172px;*/
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -591,15 +594,16 @@ figcaption {
   align-items: center;
   justify-content: center;
   width: 1200px;
-  margin: 0 auto;
+  margin: 0px auto;
+  margin-top: -293px;
   padding: 41px 27px;
   /*border: 1px solid green; /*убрать после*/
   position: relative;
-  top: -465px;
+  /*top: -465px; */
   box-sizing: border-box;
 }
 .view {
-  padding: 0px 20px;
+  padding: 1px 20px;
   margin-left: 26px;
   border: none;
   border-radius: 15px;
@@ -610,38 +614,39 @@ figcaption {
   text-align: left;
   line-height: 1.22;
   font-weight: bold;
+  /*border: 1px solid green; /*убрать после*/
 }
 .raspberries {
   margin-left: 0px;
   background: #dc143c url('../img/raspberries-background.png') no-repeat top center;
+  background-size: cover;
 }
 
 .choco {
   background: #370202 url('../img/choco-background.png') no-repeat top center;
+  background-size: cover;
 }
 
 .view a {
   display: inline-block;
   position: relative;
-  bottom: -7px;
   left: 318px;
+  margin-bottom: 23px;
   padding: 14px 41px;
   text-decoration: none;
   border-radius: 50px;
   background-image: linear-gradient(to top, #e74a35, #f26843);
-  box-shadow: 0px 2px 2px 0 var(--deep-red-64);
+  box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
   border: none;
   color: #ffffff;
   opacity: 0.99;
-  text-align: center;
+  text-align: left;
   vertical-align: top;
   line-height: 1.33;
   font-weight: bold;
   font-size: 18px;
 }
-.choco a {
-  left: 297px;
-}
+.choco a {left: 297px;}
 .view a:hover {
   box-shadow: 0px 2px 2px 0 #ac1000;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(to top, #e74a35, #f26843);
@@ -663,7 +668,7 @@ figcaption {
   /*border: 1px solid red; /*убрать после*/
   position: relative;
   z-index: 300;
-  top: -466px;
+  /*top: -466px;*/
   box-sizing: border-box;
 }
 
@@ -686,38 +691,40 @@ figcaption {
   height: 267px;
   position: relative;
 }
-.cream1 {
-  background: url('../img/hit-card.svg') no-repeat, url('../img/1.png') no-repeat top center;
-}
-.cream2 {
-  background: url('../img/hit-card.svg') no-repeat, url('../img/2.png') no-repeat top center;
-}
-.cream3 {
-  background: url('../img/hit-card.svg') no-repeat, url('../img/3.png') no-repeat top center;
-}
-.cream4 {
-  background: url('../img/hit-card.svg') no-repeat, url('../img/4.png') no-repeat top center;
-}
 
 .cost1  {
   position: absolute;
-  top: 165px;
+  top: 170px;
   text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
+  font-family: Roboto;
   font-size: 45px;
   font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
   line-height: 1;
-  color: var(--white-four);
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
 }
 .cost1 span {
+  text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
+  font-family: Roboto;
   font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
   line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
 }
 .profile {
+  display: inline-block;
   position: relative;
   font-weight: 500;
   line-height: 1.38;
   text-align: center;
-  color: var(--white-four);
+  color: #ffffff;
   margin-top: 15px;
 }
 .under {
@@ -731,15 +738,16 @@ figcaption {
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   background-color: rgba(229,229,229, 0.2);
 }
-.catalog-item:hover a {
+.catalog-item:hover .fast_screen {
   display: inline-block;
 }
 
-.catalog-item a {
+.fast_screen {
   display: none;
-  position: relative;
+  /*position: relative;
   bottom: 7px;
-  left: 33px;
+  left: 33px;*/
+  margin: 11px 17px 9px 34px;
   padding: 13px 17px;
   text-decoration: none;
   border-radius: 50px;
@@ -754,11 +762,11 @@ figcaption {
   font-weight: bold;
   font-size: 18px;
 }
-.catalog-item a:hover {
+.catalog-item .fast_screen:hover {
   box-shadow: 0px 2px 2px 0 #ac1000;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(to top, #e74a35, #f26843);
 }
-.catalog-item a:active {
+.catalog-item .fast_screen:active {
   outline: none;
   box-shadow: inset 0px 2px 2px 0 #942718;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to top, #e74a35, #f26843);
@@ -776,11 +784,12 @@ figcaption {
   padding: 0px 27px;
   border: 1px solid red; /*убрать после*/
   position: relative;
-  z-index: 250;
-  top: -480px;
+   z-index: 250;
+  /*top: -480px;*/
   color: #323232;
   box-sizing: border-box;
   background: #849d8f url('../img/wafer.png') no-repeat center center;
+  background-size: cover;
 }
 
 .shop {
