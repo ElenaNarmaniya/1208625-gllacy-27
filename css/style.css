@@ -179,13 +179,13 @@ body { /*обнуляем внешние и внутренние отступы 
   left: 7px;
 }
 
-.icon path {
+.icon_menu path {
   fill:inherit;
   stroke:inherit;
   stroke-width:inherit;
 }
 
-.icon:hover g {
+.icon_menu:hover g {
   fill: black;
 }
 .search-btn:hover {
@@ -662,6 +662,7 @@ figcaption {
   padding: 0px 27px;
   /*border: 1px solid red; /*убрать после*/
   position: relative;
+  z-index: 300;
   top: -466px;
   box-sizing: border-box;
 }
@@ -775,6 +776,7 @@ figcaption {
   padding: 0px 27px;
   border: 1px solid red; /*убрать после*/
   position: relative;
+  z-index: 250;
   top: -480px;
   color: #323232;
   box-sizing: border-box;
@@ -790,19 +792,7 @@ figcaption {
   line-height: 1.25;
   text-align: left;
 }
-.advantage {
-  list-style: none;
-  margin-left: 21px;
-  padding: 0;
-}
-.icon {
-  padding: 0;
-  margin: 0;
-  width: 49px;
-  height: 49px;
-  position: relative;
-  border: 1px solid green;
-}
+
 .iconcream {
   background: url('../img/cream-advantage.png') no-repeat top center;
 }
@@ -817,4 +807,56 @@ figcaption {
 .text-advantage {
   line-height: 1.38;
   border: 1px solid green;
+}
+
+.advantage {
+  list-style: none;
+  margin: 5px 7px 0px 21px;
+  padding: 0;
+  min-width: 1040px;
+  min-height: 250px;
+  border: 1px solid orange;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.advantage li {
+  border: 1px solid blue;
+  min-height: 50px;
+  width:  550px;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.icon {
+  padding: 0;
+  margin: 0px 3px;
+  margin-left: 0;
+  width: 49px;
+  height: 49px;
+  position: relative;
+  border: 1px solid green;
+}
+.text-advantage {
+  position: relative;
+  top: -15px;
+  margin: 0;
+  padding: 0;
+  width: 485px;
+}
+.advantage-delivery, .advantage-ferm {
+  align-self: flex-start;
+  top: -15px;
 }
