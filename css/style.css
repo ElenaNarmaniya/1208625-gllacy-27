@@ -27,7 +27,6 @@ body { /*обнуляем внешние и внутренние отступы 
 .header-top { /*контейнер для хедера с размерами*/
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
   width: 1200px;
   margin: 0 auto;
@@ -39,32 +38,36 @@ body { /*обнуляем внешние и внутренние отступы 
 }
 /*СТИЛИ ДЛЯ МЕНЮ*/
 .navigation {
-  width: 400px;
-  min-height: 64px;
-  position: relative;
-  left: -200px;
+  min-width: 365px;
+  min-height: 33px;
+  margin: 0;
+  margin-left: 13px; /*отступ блока навигации от логотипа*/
+  padding: 1px;
+  box-sizing: border-box;
+  /*position: relative;
+  left: -200px;*/
 }
 .main-nav {
   list-style: none;
-  margin-left: 10px;
+  margin: 0;
+  /*margin-left: 10px;*/
   padding: 0;
-  /*border: 1px solid #e5e5e5; */
 }
 .main-nav > li {
-  position: relative;
   display: inline-block;
-  margin-right: 0px;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 .main-nav a {
   display: inline-block;
   margin: 0px;
-  padding: 7px 14px;
+  padding: 9px 14px;
   text-align: center;
   color: #ffffff;
   text-decoration:  none;
   font-weight: bold;
   box-sizing: border-box;
-  /* border-left: 1px solid #e5e5e5; */
 }
 
 .main-nav a:hover {
@@ -85,8 +88,8 @@ body { /*обнуляем внешние и внутренние отступы 
   position: absolute;
   z-index: 10;
   left: -7px;
-  top: 33px;
-  min-width: 143px;
+  top: 38px;
+  width: 143px;
   min-height: 171px;
   padding: 0;
   margin: 0;
@@ -113,57 +116,66 @@ body { /*обнуляем внешние и внутренние отступы 
 .sub-menu li:first-child a {
   font-weight: bold;
 }
-
-.main-nav .sub-menu a:hover {background-color: #fdded8;}
-.main-nav .sub-menu a:active {background-color: #f6b5a5;}
+.sub-menu li:hover, .sub-menu a:hover {background-color: #fdded8;}
+.sub-menu li:active, .sub-menu a:active {background-color: #f6b5a5;}
 .main-nav > li:hover .sub-menu {
-  display: block;/*при наведении на пункт главного меню открыть подменю*/
+  display: inline-block;/*при наведении на пункт главного меню открыть подменю*/
 }
 
  /*СТИЛИ ДЛЯ КНОПОК ВХОДА, ФОРМЫ, КОРЗИНЫ*/
 .right-buttons {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
-  position: relative;
+  /*position: relative;
   /*left: -50px;*/
-  width: 245px;
-  min-height: 64px;
+  width: 245px; /*245*/
+  height: 33px; /*33*/
+  margin: 0;
+  padding: 1px;
+  margin-left: 375px;
 }
 
 /*СТИЛИ ДЛЯ КНОПКИ ПОИСКА*/
 .search-button {
+  display: inline-block;
   position: relative;
   /*top: 17px; */
-  width: 341px;
-  min-height: 84px;
+  min-width: 33px;
+  min-height: 33px;
   vertical-align: middle;
+  box-sizing: border-box;
+  padding: 1px;
+  margin-right: 5px;
 }
-.search input[type="search"] {
+.search-button input[type="search"] {
   display: none;
   position: absolute;
-  top: 50px;
-  left: -291px;
+  top: 39px;
+  left: -307px;
   z-index: 15;
-  width: 311px;
-  height: 44px; /*высота поля*/
+  min-width: 341px;
+  min-height: 44px; /*высота поля*/
   padding: 15px; /*размеры поля*/
   color: #999999;
   line-height: 1.71px;
   font-size: 14px;
-  border: 1px solid #d3d3d2;
-  outline: 15px solid #f8f7f4; /*внешняя рамка*/
+  border: 15px solid #f8f7f4; /*внешняя рамка*/
   background-color: #ffffff;
   border-radius: 5px;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
-  transition: 1s;
   box-sizing: border-box;
 }
+
 .search-button button {
+  position: relative;
+  z-index: 1;
   border-radius: 60%;
-  height: 33px;
-  width: 33px;
+  min-height: 32px;
+  min-width: 32px;
+  padding: 1px;
   border: none;
   background: rgba(0, 0, 0, 0.2);
 }
@@ -172,13 +184,11 @@ body { /*обнуляем внешние и внутренние отступы 
   top: 7px;
   left: 7px;
 }
-
 .icon_menu path {
   fill:inherit;
   stroke:inherit;
   stroke-width:inherit;
 }
-
 .icon_menu:hover g {
   fill: black;
 }
@@ -187,17 +197,21 @@ body { /*обнуляем внешние и внутренние отступы 
 }
 .search-button:hover .search input[type="search"] {
   display: block;
-  width: 311px; /*ширина поля input[type="search"]*/
+  min-width: 341px; /*ширина поля input[type="search"]*/
 }
 .search-button input[type="search"]:focus, .search-button input[type="search"]:active {
-  width: 311px;
+  min-width: 341px;
 }
 
 /*СТИЛИ ДЛЯ КНОПКИ ФОРМЫ АВТОРИЗАЦИИ*/
 .entrance-form {
-  position: relative;
-  width: 277px;
+  min-width: 93px;
   min-height: 33px;
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding: 1px;
+  margin-right: 5px;
+  position: relative;
   /*top: -67px;
   left:  40px;*/
 }
@@ -207,20 +221,21 @@ body { /*обнуляем внешние и внутренние отступы 
   position: absolute;
   width: 277px;
   min-height: 214px;
-  top: 33px;
-  left: -220px;
+  top: 34px;
+  left: -195px;
   z-index: 20;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
   padding: 19px; /*внешний отступ от края формы до поля ввода*/
   padding-top: 20px;
-  border-radius: 5px;
   border-top: 3px solid #849d8f;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 input[type="email"], input[type="password"] {
   width: 241px;
-  height: 44px; /*высота поля*/
+  min-height: 44px; /*высота поля*/
   margin-bottom: 20px;
   padding: 1px 15px;
   color: #999999;
@@ -246,7 +261,10 @@ input[type="email"]:focus, input[type="password"]:focus {
   vertical-align: top;
   font-weight: 500;
   font-size: 14px;
+  min-width: 91px; /*93*/
+  min-height: 34px;
   border-radius: 20px;
+  margin: 0;
   padding: 5px 15px;
   border: none;
   background-color: rgba(0, 0, 0, 0.2);
@@ -279,8 +297,11 @@ input[type="email"]:focus, input[type="password"]:focus {
   top: -20px;
   left: 104px;
 }
+.entrance a:hover, .entrance a:active {
+  color: #e84d37;
+}
 
- button[type="submit"] { /*кнопка "Войти" в форме*/
+button[type="submit"] { /*кнопка "Войти" в форме*/
   border-radius: 20px;
   width: 100px;
   height: 44px;
@@ -311,8 +332,12 @@ input[type="email"]:focus, input[type="password"]:focus {
 /*СТИЛИ ДЛЯ КОРЗИНЫ*/
 .basket-buttons {
   position: relative;
-  width: 540px;
+  min-width: 100px;
   min-height: 33px;
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding: 1px;
+  margin-right: 0px;
   /*top: -99px;
   left: 142px;*/
 }
@@ -329,6 +354,10 @@ input[type="email"]:focus, input[type="password"]:focus {
   font-size: 14px;
   display: inline-block;
   padding: 5px 20px;
+  margin: 0;
+  min-width: 100px;
+  min-height: 33px;
+  box-sizing: border-box;
 }
 
 .basket svg {
@@ -343,7 +372,7 @@ input[type="email"]:focus, input[type="password"]:focus {
 .basket-table {
   display: none;
   position: relative;
-  left: -445px;
+  left: -440px;
   width: 540px;
   z-index: 30;
   min-height: 242px;
@@ -446,12 +475,12 @@ tr:nth-child(2) {
   z-index: 40;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: flex-end;
   width: 1200px;
-  margin: 0 auto;
   box-sizing: border-box;
+  margin: 0 auto;
   padding: 9px 27px;
   font-size: 14px;
   font-weight: bold;
@@ -460,6 +489,8 @@ tr:nth-child(2) {
   color: #ffffff;
 }
 .time-work a {
+  margin: -10px;
+  padding: 0;
   font-size: 22px;
   font-weight: bold;
   line-height: 1.09;
