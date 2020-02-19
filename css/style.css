@@ -20,6 +20,8 @@ body { /*обнуляем внешние и внутренние отступы 
 .page-header {
   position: relative;
   z-index: 50;
+  min-height: 82px;
+  padding: 1px;
 }
 
 .header-top { /*контейнер для хедера с размерами*/
@@ -37,8 +39,8 @@ body { /*обнуляем внешние и внутренние отступы 
 }
 /*СТИЛИ ДЛЯ МЕНЮ*/
 .navigation {
-  min-width: 400px;
-  height: 64px;
+  width: 400px;
+  min-height: 64px;
   position: relative;
   left: -200px;
 }
@@ -46,7 +48,7 @@ body { /*обнуляем внешние и внутренние отступы 
   list-style: none;
   margin-left: 10px;
   padding: 0;
-  /* border: 1px solid #e5e5e5; */
+  /*border: 1px solid #e5e5e5; */
 }
 .main-nav > li {
   position: relative;
@@ -111,39 +113,31 @@ body { /*обнуляем внешние и внутренние отступы 
 .sub-menu li:first-child a {
   font-weight: bold;
 }
-.sub-menu li:first-child a::after {
-  position: absolute;
-  content: "";
-  top: 33px;
-  width: 120px;
-  left: 10px;
-  height: 1px;
-  background-color: #e5e5e5;
-}
 
 .main-nav .sub-menu a:hover {background-color: #fdded8;}
 .main-nav .sub-menu a:active {background-color: #f6b5a5;}
 .main-nav > li:hover .sub-menu {
   display: block;/*при наведении на пункт главного меню открыть подменю*/
 }
+
  /*СТИЛИ ДЛЯ КНОПОК ВХОДА, ФОРМЫ, КОРЗИНЫ*/
 .right-buttons {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   position: relative;
-  left: -50px;
+  /*left: -50px;*/
   width: 245px;
-  height: 64px;
+  min-height: 64px;
 }
 
 /*СТИЛИ ДЛЯ КНОПКИ ПОИСКА*/
 .search-button {
   position: relative;
-  top: 17px;
+  /*top: 17px; */
   width: 341px;
-  height: 84px;
+  min-height: 84px;
   vertical-align: middle;
 }
 .search input[type="search"] {
@@ -203,15 +197,16 @@ body { /*обнуляем внешние и внутренние отступы 
 .entrance-form {
   position: relative;
   width: 277px;
-  top: -67px;
-  left:  40px;
+  min-height: 33px;
+  /*top: -67px;
+  left:  40px;*/
 }
 
 .entrance  {
   display:  none;
   position: absolute;
   width: 277px;
-  height: 214px;
+  min-height: 214px;
   top: 33px;
   left: -220px;
   z-index: 20;
@@ -245,18 +240,18 @@ input[type="email"]:focus, input[type="password"]:focus {
 }
 .entrance-btn { /* кнопка ВХОД главного меню*/
   display: inline-block;
-  border-radius: 20px;
-  height: 33px;
-  width: 93px;
-  padding: 5px 15px;
-  border: none;
   color:#ffffff;
   line-height: 1.14;
   text-align: center;
   vertical-align: top;
   font-weight: 500;
   font-size: 14px;
-  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 5px 15px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-size: cover;
+
 }
 .entrance-btn svg {
   position: relative;
@@ -317,12 +312,11 @@ input[type="email"]:focus, input[type="password"]:focus {
 .basket-buttons {
   position: relative;
   width: 540px;
-  top: -99px;
-  left: 142px;
+  min-height: 33px;
+  /*top: -99px;
+  left: 142px;*/
 }
 .basket {
-  display: inline-block;
-  padding: 5px 20px;
   color: #ffffff;
   text-decoration: none;
   background-color: rgba(0, 0, 0, 0.2);
@@ -333,6 +327,8 @@ input[type="email"]:focus, input[type="password"]:focus {
   vertical-align: top;
   font-weight: 500;
   font-size: 14px;
+  display: inline-block;
+  padding: 5px 20px;
 }
 
 .basket svg {
