@@ -88,7 +88,7 @@ body { /*обнуляем внешние и внутренние отступы 
   position: absolute;
   z-index: 10;
   left: -7px;
-  top: 38px;
+  top: 36px;
   width: 143px;
   min-height: 171px;
   padding: 0;
@@ -131,8 +131,8 @@ body { /*обнуляем внешние и внутренние отступы 
   align-items: center;
   /*position: relative;
   /*left: -50px;*/
-  width: 245px; /*245*/
-  height: 33px; /*33*/
+  min-width: 245px;
+  min-height: 33px;
   margin: 0;
   padding: 1px;
   margin-left: 375px;
@@ -145,7 +145,7 @@ body { /*обнуляем внешние и внутренние отступы 
   /*top: 17px; */
   min-width: 33px;
   min-height: 33px;
-  vertical-align: middle;
+  vertical-align: bottom;
   box-sizing: border-box;
   padding: 1px;
   margin-right: 5px;
@@ -171,11 +171,13 @@ body { /*обнуляем внешние и внутренние отступы 
 
 .search-button button {
   position: relative;
+  top: 2px;
   z-index: 1;
   border-radius: 60%;
-  min-height: 32px;
-  min-width: 32px;
+  min-height: 33px;
+  min-width: 33px;
   padding: 1px;
+  padding-top: 0px;
   border: none;
   background: rgba(0, 0, 0, 0.2);
 }
@@ -221,8 +223,8 @@ body { /*обнуляем внешние и внутренние отступы 
   position: absolute;
   width: 277px;
   min-height: 214px;
-  top: 34px;
-  left: -195px;
+  top: 36px;
+  left: -187px;
   z-index: 20;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
@@ -465,7 +467,7 @@ tr:nth-child(2) {
 .basket-buttons:hover .basket-table {
   display: block;
   position: absolute;
-  border-top: 4px solid #849d8f;
+  border-top: 5px solid #849d8f;
 }
 
 
@@ -489,7 +491,8 @@ tr:nth-child(2) {
   color: #ffffff;
 }
 .time-work a {
-  margin: -10px;
+  margin: 0;
+  margin-top: -10px;
   padding: 0;
   font-size: 22px;
   font-weight: bold;
@@ -503,9 +506,9 @@ tr:nth-child(2) {
 .promo {
   position: relative;
   margin: 0px auto;
-  margin-top: -172px;
+  margin-top: -175px;
   width: 1200px; /*наследуемая ширина*/
-  height: 893px; /*высота секции*/
+  min-height: 893px; /*высота секции*/
 }
 .slider { /*стиль для конт. с фото и кнопками*/
   position: relative;
@@ -692,21 +695,20 @@ figcaption {
   width: 1200px;
   margin: 0 auto;
   padding: 0px 27px;
-  /*border: 1px solid red; /*убрать после*/
+  border: 1px solid red;
   position: relative;
   z-index: 300;
-  /*top: -466px;*/
   box-sizing: border-box;
 }
 
 .catalog-item {
   position: relative;
-  padding: 0;
-  padding-top: 6px;
+  padding: 1px;
+  padding-top: 5px;
   margin-left: 26px;
   box-sizing: border-box;
-  max-width: 293px;
-  max-height: 405px;
+  min-width: 270px;
+  min-height: 330px;
 }
 .catalog-item:first-child {
   margin-left: 0px;
@@ -717,11 +719,12 @@ figcaption {
   width: 267px;
   height: 267px;
   position: relative;
+  z-index: 20;
 }
 
 .cost1  {
-  position: absolute;
-  top: 170px;
+  position: relative;
+  z-index: 25;
   text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
   font-family: Roboto;
   font-size: 45px;
@@ -732,6 +735,10 @@ figcaption {
   letter-spacing: normal;
   text-align: left;
   color: #ffffff;
+  padding: 1px;
+  margin: 0;
+  margin-top: -80px;
+  box-sizing: border-box;
 }
 .cost1 span {
   text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
@@ -748,39 +755,47 @@ figcaption {
 .profile {
   display: inline-block;
   position: relative;
+  z-index: 30;
   font-weight: 500;
   line-height: 1.38;
   text-align: center;
   color: #ffffff;
-  margin-top: 15px;
+  padding: 1px;
+  margin: 0;
+  margin-top: 35px;
+  box-sizing: border-box;
 }
 .under {
   background-image: linear-gradient(to bottom,  rgba(229,229,229, 0.2) 50%, transparent 50%);
   background-position: 0px 18px;
   background-repeat: repeat-x;
-  background-size: 1px 2px;
+  background-size: 1px 5px;
 }
 
-.catalog-item:hover {
+.back_screen {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: -13px;
+  z-index: 5;
+  width: 295px;
+  min-height: 410px;
+  padding: 1px;
+  box-sizing: border-box;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   background-color: rgba(229,229,229, 0.2);
 }
-.catalog-item:hover .fast_screen {
-  display: inline-block;
-}
-
 .fast_screen {
-  display: none;
-  /*position: relative;
-  bottom: 7px;
-  left: 33px;*/
-  margin: 11px 17px 9px 34px;
+  display: inline-block;
+  margin: 0;
+  margin-top: 345px;
+  margin-left: 45px;
   padding: 13px 17px;
   text-decoration: none;
   border-radius: 50px;
   background-image: linear-gradient(to top, #e74a35, #f26843);
   box-shadow: 0px 1px 2px 0 #ac1000;
-  border: none;
+  box-sizing: border-box;
   color: #ffffff;
   opacity: 0.99;
   text-align: center;
@@ -789,15 +804,19 @@ figcaption {
   font-weight: bold;
   font-size: 18px;
 }
-.catalog-item .fast_screen:hover {
+.catalog-item:hover .back_screen {
+  display: inline-block;
+}
+.fast_screen:hover {
   box-shadow: 0px 2px 2px 0 #ac1000;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(to top, #e74a35, #f26843);
 }
-.catalog-item .fast_screen:active {
+.fast_screen:active {
   outline: none;
   box-shadow: inset 0px 2px 2px 0 #942718;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to top, #e74a35, #f26843);
 }
+
 
 /* секция преимуществ*/
 
@@ -807,7 +826,7 @@ figcaption {
   align-items: center;
   justify-content: flex-start;
   width: 1200px;
-  margin: 0 auto;
+  margin: 60px auto;
   padding: 0px 27px;
   border: 1px solid red; /*убрать после*/
   position: relative;
