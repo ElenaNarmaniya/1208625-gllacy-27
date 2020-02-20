@@ -695,24 +695,41 @@ figcaption {
   width: 1200px;
   margin: 0 auto;
   padding: 0px 27px;
-  border: 1px solid red;
   position: relative;
   z-index: 300;
   box-sizing: border-box;
+  /*border: 1px solid green; /*убрать после*/
 }
 
 .catalog-item {
   position: relative;
   padding: 1px;
-  padding-top: 5px;
+  /*padding-top: 5px;*/
   margin-left: 26px;
-  box-sizing: border-box;
-  min-width: 270px;
+  min-width: 269px;
   min-height: 330px;
+  box-sizing: border-box;
+  /*border: 1px solid blue; /*убрать после*/
 }
 .catalog-item:first-child {
   margin-left: 0px;
 }
+.hit::before { /*псевдоэлемент для добавления кружка хит к любой карточке товара*/
+  /*border: 1px solid green;*/
+  content: "";
+  margin: 0;
+  padding: 1px;
+  width: 61px;
+  height: 61px;
+  box-sizing: border-box;
+  background: url('../img/hit-card.svg') no-repeat top center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 21;
+}
+
 .ice {
   padding: 0;
   margin: 0;
@@ -735,10 +752,10 @@ figcaption {
   letter-spacing: normal;
   text-align: left;
   color: #ffffff;
+  box-sizing: border-box;
   padding: 1px;
   margin: 0;
   margin-top: -80px;
-  box-sizing: border-box;
 }
 .cost1 span {
   text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
@@ -760,6 +777,7 @@ figcaption {
   line-height: 1.38;
   text-align: center;
   color: #ffffff;
+  text-decoration: none;
   padding: 1px;
   margin: 0;
   margin-top: 35px;
@@ -775,11 +793,11 @@ figcaption {
 .back_screen {
   display: none;
   position: absolute;
-  top: 0px;
+  top: -7px;
   left: -13px;
   z-index: 5;
   width: 295px;
-  min-height: 410px;
+  min-height: 416px;
   padding: 1px;
   box-sizing: border-box;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
@@ -788,7 +806,7 @@ figcaption {
 .fast_screen {
   display: inline-block;
   margin: 0;
-  margin-top: 345px;
+  margin-top: 339px;
   margin-left: 45px;
   padding: 13px 17px;
   text-decoration: none;
@@ -825,13 +843,13 @@ figcaption {
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
-  width: 1200px;
-  margin: 60px auto;
-  padding: 0px 27px;
-  border: 1px solid red; /*убрать после*/
+  width: 1150px; /*1146*/
+  height: 306px;
+  margin: 20px auto;
+  padding: 0px 20px;
+ /* border: 1px solid red; /*убрать после*/
   position: relative;
-   z-index: 250;
-  /*top: -480px;*/
+  z-index: 250;
   color: #323232;
   box-sizing: border-box;
   background: #849d8f url('../img/wafer.png') no-repeat center center;
@@ -839,9 +857,15 @@ figcaption {
 }
 
 .shop {
+  display: inline-block;
   position: relative;
-  top: 29px;
-  left: 21px;
+  min-height: 56px;
+  margin: 28px 0px;
+  margin-bottom: 10px;
+  padding: 1px;
+
+  /*border: 1px solid brown;*/
+
   font-size: 24px;
   font-weight: 500;
   line-height: 1.25;
@@ -859,19 +883,16 @@ figcaption {
 }.icondelivery {
   background: url('../img/delivery.png') no-repeat top center;
 }
-.text-advantage {
-  line-height: 1.38;
-  border: 1px solid green;
-}
 
 .advantage {
   list-style: none;
-  margin: 5px 7px 0px 21px;
-  padding: 0;
-  min-width: 1040px;
-  min-height: 250px;
-  border: 1px solid orange;
-
+  margin: 0;
+  margin-top: -5px;
+  padding: 1px;
+  padding-bottom: 0;
+  width: 1100px;
+  min-height: 160px;
+  /*border: 1px solid orange;*/
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -881,17 +902,18 @@ figcaption {
 }
 
 .advantage li {
-  border: 1px solid blue;
-  min-height: 50px;
-  width:  550px;
-  margin: 0;
-  padding: 0;
-
   display: flex;
   flex-wrap: nowrap;
   align-items: baseline;
   justify-content: center;
   position: relative;
+
+  /*border: 1px solid blue;*/
+  width: 544px;
+  min-height: 77px;
+  margin: 0;
+  padding: 1px;
+  padding-left: 0;
   box-sizing: border-box;
 }
 
@@ -902,16 +924,25 @@ figcaption {
   width: 49px;
   height: 49px;
   position: relative;
-  border: 1px solid green;
+  /*border: 1px solid green;*/
 }
 .text-advantage {
   position: relative;
-  top: -15px;
+  top: -20px;
   margin: 0;
-  padding: 0;
-  width: 485px;
+  width: 488px;
+  min-height: 62px;
+  padding: 1px;
+  padding-left: 0;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 1.38;
+  font-weight: normal;
+  color: #323232;
+  box-sizing: border-box;
+  /*border: 1px solid green;*/
 }
 .advantage-delivery, .advantage-ferm {
   align-self: flex-start;
-  top: -15px;
+  top: -12px;
 }
