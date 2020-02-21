@@ -629,7 +629,6 @@ figcaption {
   padding: 41px 27px;
   /*border: 1px solid green; /*убрать после*/
   position: relative;
-  /*top: -465px; */
   box-sizing: border-box;
 }
 .view {
@@ -644,7 +643,7 @@ figcaption {
   text-align: left;
   line-height: 1.22;
   font-weight: bold;
-  /*border: 1px solid green; /*убрать после*/
+  border: 1px solid green; /*убрать после*/
 }
 .raspberries {
   margin-left: 0px;
@@ -657,7 +656,7 @@ figcaption {
   background-size: cover;
 }
 
-.view a {
+.view .view_promo {
   display: inline-block;
   position: relative;
   left: 318px;
@@ -676,12 +675,12 @@ figcaption {
   font-weight: bold;
   font-size: 18px;
 }
-.choco a {left: 297px;}
-.view a:hover {
+.choco .view_promo {left: 297px;}
+.view .view_promo:hover {
   box-shadow: 0px 2px 2px 0 #ac1000;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(to top, #e74a35, #f26843);
 }
-.view a:active {
+.view .view_promo:active {
   outline: none;
   box-shadow: inset 0px 2px 2px 0 #942718;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to top, #e74a35, #f26843);
@@ -784,7 +783,7 @@ figcaption {
   box-sizing: border-box;
 }
 .under {
-  background-image: linear-gradient(to bottom,  rgba(229,229,229, 0.2) 50%, transparent 50%);
+  background-image: linear-gradient(to bottom, rgba(229,229,229, 0.2) 50%, transparent 50%);
   background-position: 0px 18px;
   background-repeat: repeat-x;
   background-size: 1px 5px;
@@ -945,4 +944,94 @@ figcaption {
 .advantage-delivery, .advantage-ferm {
   align-self: flex-start;
   top: -12px;
+}
+
+/* Секция блога и формы почтовой рассылки */
+
+.blog-subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1200px;
+  margin: 0px auto;
+  margin-top: -20px;
+  padding: 41px 27px;
+  border: 1px solid green; /*убрать после*/
+  position: relative;
+  box-sizing: border-box;
+}
+.blog {
+  margin-left: 0px;
+  background: #dc143c url('../img/strawberry.png') no-repeat top center;
+  background-size: cover;
+  color: #323232;
+}
+.blog p {
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 1.38;
+  font-weight: normal;
+}
+.blog a {
+  display:  inline-block;
+  text-decoration: none;
+  color: #323232;
+  width: 280px;
+  min-height: 120px;
+
+
+  border: 1px solid orange;
+}
+.line_blog {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, transparent 50%);
+  background-position: left 0px bottom -2px;
+  background-repeat: repeat-x;
+  background-size: 1px 4px;
+}
+
+.subscribe {
+  background: url('../img/post-back.png') no-repeat top center;
+  background-size: cover;
+  color: #323232;
+}
+.subscribe input[type="email"] {
+  min-width: 341px;
+  min-height: 44px; /*высота поля*/
+  padding: 15px; /*размеры поля*/
+  color: #999999;
+  line-height: 1.71px;
+  font-size: 14px;
+  border: 5px solid #f8f7f4; /*внешняя рамка*/
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+.subscribe button {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 23px;
+  padding: 14px 41px;
+  text-decoration: none;
+  border-radius: 50px;
+  background-image: linear-gradient(to top, #e74a35, #f26843);
+  box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
+  border: none;
+  color: #ffffff;
+  opacity: 0.99;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.33;
+  font-weight: bold;
+  font-size: 18px;
+}
+.subscribe button:hover {
+  box-shadow: 0px 2px 2px 0 #ac1000;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(to top, #e74a35, #f26843);
+}
+.subscribe button:active {
+  outline: none;
+  box-shadow: inset 0px 2px 2px 0 #942718;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to top, #e74a35, #f26843);
 }
