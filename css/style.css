@@ -643,7 +643,8 @@ figcaption {
   text-align: left;
   line-height: 1.22;
   font-weight: bold;
-  border: 1px solid green; /*убрать после*/
+  background-color: #f8f7f4;
+  /*border: 1px solid green; /*убрать после*/
 }
 .raspberries {
   margin-left: 0px;
@@ -956,31 +957,48 @@ figcaption {
   margin: 0px auto;
   margin-top: -20px;
   padding: 41px 27px;
-  border: 1px solid green; /*убрать после*/
+  /*border: 1px solid green; /*убрать после*/
   position: relative;
   box-sizing: border-box;
 }
 .blog {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   margin-left: 0px;
   background: #dc143c url('../img/strawberry.png') no-repeat top center;
   background-size: cover;
   color: #323232;
 }
 .blog p {
+  display:  inline-block;
+  margin: 0;
+  padding: 1px;
+  margin-top: 22px;
+  width: 165px;
+  min-height: 18px;
   font-family: Roboto;
   font-size: 16px;
   line-height: 1.38;
-  font-weight: normal;
+  font-weight: 500;
+  box-sizing: border-box;
 }
 .blog a {
   display:  inline-block;
+  margin: 0;
+  padding: 1px;
+  margin-top: 3px;
   text-decoration: none;
   color: #323232;
-  width: 280px;
-  min-height: 120px;
-
-
-  border: 1px solid orange;
+  width: 285px;
+  min-height: 84px;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: #323232;
+  box-sizing: border-box;
 }
 .line_blog {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, transparent 50%);
@@ -990,29 +1008,55 @@ figcaption {
 }
 
 .subscribe {
-  background: url('../img/post-back.png') no-repeat top center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #f8f7f4;
   background-size: cover;
-  color: #323232;
+  border: 6px solid #f8f7f4;
+  border-radius: 10px;
+  border-image-source: url('../img/post-back.png');
+  border-image-slice: 6;
+  border-image-repeat: round;
+  background-clip: padding-box;
+  background-origin: border-box;
+}
+.subscribe p {
+  display:  inline-block;
+  margin: 0;
+  padding: 1px;
+  margin-top: 33px;
+  width: 512px;
+  min-height: 63px;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 1.38;
+  font-weight: normal;
+  color: #5a5a5a;
+  box-sizing: border-box;
 }
 .subscribe input[type="email"] {
-  min-width: 341px;
-  min-height: 44px; /*высота поля*/
-  padding: 15px; /*размеры поля*/
+  margin: 0;
+  margin-top: 38px;
+  min-width: 368px;
+  height: 40px; /*высота поля*/
+  padding: 14px; /*размеры поля*/
   color: #999999;
-  line-height: 1.71px;
-  font-size: 14px;
-  border: 5px solid #f8f7f4; /*внешняя рамка*/
+  line-height: 1.5;
+  font-size: 16px;
+  border: 1px solid rgba(178, 178, 178, 0.52); /*внешняя рамка*/
   background-color: #ffffff;
   border-radius: 5px;
-  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   box-sizing: border-box;
 }
 
 .subscribe button {
   display: inline-block;
-  position: relative;
-  margin-bottom: 23px;
-  padding: 14px 41px;
+  margin: 0;
+  margin-top: 38px;
+  min-width: 129px;
+  min-height: 44px;
+  padding: 13px 19px;
   text-decoration: none;
   border-radius: 50px;
   background-image: linear-gradient(to top, #e74a35, #f26843);
@@ -1021,10 +1065,10 @@ figcaption {
   color: #ffffff;
   opacity: 0.99;
   text-align: left;
-  vertical-align: top;
   line-height: 1.33;
   font-weight: bold;
   font-size: 18px;
+  box-sizing: border-box;
 }
 .subscribe button:hover {
   box-shadow: 0px 2px 2px 0 #ac1000;
@@ -1035,3 +1079,110 @@ figcaption {
   box-shadow: inset 0px 2px 2px 0 #942718;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to top, #e74a35, #f26843);
 }
+
+/*изображения карты и блока адреса
+ с кнопкой "Форма обратной связи" */
+
+.map {
+  width: 1200px;
+  height: 430px;
+  margin: 0px auto;
+  padding: 0;
+  box-sizing: border-box;
+  background: #849d8f url('../img/map.jpg') no-repeat top center;
+  box-sizing: border-box;
+  position: relative;
+}
+.map iframe {
+  position: absolute;
+  z-index: 2;
+}
+.feedback {
+  display: inline-block;
+  position: absolute;
+  z-index: 200;
+  color: #323232;
+  width: 302px;
+  height: 305px;
+  margin: 0;
+  margin-left: 871px;
+  margin-top: 63px;
+  padding: 0px;
+  padding-top: 30px;
+  padding-left: 25px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+.address, .order, .time {
+  width: 152px;
+  min-height: 34px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 1.43;
+}
+.bold, .phone {
+  width: 230px;
+  min-height: 41px;
+  margin: 0;
+  padding: 1px;
+  box-sizing: border-box;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.33;
+}
+.order {
+  width: 180px;
+  min-height: 14px;
+  margin-top: 17px;
+}
+.phone {
+  display: inline-block;
+  min-height: 23px;
+  margin-top: 4px;
+  text-decoration: none;
+  color: #323232;
+}
+.time {
+  width: 160px;
+  min-height: 14px;
+  margin-top: 1px;
+}
+.modal_form {
+  display: inline-block;
+  width: 252px;
+  min-height: 44px;
+  margin: 0 auto;
+  margin-top: 24px;
+  padding: 13px 28px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #fefefe;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 50px;
+  box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
+  background-image: linear-gradient(to top, #e74a35, #f26843);
+}
+.modal_form:hover {
+  box-shadow: 0px 2px 2px 0 #ac1000;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(to top, #e74a35, #f26843);
+}
+.modal_form:active {
+  outline: none;
+  box-shadow: inset 0px 2px 2px 0 #942718;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to top, #e74a35, #f26843);
+}
+.pin {
+  position: absolute;
+  top: 160px;
+  left: 325px;
+  width: 80px;
+  height: 140px;
+  z-index: 100;
+  background-image: url('../img/ice-cream-cone.svg');
+  font-size: 0;
+}
+

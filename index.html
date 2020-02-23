@@ -234,25 +234,20 @@
     </section>
 
     <!-- Контейнер для изображения карты и блока адреса с кнопкой "Форма обратной связи" -->
-    <div class="map">
-      <article>
-        <p>Адрес главного офиса и оф-лайн магазина:</p>
-        <p><b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
-        <p>Для заказов по телефону:</p>
-        <a href="tel:88124502525"><b>8 812 450-25-25</b></a>
-        <p>(с 10 до 20 ежедневно)</p>
-        <a href="#">Форма обратной связи</a>
-      </article>
-        <!-- Форма при нажатии на "Форма обратной связи" внутри дива или нет? -->
-        <form action="#" method="post" name="form-post" class="form-post">
-          <p>Мы обязательно вам ответим!</p>
-          <input type="text" name="name">
-          <input type="email" placeholder="email@example.com" name="e-mail" required>
-          <textarea name="information" placeholder="В свободной форме" rows="10"></textarea>
-          <button type="submit" value="Отправить">Отправить</button>
-          <button type="image" class="close"></button>
-        </form>
-    </div>
+    <section class="map">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A116ee1e9c4e5fed8ddabddb279cfa304176cb1557b112b4a71785a8ce3a7b751&amp;source=constructor" width="1200" height="430">
+      </iframe>
+      </iframe>
+      <div class="pin"></div>
+      <div class="feedback">
+        <p class="address">Адрес главного офиса и оф-лайн магазина:</p>
+        <p class="bold">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+        <p class="order">Для заказов по телефону:</p>
+        <a href="tel:88124502525" class="phone">8 812 450-25-25</a>
+        <p class="time">(с 10 до 20 ежедневно)</p>
+        <a href="javascript: void(0)" class="modal_form">Форма обратной связи</a>
+      </div>
+    </section>
 
 
         <div class="footer">
@@ -283,6 +278,18 @@
             Сделано в <a href="https://htmlacademy.ru" title="Переход на страницу HTML Academy">HTML Academy</a> © 2019
           </div>
         </div>
+
+      <!-- Форма при нажатии на "Форма обратной связи" -->
+      <section class="modal modal-form">
+        <form action="#" method="post" name="form-post" class="form-post">
+          <p>Мы обязательно вам ответим!</p>
+          <input type="text" name="name">
+          <input type="email" placeholder="email@example.com" name="e-mail" required>
+          <textarea name="information" placeholder="В свободной форме" rows="10"></textarea>
+          <button type="submit" value="Отправить">Отправить</button>
+          <button type="image" class="close"></button>
+        </form>
+      </section>
     </div>
   </body>
 </html>
