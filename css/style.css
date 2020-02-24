@@ -1185,4 +1185,106 @@ figcaption {
   background-image: url('../img/ice-cream-cone.svg');
   font-size: 0;
 }
+ /*Подвал*/
+.footer {
+  display:  flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1200px;
+  margin: 0px auto;
+  padding: 37px 27px 31px 27px;
+  border: 1px solid green; /*убрать после*/
+  box-sizing: border-box;
+}
 
+.footer-top-social {
+  border: 1px solid green; /*убрать после*/
+
+  width: 187px; /*185 поставить*/
+  font-size: 0;
+  box-sizing: border-box;
+}
+.social {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  margin-right: 11px;
+  text-align: left;
+  vertical-align: middle;
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+}
+.twit {
+  background: #849d8f url('../img/twitter.png') no-repeat;
+  background-position: -1px -1px;
+}
+.insta {
+  background: #849d8f url('../img/insta.png') no-repeat;
+  background-position: -1px -1px;
+}
+.facebook {
+  background: #849d8f url('../img/facebook.png') no-repeat;
+  background-position: -1px -1px;
+}
+.vkontakte {
+  background: #849d8f url('../img/vkontakte.png') no-repeat;
+  background-position: -1px -1px;
+  margin-right: 0px;
+}
+
+.footer-middle {
+  border: 1px solid green; /*убрать после*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+}
+.footer-menu ul {
+  list-style: none;
+  margin: 0;
+  margin-right: 32px;
+  padding: 0;
+  min-height: 37px;
+}
+.footer-menu ul:first-child {
+  padding-left: 22px;
+}
+.footer-menu ul:last-child {
+  margin-right: 0px;
+}
+.footer-menu li {
+  margin: 0;
+  padding: 0;
+}
+.footer-menu a {
+  text-decoration: none;
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 1.38;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+.big {
+  font-weight: bold;
+}
+
+
+.under {
+  background-image: linear-gradient(to bottom, rgba(229,229,229, 0.2) 50%, transparent 50%);
+  background-position: 0px 18px;
+  background-repeat: repeat-x;
+  background-size: 1px 5px;
+}
+
+
+
+
+.footer-bottom {
+  border: 1px solid green; /*убрать после*/
+}
