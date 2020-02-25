@@ -1198,7 +1198,7 @@ figcaption {
 }
 
 .footer-top-social {
-  border: 1px solid green; /*убрать после*/
+  /*border: 1px solid green; /*убрать после*/
 
   width: 187px; /*185 поставить*/
   font-size: 0;
@@ -1218,49 +1218,56 @@ figcaption {
 }
 .twit {
   background: #849d8f url('../img/twitter.png') no-repeat;
-  background-position: -1px -1px;
+  background-position: -1px 0px;
 }
 .insta {
   background: #849d8f url('../img/insta.png') no-repeat;
-  background-position: -1px -1px;
+  background-position: -1px 0px;
 }
 .facebook {
   background: #849d8f url('../img/facebook.png') no-repeat;
-  background-position: -1px -1px;
+  background-position: -1px 0px;
 }
 .vkontakte {
   background: #849d8f url('../img/vkontakte.png') no-repeat;
-  background-position: -1px -1px;
+  background-position: -1px 0px;
   margin-right: 0px;
 }
 
 .footer-middle {
-  border: 1px solid green; /*убрать после*/
+  /*border: 1px solid green; /*убрать после*/
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0;
-  padding: 0;
+  padding: 1px;
+  box-sizing: border-box;
 
 }
 .footer-menu ul {
   list-style: none;
   margin: 0;
-  margin-right: 32px;
-  padding: 0;
-  min-height: 37px;
+  padding: 1px;
+  box-sizing: border-box;
 }
-.footer-menu ul:first-child {
-  padding-left: 22px;
+.footer-menu:first-child ul {
+  padding-left: 25px;
+  background: url('../img/heart.png') no-repeat;
+  background-position: 6px 6px;
 }
-.footer-menu ul:last-child {
+.footer-menu:last-child ul {
   margin-right: 0px;
+}
+.footer-menu:first-child ul {
+  margin-right: 32px;
 }
 .footer-menu li {
   margin: 0;
-  padding: 0;
+  padding: 1px;
+  box-sizing: border-box;
 }
 .footer-menu a {
+  display: inline-block;
   text-decoration: none;
   font-family: Roboto;
   font-weight: normal;
@@ -1268,23 +1275,88 @@ figcaption {
   line-height: 1.38;
   color: #ffffff;
   margin: 0;
-  padding: 0;
+  padding: 1px;
+  min-height: 14px;
+  box-sizing: border-box;
+
+  /*border: 1px solid blue; /* убрать*/
 }
 .big {
   font-weight: bold;
 }
-
-
-.under {
+.line {
   background-image: linear-gradient(to bottom, rgba(229,229,229, 0.2) 50%, transparent 50%);
-  background-position: 0px 18px;
+  background-position: 0px 14px;  /*0px 18px*/
   background-repeat: repeat-x;
-  background-size: 1px 5px;
+  background-size: 1px 15px; /*1px 5px*/
 }
 
 
-
-
 .footer-bottom {
-  border: 1px solid green; /*убрать после*/
+  /*border: 1px solid green; /*убрать после*/
+  text-decoration: none;
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 1.38;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+  margin-top: 25px;
+  padding: 1px;
+  min-height: 13px;
+}
+.footer-bottom a {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0;
+  padding: 1px;
+}
+.footer-bottom img {
+  position: absolute;
+  top: -45px;
+}
+.small {
+  background-image: linear-gradient(to bottom, rgba(229,229,229, 0.2) 50%, transparent 50%);
+  background-position: 0px 12px;  /*0px 18px*/
+  background-repeat: repeat-x;
+  background-size: 1px 5px; /*1px 5px*/
+}
+
+/*Форма при нажатии на "Форма обратной связи"*/
+
+.modal-form  {
+  display:  ;
+  position: relative;
+  width: 277px;
+  min-height: 214px;
+
+  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+  padding: 19px; /*внешний отступ от края формы до поля ввода*/
+  padding-top: 20px;
+  border-top: 3px solid #849d8f;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="email"], input[type="password"] {
+  width: 241px;
+  min-height: 44px; /*высота поля*/
+  margin-bottom: 20px;
+  padding: 1px 15px;
+  color: #999999;
+  line-height: 1.71;
+  font-size: 14px;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  outline: none; /*внешняя рамка*/
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+input[type="email"]:hover, input[type="password"]:hover {
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
+input[type="email"]:focus, input[type="password"]:focus {
+  border: 2px solid rgba(46, 136, 228, 0.52);
 }
