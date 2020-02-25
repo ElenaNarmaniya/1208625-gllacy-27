@@ -245,7 +245,7 @@
         <p class="order">Для заказов по телефону:</p>
         <a href="tel:88124502525" class="phone">8 812 450-25-25</a>
         <p class="time">(с 10 до 20 ежедневно)</p>
-        <a href="javascript: void(0)" class="modal_form">Форма обратной связи</a>
+        <a href="javascript: void(0)" class="back_form">Форма обратной связи</a>
       </div>
     </section>
 
@@ -289,15 +289,80 @@
 
       <!-- Форма при нажатии на "Форма обратной связи"-->
     <section class="modal-form">
+      <p>Мы обязательно вам ответим!</p>
       <form action="#" method="post" name="form-post" class="form-post">
-        <p>Мы обязательно вам ответим!</p>
-        <input type="text" name="name">
-        <input type="email" placeholder="email@example.com" name="e-mail" required>
-        <textarea name="information" placeholder="В свободной форме" rows="10"></textarea>
-        <button type="submit" value="Отправить">Отправить</button>
-        <button type="image" class="close"></button>
+        <input type="text" name="Name" placeholder="Имя Фамилия">
+        <input type="email" placeholder="email@example.com" name="Email" required>
+        <textarea name="information" placeholder="В свободной форме" rows="1"></textarea>
+        <button type="submit" value="Отправить" class="btn-form">Отправить</button>
+        <button type="image" class="clform"></button>
       </form>
     </section>
     </div>
+
+  <script>
+    var link = document.querySelector(".back_form");
+    var popup = document.querySelector(".modal-form");
+    var close = popup.querySelector(".clform");
+    var login = popup.querySelector("[name=Name]");
+    var email = popup.querySelector("[name=Email]");
+    var form = popup.querySelector("form");
+
+    var isStorageSupport = true;
+    var storage = "";
+    try {
+    storage = localStorage.getItem("Name");
+    storage = localStorage.getItem("Email");
+    } catch (err) {
+    isStorageSupport = false;
+    }
+
+
+    link.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.add("modal-show");
+      if (storage) {
+      login.value = storage;
+      email.focus();
+      } else {
+        login.focus();
+      }
+
+      login.focus();
+      });
+
+      close.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.remove("modal-show");
+    });
+
+      form.addEventListener("submit", function (evt) {
+    evt.preventDefault();
+  });
+
+    form.addEventListener("submit", function (evt) {
+      if (!login.value || !email.value) {
+      evt.preventDefault();
+      console.log("Нужно ввести имя и фамилию, адрес электронной почты");
+      } else {
+        if (isStorageSupport) {
+      localStorage.setItem("Name", login.value);
+      localStorage.setItem("Email", email.value); }
+    }
+    });
+
+    window.addEventListener("keydown", function (evt) {
+      if (evt.keyCode === 27) {
+      evt.preventDefault();
+        if (popup.classList.contains("modal-show")) {
+        popup.classList.remove("modal-show");
+        }
+      }
+    });
+
+
+
+  </script>
+
   </body>
 </html>

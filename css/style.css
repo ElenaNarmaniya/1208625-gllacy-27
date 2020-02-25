@@ -438,6 +438,7 @@ td {
 .close {
   background: url('../img/close.png') no-repeat center center;
   background-size: 11px 11px;
+  cursor: pointer;
 }
 .image {
   background: url('../img/1.png') no-repeat center center;
@@ -1049,8 +1050,13 @@ figcaption {
   border-radius: 5px;
   box-sizing: border-box;
 }
-
-.subscribe button {
+.subscribe input[type="email"]:hover {
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
+.subscribe input[type="email"]:focus {
+  border: 2px solid rgba(46, 136, 228, 0.52);
+}
+.subscribe button, .btn-form {
   display: inline-block;
   margin: 0;
   margin-top: 38px;
@@ -1070,11 +1076,11 @@ figcaption {
   font-size: 18px;
   box-sizing: border-box;
 }
-.subscribe button:hover {
+.subscribe button:hover, .btn-form:hover {
   box-shadow: 0px 2px 2px 0 #ac1000;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(to top, #e74a35, #f26843);
 }
-.subscribe button:active {
+.subscribe button:active, .btn-form:active {
   outline: none;
   box-shadow: inset 0px 2px 2px 0 #942718;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to top, #e74a35, #f26843);
@@ -1150,7 +1156,7 @@ figcaption {
   min-height: 14px;
   margin-top: 1px;
 }
-.modal_form {
+.back_form {
   display: inline-block;
   width: 252px;
   min-height: 44px;
@@ -1166,11 +1172,11 @@ figcaption {
   box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
   background-image: linear-gradient(to top, #e74a35, #f26843);
 }
-.modal_form:hover {
+.back_form:hover {
   box-shadow: 0px 2px 2px 0 #ac1000;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(to top, #e74a35, #f26843);
 }
-.modal_form:active {
+.back_form:active {
   outline: none;
   box-shadow: inset 0px 2px 2px 0 #942718;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to top, #e74a35, #f26843);
@@ -1192,8 +1198,8 @@ figcaption {
   justify-content: space-between;
   width: 1200px;
   margin: 0px auto;
-  padding: 37px 27px 31px 27px;
-  border: 1px solid green; /*убрать после*/
+  padding: 32px 27px 29px 27px;
+  /*border: 1px solid green; /*убрать после*/
   box-sizing: border-box;
 }
 
@@ -1297,14 +1303,14 @@ figcaption {
   text-decoration: none;
   font-family: Roboto;
   font-weight: normal;
-  font-size: 11px;
-  line-height: 1.38;
+  font-size: 12px;
+  line-height: 1.5;
   box-sizing: border-box;
   position: relative;
   margin: 0;
   margin-top: 25px;
   padding: 1px;
-  min-height: 13px;
+  min-height: 12px;
 }
 .footer-bottom a {
   text-decoration: none;
@@ -1314,49 +1320,79 @@ figcaption {
 }
 .footer-bottom img {
   position: absolute;
-  top: -45px;
+  top: -40px;
 }
 .small {
   background-image: linear-gradient(to bottom, rgba(229,229,229, 0.2) 50%, transparent 50%);
-  background-position: 0px 12px;  /*0px 18px*/
+  background-position: 0px 13px;  /*0px 18px*/
   background-repeat: repeat-x;
-  background-size: 1px 5px; /*1px 5px*/
+  background-size: 1px 2px; /*1px 5px*/
 }
 
 /*Форма при нажатии на "Форма обратной связи"*/
 
 .modal-form  {
-  display:  ;
+  display:  none;
+  position: fixed;
+  margin: 0;
   position: relative;
-  width: 277px;
-  min-height: 214px;
-
-  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  left: 480px;
+  bottom: 2135px;
+  width: 478px;
+  min-height: 443px;
+  border-radius: 10px;
   background-color: #f8f7f4;
-  padding: 19px; /*внешний отступ от края формы до поля ввода*/
-  padding-top: 20px;
-  border-top: 3px solid #849d8f;
-  border-radius: 5px;
+  padding: 20px 26px 16px 24px; /*внешний отступ от края формы до поля ввода*/
   box-sizing: border-box;
 }
-
-input[type="email"], input[type="password"] {
-  width: 241px;
-  min-height: 44px; /*высота поля*/
-  margin-bottom: 20px;
-  padding: 1px 15px;
+.modal-form p {
+  margin: 0;
+  margin-top: -3px;
+  font-size: 24px;
+  line-height: 1.17;
+  font-weight: 500;
+  color: #323232;
+}
+.modal-form input[type="email"], .modal-form input[type="text"], .modal-form textarea {
+  width: 267px;
+  height: 44px; /*высота поля*/
+  margin-top: 20px;
+  padding: 15px;
   color: #999999;
-  line-height: 1.71;
-  font-size: 14px;
+  line-height: 1.5;
+  font-size: 16px;
   border: 1px solid rgba(178, 178, 178, 0.52);
   outline: none; /*внешняя рамка*/
   background-color: #ffffff;
   border-radius: 5px;
   box-sizing: border-box;
 }
-input[type="email"]:hover, input[type="password"]:hover {
+.form-post input[type="email"]:hover, input[type="text"]:hover, .modal-form textarea:hover {
   border: 2px solid rgba(154, 154, 154, 0.52);
 }
-input[type="email"]:focus, input[type="password"]:focus {
+.form-post input[type="email"]:focus, input[type="text"]:focus, .modal-form textarea:focus {
   border: 2px solid rgba(46, 136, 228, 0.52);
+}
+.modal-form textarea {
+  width: 428px;
+  min-height: 155px; /*высота поля*/
+  margin: 0;
+}
+.btn-form {
+  margin: 0;
+  margin-top: 23px;
+  margin-left: 300px;
+}
+.clform {
+  border: none;
+  background: #f8f7f4 url('../img/close.png') no-repeat;
+  width: 18px;
+  height: 17px;
+  position: absolute;
+  top: 17px;
+  left: 445px;
+  cursor: pointer;
+}
+.modal-show {
+  display: inline-block;
 }
