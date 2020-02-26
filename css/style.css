@@ -840,16 +840,16 @@ figcaption {
 /* секция преимуществ*/
 
 .advantage-wrapper {
-  display: flex;
+  display:  flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
-  width: 1150px; /*1146*/
-  height: 306px;
+  position:  relative;
   margin: 20px auto;
-  padding: 0px 20px;
- /* border: 1px solid red; /*убрать после*/
-  position: relative;
+  padding: 0px 27px;
+  width: 1146px; /*1146*/
+  min-height: 306px;
+  border: 1px solid red; /*убрать после*/
   z-index: 250;
   color: #323232;
   box-sizing: border-box;
@@ -860,93 +860,21 @@ figcaption {
 .shop {
   display: inline-block;
   position: relative;
-  min-height: 56px;
+  min-height: 24px;
   margin: 28px 0px;
   margin-bottom: 10px;
   padding: 1px;
-
-  /*border: 1px solid brown;*/
-
+  border: 1px solid brown;
+  font-family: Roboto;
   font-size: 24px;
   font-weight: 500;
   line-height: 1.25;
   text-align: left;
+
 }
 
-.iconcream {
-  background: url('../img/cream-advantage.png') no-repeat top center;
-}
-.iconmilk {
-  background: url('../img/milk.png') no-repeat top center;
-}
-.iconferm {
-  background: url('../img/ferm.png') no-repeat top center;
-}.icondelivery {
-  background: url('../img/delivery.png') no-repeat top center;
-}
 
-.advantage {
-  list-style: none;
-  margin: 0;
-  margin-top: -5px;
-  padding: 1px;
-  padding-bottom: 0;
-  width: 1100px;
-  min-height: 160px;
-  /*border: 1px solid orange;*/
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  box-sizing: border-box;
-}
 
-.advantage li {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: baseline;
-  justify-content: center;
-  position: relative;
-
-  /*border: 1px solid blue;*/
-  width: 544px;
-  min-height: 77px;
-  margin: 0;
-  padding: 1px;
-  padding-left: 0;
-  box-sizing: border-box;
-}
-
-.icon {
-  padding: 0;
-  margin: 0px 3px;
-  margin-left: 0;
-  width: 49px;
-  height: 49px;
-  position: relative;
-  /*border: 1px solid green;*/
-}
-.text-advantage {
-  position: relative;
-  top: -20px;
-  margin: 0;
-  width: 488px;
-  min-height: 62px;
-  padding: 1px;
-  padding-left: 0;
-  font-family: Roboto;
-  font-size: 16px;
-  line-height: 1.38;
-  font-weight: normal;
-  color: #323232;
-  box-sizing: border-box;
-  /*border: 1px solid green;*/
-}
-.advantage-delivery, .advantage-ferm {
-  align-self: flex-start;
-  top: -12px;
-}
 
 /* Секция блога и формы почтовой рассылки */
 
@@ -1241,7 +1169,7 @@ figcaption {
 }
 
 .footer-middle {
-  /*border: 1px solid green; /*убрать после*/
+  border: 1px solid green; /*убрать после*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1285,7 +1213,7 @@ figcaption {
   min-height: 14px;
   box-sizing: border-box;
 
-  /*border: 1px solid blue; /* убрать*/
+  border: 1px solid blue; /* убрать*/
 }
 .big {
   font-weight: bold;
@@ -1336,7 +1264,7 @@ figcaption {
   position: fixed;
   margin: 0;
   position: relative;
-  left: 480px;
+  left: 40%;
   bottom: 2135px;
   width: 478px;
   min-height: 443px;
@@ -1382,6 +1310,7 @@ figcaption {
   margin: 0;
   margin-top: 23px;
   margin-left: 300px;
+  outline:  none;
 }
 .clform {
   border: none;
@@ -1395,4 +1324,29 @@ figcaption {
 }
 .modal-show {
   display: inline-block;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+.modal-error {
+  animation: shake 0.6s;
 }

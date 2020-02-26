@@ -199,20 +199,16 @@
       <p class="shop">Магазин Глейси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
       <ul class="advantage">
         <li class="advantage-techology">
-          <div class="icon iconcream"></div>
-          <p class="text-advantage">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+          <p class="text-advantage iconcream">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
         </li>
         <li class="advantage-milk">
-          <div class="icon iconmilk"></div>
-          <p class="text-advantage">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+          <p class="text-advantage iconmilk">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
         </li>
         <li class="advantage-ferm">
-          <div class="icon iconferm"></div>
-          <p class="text-advantage">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+          <p class="text-advantage iconferm">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
         </li>
         <li class="advantage-delivery">
-          <div class="icon icondelivery"></div>
-          <p class="text-advantage">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+          <p class="text-advantage icondelivery">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
         </li>
       </ul>
     </div>
@@ -304,36 +300,37 @@
     var link = document.querySelector(".back_form");
     var popup = document.querySelector(".modal-form");
     var close = popup.querySelector(".clform");
-    var login = popup.querySelector("[name=Name]");
+    var data = popup.querySelector("[name=Name]");
     var email = popup.querySelector("[name=Email]");
+    var text = popup.querySelector("[name=information]");
     var form = popup.querySelector("form");
 
     var isStorageSupport = true;
-    var storage = "";
+    var namestorage = "";
+    var emailstorage = "";
     try {
-    storage = localStorage.getItem("Name");
-    storage = localStorage.getItem("Email");
+    name_storage = localStorage.getItem("Name");
+    email_storage = localStorage.getItem("Email");
     } catch (err) {
     isStorageSupport = false;
     }
 
-
     link.addEventListener("click", function (evt) {
       evt.preventDefault();
       popup.classList.add("modal-show");
-      if (storage) {
-      login.value = storage;
-      email.focus();
+      if ((namestorage==true) && (emailstorage==true)) {
+      data.value = namestorage;
+      email.value = emailstorage;
+      text.focus();
       } else {
-        login.focus();
-      }
-
-      login.focus();
-      });
+          data.focus();
+        }
+    });
 
       close.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.remove("modal-show");
+    popup.classList.remove("modal-error");
     });
 
       form.addEventListener("submit", function (evt) {
@@ -341,13 +338,17 @@
   });
 
     form.addEventListener("submit", function (evt) {
-      if (!login.value || !email.value) {
+      if (!data.value || !email.value || !text.value) {
       evt.preventDefault();
-      console.log("Нужно ввести имя и фамилию, адрес электронной почты");
+      popup.classList.remove("modal-error");
+      popup.offsetWidth = popup.offsetWidth;
+      popup.classList.add("modal-error");
+      console.log("Необходимо заполнить все поля формы");
       } else {
         if (isStorageSupport) {
-      localStorage.setItem("Name", login.value);
-      localStorage.setItem("Email", email.value); }
+      localStorage.setItem("Name", data.value);
+      localStorage.setItem("Email", email.value);
+       }
     }
     });
 
@@ -356,11 +357,10 @@
       evt.preventDefault();
         if (popup.classList.contains("modal-show")) {
         popup.classList.remove("modal-show");
+        popup.classList.remove("modal-error");
         }
       }
     });
-
-
 
   </script>
 
