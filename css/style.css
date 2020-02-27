@@ -53,13 +53,10 @@ body { /*обнуляем внешние и внутренние отступы 
   margin-left: 13px; /*отступ блока навигации от логотипа*/
   padding: 1px;
   box-sizing: border-box;
-  /*position: relative;
-  left: -200px;*/
 }
 .main-nav {
   list-style: none;
   margin: 0;
-  /*margin-left: 10px;*/
   padding: 0;
 }
 .main-nav > li {
@@ -93,7 +90,7 @@ body { /*обнуляем внешние и внутренние отступы 
 }
 .active {
   color: #ffffff;
-  background-color: red; /*!!!!!!!*/
+  background-color: #d07058;
   border-radius: 20px;
   font-weight: bold;
 }
@@ -144,20 +141,20 @@ body { /*обнуляем внешние и внутренние отступы 
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  /*position: relative;
-  /*left: -50px;*/
   min-width: 245px;
   min-height: 33px;
   margin: 0;
   padding: 1px;
   margin-left: 375px;
 }
+.cat {
+  margin-left: 358px;
+}
 
 /*СТИЛИ ДЛЯ КНОПКИ ПОИСКА*/
 .search-button {
   display: inline-block;
   position: relative;
-  /*top: 17px; */
   min-width: 33px;
   min-height: 33px;
   vertical-align: bottom;
@@ -229,8 +226,6 @@ body { /*обнуляем внешние и внутренние отступы 
   padding: 1px;
   margin-right: 5px;
   position: relative;
-  /*top: -67px;
-  left:  40px;*/
 }
 
 .entrance  {
@@ -355,8 +350,6 @@ button[type="submit"] { /*кнопка "Войти" в форме*/
   box-sizing: border-box;
   padding: 1px;
   margin-right: 0px;
-  /*top: -99px;
-  left: 142px;*/
 }
 .basket {
   color: #ffffff;
@@ -366,7 +359,6 @@ button[type="submit"] { /*кнопка "Войти" в форме*/
   border: none;
   line-height: 1.14;
   text-align: right;
-  vertical-align: top;
   font-weight: 500;
   font-size: 14px;
   display: inline-block;
@@ -376,7 +368,11 @@ button[type="submit"] { /*кнопка "Войти" в форме*/
   min-height: 33px;
   box-sizing: border-box;
 }
-
+.bas {
+  background-color: #ffffff;
+  color: #323232;
+  font-weight: 600;
+}
 .basket svg {
  position: relative;
  left: -5px;
@@ -499,6 +495,7 @@ tr:nth-child(2) {
   width: 1200px;
   box-sizing: border-box;
   margin: 0 auto;
+  margin-top: -30px;
   padding: 9px 27px;
   font-size: 14px;
   font-weight: bold;
@@ -522,7 +519,7 @@ tr:nth-child(2) {
 .promo {
   position: relative;
   margin: 0px auto;
-  margin-top: -175px;
+  margin-top: -145px;
   width: 1200px; /*наследуемая ширина*/
   min-height: 893px; /*высота секции*/
 }
@@ -1408,3 +1405,62 @@ figcaption {
 .modal-error {
   animation: shake 0.6s;
 }
+
+
+/*хлебные крошки*/
+.tosts {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  list-style: none;
+  width: 240px;
+  padding: 1px;
+  margin: 0;
+  margin-top: -30px;
+  margin-left: 70px;
+  min-height: 17px;
+  font-size: 14px;
+  line-height: 1.14;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 41;
+  /*border: 1px solid green; /*убрать после*/
+}
+.tosts li {
+  margin: 0;
+  padding: 0;
+  padding-right: 4px;
+  box-sizing: border-box;
+}
+.linetosts {
+  background-image: linear-gradient(to bottom, rgba(229,229,229, 0.2) 50%, transparent 50%);
+  background-position: 0px 16px;
+  background-repeat: repeat-x;
+  background-size: 1px 3px;
+}
+.tosts a {
+  margin: 0;
+  padding: 2px;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.boldP {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 10px 0px;
+  font-family: Roboto;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 1.17;
+  box-sizing: border-box;
+}
+ /*Большой блок формы*/
+.form-menu {
+  border: 1px solid green; /*убрать после*/
+}
+
+/*1 Страница каталога мороженого*/
+
