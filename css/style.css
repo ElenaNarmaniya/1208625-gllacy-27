@@ -36,6 +36,15 @@ body { /*обнуляем внешние и внутренние отступы 
   width: 154px;
   height: 64px;
 }
+.logo {
+  display: inline-block;
+  width: 154px;
+  height: 64px;
+  margin: 0;
+  padding: 0;
+  text-decoration:  none;
+}
+
 /*СТИЛИ ДЛЯ МЕНЮ*/
 .navigation {
   min-width: 365px;
@@ -81,6 +90,12 @@ body { /*обнуляем внешние и внутренние отступы 
   background-color: #ededed;
   box-shadow: inset 0px 2px 1px 0 #696969;
   border-radius: 20px;
+}
+.active {
+  color: #ffffff;
+  background-color: red; /*!!!!!!!*/
+  border-radius: 20px;
+  font-weight: bold;
 }
 
 .main-nav .sub-menu {
