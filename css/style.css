@@ -148,7 +148,7 @@ body { /*обнуляем внешние и внутренние отступы 
   margin-left: 375px;
 }
 .cat {
-  margin-left: 358px;
+  margin-left: 360px;
 }
 
 /*СТИЛИ ДЛЯ КНОПКИ ПОИСКА*/
@@ -581,6 +581,10 @@ figcaption {
   cursor: pointer; /*вид курсора - рука*/
   transition: background-color 0.2s; /*время переключения со светлой на темную кнопку*/
 }
+.slider-controls label:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 .visually-hidden {display: none;} /*скрыли радио-кнопки*/
 
 #btn-1:checked ~ .gllacy-wrapper label[for="btn-1"],
@@ -701,6 +705,7 @@ figcaption {
 }
 
 /* каталог */
+
 .catalog {
   display: flex;
   align-items: center;
@@ -1422,7 +1427,8 @@ figcaption {
   font-size: 14px;
   line-height: 1.14;
   box-sizing: border-box;
-  position: relative;
+  position: absolute;
+  left: 278px;
   z-index: 41;
   /*border: 1px solid green; /*убрать после*/
 }
@@ -1456,6 +1462,7 @@ figcaption {
   font-weight: bold;
   line-height: 1.17;
   box-sizing: border-box;
+  position: relative;
 }
  /*Большой блок формы*/
 .form-menu {
@@ -1463,4 +1470,61 @@ figcaption {
 }
 
 /*1 Страница каталога мороженого*/
+.slider-catalog {
+  border: 1px solid blue;
+}
+.card-file-2 {
+  z-index: 290;
+  margin-top: 40px;
+}
+.card-file-3 {
+  z-index: 280;
+  margin-top: 40px;
+}
+
+/*переключатели*/
+.pagination-catalog {
+  border: 1px solid orange; /*убрать после*/
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 90px;
+  box-sizing: border-box;
+  padding: 0 27px;
+  list-style: none;
+}
+.pagination-catalog li {
+  margin: 0;
+  padding: 0;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.pagination-catalog a {
+  display: inline-block;
+  margin: 0;
+  padding: 2px;
+  text-decoration: none;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  color: #ffffff;
+}
+.pagination-catalog .first {
+  background-color: #ffffff;
+  color: #323232;
+}
+.pagination-catalog a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+.pagination-catalog a:active {
+  background-color: #ffffff;
+  color: #323232;
+}
 
