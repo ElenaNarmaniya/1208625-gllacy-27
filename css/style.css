@@ -1421,15 +1421,11 @@ figcaption {
   width: 240px;
   padding: 1px;
   margin: 0;
-  margin-top: -30px;
-  margin-left: 70px;
+  margin-top: -18px;
   min-height: 17px;
-  font-size: 14px;
-  line-height: 1.14;
   box-sizing: border-box;
-  position: absolute;
-  left: 278px;
-  z-index: 41;
+  position: relative;
+  left: -935px;
   /*border: 1px solid green; /*убрать после*/
 }
 .tosts li {
@@ -1450,19 +1446,23 @@ figcaption {
   text-decoration: none;
   box-sizing: border-box;
   color: #ffffff;
+  font-size: 14px;
+  line-height: 1.14;
 }
 
 .boldP {
   display: flex;
   width: 1200px;
   margin: 0 auto;
-  padding: 10px 0px;
+  margin-top: -7px;
+  padding: 1px;
   font-family: Roboto;
   font-size: 35px;
   font-weight: bold;
   line-height: 1.17;
+  min-height: 35px;
   box-sizing: border-box;
-  position: relative;
+  /*border: 1px solid green; /*убрать после*/
 }
  /*Большой блок формы*/
 .form-menu {
@@ -1471,7 +1471,13 @@ figcaption {
 
 /*1 Страница каталога мороженого*/
 .slider-catalog {
-  border: 1px solid blue;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /*  */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 27px;
 }
 .card-file-2 {
   z-index: 290;
@@ -1484,14 +1490,15 @@ figcaption {
 
 /*переключатели*/
 .pagination-catalog {
-  border: 1px solid orange; /*убрать после*/
+  /*border: 1px solid orange; /*убрать после*/
 
   display: flex;
   align-items: center;
   justify-content: flex-end;
   width: 1200px;
   margin: 0 auto;
-  margin-top: 90px;
+  margin-top: 80px;
+  margin-bottom: 30px;
   box-sizing: border-box;
   padding: 0 27px;
   list-style: none;
@@ -1499,32 +1506,195 @@ figcaption {
 .pagination-catalog li {
   margin: 0;
   padding: 0;
-  padding-right: 10px;
+  padding-right: 3px;
   box-sizing: border-box;
 }
 .pagination-catalog a {
   display: inline-block;
   margin: 0;
-  padding: 2px;
+  padding: 5px;
   text-decoration: none;
   box-sizing: border-box;
   text-align: center;
   cursor: pointer;
-  width: 21px;
-  height: 21px;
+  width: 27px;
+  height: 27px;
   border-radius: 50%;
   color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.13;
 }
 .pagination-catalog .first {
   background-color: #ffffff;
-  color: #323232;
+  color: #000000;
 }
-.pagination-catalog a:hover {
+.pagination-catalog a:hover:not(.prev):not(.next) {
   background-color: rgba(255, 255, 255, 0.2);
   color: #ffffff;
 }
-.pagination-catalog a:active {
+.pagination-catalog a:active:not(.prev):not(.next) {
   background-color: #ffffff;
+  color: #000000;
+}
+.pagination-catalog .prev {
+  margin-right: 8px;/*отступ блока со стрелкой от остальных блоков*/
+  text-indent: -3000px;/*отступ блока со стрелкой от остальных блоков*/
+  background-image: url("../img/icon-right-small.png");/*картинка стрелочки назад*/
+  background-repeat: no-repeat;/*без повторения*/
+  background-position: 5px 7px;/*координаты стреллчки назад*/
+  transform: rotate(180deg);
+}
+.pagination-catalog .disabled {opacity: 0.2;}
+.pagination-catalog .next {
+  margin-right: -22px;/*отступ блока со стрелкой от остальных блоков*/
+  text-indent: -3000px;/*отступ блока со стрелкой от остальных блоков*/
+  background-image: url("../img/icon-right-small.png");/*картинка стрелочки назад*/
+  background-repeat: no-repeat;/*без повторения*/
+  background-position: 5px 7px;/*координаты стреллчки назад*/
+}
+
+/*Большой блок формы*/
+.form-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.form-menu label, .form-menu legend {
+  display: inline-block;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+
+  /*border: 1px solid green;  /**/
+}
+  /*Блок сортировки select*/
+.sorting {
+  /*border: 1px solid orange; /*убрать после*/
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 194px;
+  height: 60px;
+  box-sizing: border-box;
+}
+.sorting label {
+  padding-left: 18px;
+  margin-bottom: 6px;
+}
+.sorting::after {
+  content: url('../img/icon-down-dir.png');
+  position: absolute;
+  right: 17px;
+  top: 32px;
+  z-index: 1;
+  text-align: center;
+  width: 10px;
+  height: 11px;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+.sorting select {
+  display: inline-block;
+  appearance: none;
+  margin: 0;
+  padding: 0px;
+  padding-left: 15px;
+  height: 37px;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 1.13;
+  color: #ffffff;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  background-color: rgba(248, 247, 244, 0.2);
+}
+.sorting select:hover {
   color: #323232;
+  background-color: #ffffff;
+ }
+
+
+/* Блок с ценами*/
+.price {
+  border: 1px solid orange; /*убрать после*/
+  width: 222px;
+  height: 60px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Блок с жирностью*/
+
+.fat {
+  border: 1px solid orange; /*убрать после*/
+  position: relative;
+  margin: 0;
+  padding: 1px;
+  width: 415px;
+  height: 60px;
+  box-sizing: border-box;
+}
+.label-fat {
+  /*border: 1px solid orange; /*убрать после*/
+
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  padding-left: 18px;
+}
+.radio_fat {
+  border: 1px solid orange; /*убрать после*/
+
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  margin-top: 4px; /*6*/
+  padding: 0;
+  height: 37px;
+  color: #ffffff;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  background-color: rgba(248, 247, 244, 0.2);
+}
+.radio_fat label {
+ padding-left: 15px;
+ padding-top: 10px;
+ padding-right: 15px;
+ font-family: Roboto;
+ font-size: 16px;
+ line-height: 1.13;
+ text-align: center;
+ vertical-align: middle;
+}
+input[type="radio"]:checked,
+input[type="radio"]:not(:checked) {
+  appearance: none;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+}
+input[type="radio"]::before {
+  content: url('../img/radio-off.png');
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  z-index: 1;
+  text-align: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #dddddd;
+  box-sizing: border-box;
 }
 

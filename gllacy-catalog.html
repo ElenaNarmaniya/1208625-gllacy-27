@@ -111,37 +111,41 @@
     <div class="time-work">
       <p>С 10 до 20, ежедневно</p>
       <a href="tel:88124502525" title="Позвонить по номеру 88124502525"><b>8 812 450-25-25</b></a>
-    </div>
-
       <!-- хлебные крошки-->
-    <ul class="tosts">
-      <li><a href="index.html" title="Переход на  Главную страницу"><span class="linetosts">Главная</span></a> »</li>
-      <li><a href="gllacy-catalog.html" title="Переход на страницу Каталога"><span class="linetosts">Каталог</span></a> »</li>
-      <li><a href="javascript: void(0)" title="Переход на страницу Каталога - Сливочное">Сливочное</a></li>
-    </ul>
+      <ul class="tosts">
+        <li><a href="index.html" title="Переход на  Главную страницу"><span class="linetosts">Главная</span></a> »</li>
+        <li><a href="gllacy-catalog.html" title="Переход на страницу Каталога"><span class="linetosts">Каталог</span></a> »</li>
+        <li><a href="javascript: void(0)" title="Переход на страницу Каталога - Сливочное">Сливочное</a></li>
+      </ul>
+    </div>
 
     <p class="boldP">Сливочное мороженое</p>
     <!-- Большой блок формы-->
     <form action="#" method="post" name="choice" class="form-menu">
     <!-- Блок сортировки select-->
-      <p>Сортировка:</p>
-      <select name="sorting" class="sorting">
-        <option value="popular" selected>по популярности</option>
-        <option value="min-price">сначала недорогие</option>
-        <option value="max-price">сначала дорогие</option>
-        <option value="fat">по жирности</option>
-      </select>
+      <div class="sorting">
+        <label for="topic">Сортировка:</label>
+        <select name="sorting" id="topic" required>
+          <option value="popular" selected>по популярности</option>
+          <option value="min-price">сначала недорогие</option>
+          <option value="max-price">сначала дорогие</option>
+          <option value="fat">по жирности</option>
+        </select>
+      </div>
+
       <div class="price">
         <label for="price">Цена: 100 руб. - 500 руб.</label>
-        <label>100<input type="range" id="price" name="price" min="100" max="500" step="50">500</label>
+        <label><input type="range" id="price" name="price" min="100" max="500" step="50"></label>
       </div>
+
       <div class="fat">
-        <label for="fat_s">Жирность:
+        <label for="fat_s" class="label-fat">Жирность:</label>
+        <div class="radio_fat">
           <label><input type="radio" name="fat" value="0" id="fat_s">0%</label>
           <label><input type="radio" name="fat" value="10" id="fat_s" checked>до 10%</label>
           <label><input type="radio" name="fat" value="30" id="fat_s">до 30%</label>
           <label><input type="radio" name="fat" value="40" id="fat_s">свыше 30%</label>
-        </label>
+        </div>
       </div>
       <!-- добавлено каждому одинаковое name и значение value -->
       <div class="filler">
@@ -244,6 +248,8 @@
 
      <!-- Переключатели исправлены >-&gt; <-&lt; -->
       <ul class="pagination-catalog">
+        <li><a href="#prev" title="Назад" class="prev disabled">Назад</a>
+        </li>
         <li><a href="gllacy-catalog.html"  title="Переход на 1 страницу каталога" class="first">1</a>
         </li>
         <li><a href="javascript: void(0)" title="Переход на 2 страницу каталога">2</a>
@@ -253,6 +259,8 @@
         <li><a href="javascript: void(0)" title="Переход на 4 страницу каталога">4</a>
         </li>
         <li><a href="javascript: void(0)" title="Переход на 5 страницу каталога">5</a>
+        </li>
+        <li><a href="#next" title="Вперед" class="next">Вперед</a>
         </li>
       </ul>
     </div>
