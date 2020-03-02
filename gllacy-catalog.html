@@ -134,19 +134,11 @@
       </div>
 
       <div class="cost">
-        <p class="costS">
-          <label>Цена:</label>
-          <input type="text" name="full_cost" readonly>
-        </p>
-        <div id="slider-range" class="ui-slider">
-          <div class="ui-slider-range ui-widget-header"></div>
-          <span tabindex="0" class="ui-slider-handle"></span>
-          <span tabindex="0" class="sec ui-slider-handle"></span>
-        </div>
-        <!--
         <label>Цена: 100 руб. - 500 руб.
-          <input type="range" name="full_cost" min="100" max="500" step="50">
-        </label> -->
+          <div clss="cost_range">
+            <input type="range" name="full_cost" min="100" max="500" step="50">
+          </div>
+        </label>
       </div>
 
       <div class="fat">
@@ -170,6 +162,7 @@
           </label>
         </div>
       </div>
+
       <!-- Наполнители -->
       <div class="filler">
         <legend>Наполнители:</legend>
