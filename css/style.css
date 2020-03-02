@@ -392,9 +392,7 @@ button[type="submit"] { /*кнопка "Войти" в форме*/
   background-color: #ffffff;
   color: #323232;
 }
-.basket-full {
 
-}
 .basket-table p {
   font-weight: bold;
   text-align: right;
@@ -1539,7 +1537,7 @@ figcaption {
 }
 .pagination-catalog .prev {
   margin-right: 8px;/*отступ блока со стрелкой от остальных блоков*/
-  text-indent: -3000px;/*отступ блока со стрелкой от остальных блоков*/
+  text-indent: -4000px;/*отступ блока со стрелкой от остальных блоков*/
   background-image: url("../img/icon-right-small.png");/*картинка стрелочки назад*/
   background-repeat: no-repeat;/*без повторения*/
   background-position: 5px 7px;/*координаты стреллчки назад*/
@@ -1548,7 +1546,7 @@ figcaption {
 .pagination-catalog .disabled {opacity: 0.2;}
 .pagination-catalog .next {
   margin-right: -22px;/*отступ блока со стрелкой от остальных блоков*/
-  text-indent: -3000px;/*отступ блока со стрелкой от остальных блоков*/
+  text-indent: -4000px;/*отступ блока со стрелкой от остальных блоков*/
   background-image: url("../img/icon-right-small.png");/*картинка стрелочки назад*/
   background-repeat: no-repeat;/*без повторения*/
   background-position: 5px 7px;/*координаты стреллчки назад*/
@@ -1561,7 +1559,7 @@ figcaption {
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 1200px;
-  margin: 0 auto;
+  margin: 20px auto; /*!!!!!!!!!!*/
   padding: 0px;
   box-sizing: border-box;
 }
@@ -1623,20 +1621,87 @@ figcaption {
 
 
 /* Блок с ценами*/
-.price {
+.cost {
   border: 1px solid orange; /*убрать после*/
   width: 222px;
   height: 60px;
   position: relative;
   margin: 0;
-  padding: 0;
+  padding: 1px;
   box-sizing: border-box;
 }
+.costS {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.costS label {
+  padding-left: 18px;
+}
+.costs input {
+  border: 0;
+  color: #ffffff;
+  cursor: text;
+  margin: 0;
+  padding: 0px 1px;
+}
+.ui-slider {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  vertical-align: middle;
+  border: 1px solid rgba(248, 247, 244, 0.2);
+  background-color: #ffffff;
+  height: 1px;
+}
+
+.ui-slider-range {
+  position: absolute;
+  top: 0;
+  left: 17%;
+  width: 30%;
+  height: 3px;
+  z-index: 1;
+  font-size: 16px;
+  display: inline-block;
+  border: 0;
+  background-color: green;
+  color: #323232;
+  font-weight:  bold;
+  background-position: 0px 0px;
+}
+.ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 20px;
+  height: 22px;
+  top: -1px;
+  margin-left: -1px;
+  left: 17%;
+  border: 1px solid red;
+  background-image: url('../img/filter-button.png');
+  color: #323232;
+  font-weight: normal;
+}
+.sec {
+  left: 60%;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* Блок с жирностью*/
 
-.fat {
-  border: 1px solid orange; /*убрать после*/
+.fat, .filler {
+  /*border: 1px solid orange; /*убрать после*/
   position: relative;
   margin: 0;
   padding: 1px;
@@ -1644,57 +1709,110 @@ figcaption {
   height: 60px;
   box-sizing: border-box;
 }
-.label-fat {
+.label-fat, .filler legend {
   /*border: 1px solid orange; /*убрать после*/
-
-  display: inline-block;
   margin: 0;
   padding: 0;
   padding-left: 18px;
 }
-.radio_fat {
-  border: 1px solid orange; /*убрать после*/
+.radio_fat, .checkbox_filler {
+  /*border: 1px solid orange; /*убрать после*/
 
   display: inline-block;
   position: relative;
   margin: 0;
   margin-top: 4px; /*6*/
   padding: 0;
-  height: 37px;
+  min-height: 37px;
   color: #ffffff;
   border-radius: 20px;
   outline: none;
   box-sizing: border-box;
   background-color: rgba(248, 247, 244, 0.2);
 }
-.radio_fat label {
- padding-left: 15px;
- padding-top: 10px;
- padding-right: 15px;
- font-family: Roboto;
- font-size: 16px;
- line-height: 1.13;
- text-align: center;
- vertical-align: middle;
+.radio_fat label, .filler label {
+  padding: 10px 5px 0px 8px;
+  font-size:  16px;
+  line-height:  1.13;
+  text-align: center;
+  vertical-align: middle;
 }
 input[type="radio"]:checked,
-input[type="radio"]:not(:checked) {
+input[type="radio"]:not(:checked),
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked) {
   appearance: none;
   position: absolute;
   opacity: 0;
   visibility: hidden;
   z-index: -1;
 }
-input[type="radio"]::before {
+input[type="radio"]:checked + span,
+input[type="radio"]:not(:checked) + span,
+input[type="checkbox"]:checked + span,
+input[type="checkbox"]:not(:checked) + span {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+}
+
+input[type="radio"] + span::before {
   content: url('../img/radio-off.png');
   position: absolute;
   left: 2px;
-  top: 2px;
+  top: -3px;
   z-index: 1;
   text-align: center;
   width: 22px;
   height: 22px;
-  border: 1px solid #dddddd;
   box-sizing: border-box;
 }
+input[type="radio"]:checked + span::before {
+  content: url('../img/radio-on.png');
+}
+/*Наполнители*/
 
+.filler {
+  /*border: 1px solid orange; /*убрать после*/
+  width: 700px;
+  margin-top: 15px;
+}
+.filler label {
+  padding: 10px 5px 0px 8px; /*!!!!!!*/
+}
+.checkbox_filler {
+  /*border: 1px solid orange; /*убрать после*/
+  padding: 0px 8px;
+}
+input[type="checkbox"] + span::before {
+  content: url('../img/checkbox-off.png');
+  position: absolute;
+  left: 2px;
+  top: 0px;
+  z-index: 1;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+}
+input[type="checkbox"]:checked + span::before {
+  content: url('../img/checkbox-on.png');
+}
+
+/*Кнопка "Применить"*/
+.button-form {
+  /*border: 1px solid green; /**/
+  display: inline-block;
+  margin-top: 30px;
+}
+.button-form input {
+  width: 144px;
+  min-height: 37px;
+  border-radius: 20px;
+  color: #ffffff;
+  outline: none;
+  background-color: rgba(248, 247, 244, 0.2);
+  border: 2px solid #ffffff;
+  cursor: pointer;
+}
