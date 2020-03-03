@@ -1379,11 +1379,26 @@ figcaption {
   left: 445px;
   cursor: pointer;
 }
-.modal-show {
-  display: inline-block;
+
+@keyframes bounce { /*анимация появления формы*/
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
-@keyframes shake {
+@keyframes shake { /*анимация ошибки формы*/
   0%,
   100% {
     transform: translateX(0);
@@ -1403,6 +1418,10 @@ figcaption {
   80% {
     transform: translateX(10px);
   }
+}
+.modal-show {
+  display: inline-block;
+  animation: bounce 0.6s;
 }
 .modal-error {
   animation: shake 0.6s;
