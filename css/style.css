@@ -1620,7 +1620,7 @@ figcaption {
 
 /* Блок с ценами*/
 .cost {
-  border: 1px solid orange; /*убрать после*/
+  /*border: 1px solid orange; /*убрать после*/
   width: 222px;
   min-height: 60px;
   position: relative;
@@ -1634,11 +1634,14 @@ input[type="range"] {
   -moz-appearance: none;
   appearance: none;
   display: inline-block;
-  margin-top: 20px;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 24px;
   width: 176px;
   height: 4px;
   background-color: rgba(248, 247, 244, 0.5);
 }
+input[type="range"]:focus {outline: none;}
 
 input[type=range]::-webkit-slider-thumb {
 -webkit-appearance: none;
@@ -1648,19 +1651,41 @@ height: 22px;
 border-radius: 10px;
 cursor: pointer;
 margin-top: 5px;
+position: relative;
+z-index: 2;
 }
-.cost-range {
-  display: inline-block;
+
+input[type=range]::before { /*2 переключатель*/
+content: url('../img/filter-button.png');
+width: 20px;
+height: 22px;
+border-radius: 10px;
+position: absolute;
+top: -7px;
+left: 14px;
+z-index: 2;
+}
+
+input[type=range]::after { /*линия между 2 ползунками*/
+content: "";
+width: 84px;
+height: 4px;
+background-color: rgba(248, 247, 244, 1); /*0.5*/
+position: absolute;
+top: 0px;
+left: 33px;
+z-index: 2;
+}
+.cost::after { /*фон за инпутом*/
+  position: absolute;
+  top: 24px;
+  left: 0px;
+  content: "";
   width: 220px;
   height: 37px;
   background-color: rgba(248, 247, 244, 0.2);
-  margin: 0;
-  padding: 1px;
-  box-sizing: border-box;
+  border-radius: 20px;
 }
-
-
-
 
 /* Блок с жирностью*/
 
