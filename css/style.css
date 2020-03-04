@@ -1,3 +1,6 @@
+html {
+  box-sizing: border-box;
+}
 body { /*обнуляем внешние и внутренние отступы браузеров,
  задаем глобальные параметры текста*/
   margin: 0;
@@ -31,6 +34,8 @@ body { /*обнуляем внешние и внутренние отступы 
   width: 1200px;
   margin: 0 auto;
   padding: 9px 27px;
+  box-sizing: border-box;
+  /*border: 1px solid green;*/
 }
 .header-logo {
   width: 154px;
@@ -52,7 +57,7 @@ body { /*обнуляем внешние и внутренние отступы 
   margin: 0;
   margin-left: 13px; /*отступ блока навигации от логотипа*/
   padding: 1px;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
 }
 .main-nav {
   list-style: none;
@@ -145,10 +150,10 @@ body { /*обнуляем внешние и внутренние отступы 
   min-height: 33px;
   margin: 0;
   padding: 1px;
-  margin-left: 375px;
+  margin-left: 342px;
 }
 .cat {
-  margin-left: 360px;
+  margin-left: 329px;
 }
 
 /*СТИЛИ ДЛЯ КНОПКИ ПОИСКА*/
@@ -207,7 +212,7 @@ body { /*обнуляем внешние и внутренние отступы 
   fill: black;
 }
 .search-btn:hover {
-   background-color: #f8f7f4;
+  background-color: #f8f7f4;
 }
 .search-button:hover .search input[type="search"] {
   display: block;
@@ -242,7 +247,7 @@ body { /*обнуляем внешние и внутренние отступы 
   padding-top: 20px;
   border-top: 3px solid #849d8f;
   border-radius: 5px;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
 }
 
 input[type="email"], input[type="password"] {
@@ -257,7 +262,7 @@ input[type="email"], input[type="password"] {
   outline: none; /*внешняя рамка*/
   background-color: #ffffff;
   border-radius: 5px;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
 }
 input[type="email"]:hover, input[type="password"]:hover {
   border: 2px solid rgba(154, 154, 154, 0.52);
@@ -273,7 +278,7 @@ input[type="email"]:focus, input[type="password"]:focus {
   vertical-align: top;
   font-weight: 500;
   font-size: 14px;
-  min-width: 91px; /*93*/
+  min-width: 93px; /*93*/
   min-height: 34px;
   border-radius: 20px;
   margin: 0;
@@ -324,7 +329,8 @@ button[type="submit"] { /*кнопка "Войти" в форме*/
   line-height: 1.33px;
   font-weight: bold;
   font-size: 18px;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
+
 }
 .entrance button[type="submit"]:hover {
   box-shadow: 0px 2px 2px 0 #ac1000;
@@ -347,7 +353,7 @@ button[type="submit"] { /*кнопка "Войти" в форме*/
   min-width: 100px;
   min-height: 33px;
   vertical-align: middle;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   padding: 1px;
   margin-right: 0px;
 }
@@ -526,7 +532,7 @@ tr:nth-child(2) {
   /*top: -172px;*/
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
 }
 
 .slider-inner { /*оставить только текущую картинку, остальное-скрыть*/
@@ -706,6 +712,7 @@ figcaption {
 
 .catalog {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   width: 1200px;
@@ -713,23 +720,24 @@ figcaption {
   padding: 0px 27px;
   position: relative;
   z-index: 300;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   /*border: 1px solid green; /*убрать после*/
 }
 
 .catalog-item {
   position: relative;
-  padding: 1px;
+  /*padding: 1px;*/
   /*padding-top: 5px;*/
   margin-left: 26px;
-  min-width: 269px;
+  width: 267px;
   min-height: 330px;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   /*border: 1px solid blue; /*убрать после*/
 }
-.catalog-item:first-child {
+.catalog-item:nth-child(4n-3) {
   margin-left: 0px;
 }
+
 .hit::before { /*псевдоэлемент для добавления кружка хит к любой карточке товара*/
   /*border: 1px solid green;*/
   content: "";
@@ -737,7 +745,7 @@ figcaption {
   padding: 1px;
   width: 61px;
   height: 61px;
-  box-sizing: border-box;
+  box-sizing: inherit;
   background: url('../img/hit-card.svg') no-repeat top center;
   background-size: cover;
   position: absolute;
@@ -768,7 +776,7 @@ figcaption {
   letter-spacing: normal;
   text-align: left;
   color: #ffffff;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   padding: 1px;
   margin: 0;
   margin-top: -80px;
@@ -797,7 +805,7 @@ figcaption {
   padding: 1px;
   margin: 0;
   margin-top: 35px;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
 }
 .under {
   background-image: linear-gradient(to bottom, rgba(229,229,229, 0.2) 50%, transparent 50%);
@@ -815,7 +823,7 @@ figcaption {
   width: 295px;
   min-height: 416px;
   padding: 1px;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   background-color: rgba(229,229,229, 0.2);
 }
@@ -829,7 +837,7 @@ figcaption {
   border-radius: 50px;
   background-image: linear-gradient(to top, #e74a35, #f26843);
   box-shadow: 0px 1px 2px 0 #ac1000;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   color: #ffffff;
   opacity: 0.99;
   text-align: center;
@@ -891,7 +899,7 @@ figcaption {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   list-style: none;
   margin: 0;
   margin-top: 6px;
@@ -946,7 +954,7 @@ figcaption {
   padding: 41px 27px;
   /*border: 1px solid green; /*убрать после*/
   position: relative;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
 }
 .blog {
   display: flex;
@@ -968,7 +976,7 @@ figcaption {
   font-size: 16px;
   line-height: 1.38;
   font-weight: 500;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
 }
 .blog a {
   display:  inline-block;
@@ -985,7 +993,7 @@ figcaption {
   line-height: 1.25;
   letter-spacing: normal;
   color: #323232;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
 }
 .line_blog {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, transparent 50%);
@@ -1020,7 +1028,7 @@ figcaption {
   line-height: 1.38;
   font-weight: normal;
   color: #5a5a5a;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
 }
 .subscribe input[type="email"] {
   margin: 0;
@@ -1046,6 +1054,7 @@ figcaption {
   display: inline-block;
   margin: 0;
   margin-top: 38px;
+  margin-left: 10px;
   min-width: 129px;
   min-height: 44px;
   padding: 13px 19px;
@@ -1082,7 +1091,7 @@ figcaption {
   padding: 0;
   box-sizing: border-box;
   background: #849d8f url('../img/map.jpg') no-repeat top center;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   position: relative;
 }
 .map iframe {
@@ -1184,15 +1193,15 @@ figcaption {
   justify-content: space-between;
   width: 1200px;
   margin: 0px auto;
-  padding: 32px 27px 29px 27px;
+  padding: 32px 27px;
   /*border: 1px solid green; /*убрать после*/
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
 }
 
 .footer-top-social {
   /*border: 1px solid green; /*убрать после*/
   width: 185px;
-  box-sizing: border-box;
+  margin-left: 22px;
   font-size: 0;
 }
 .social {
@@ -1232,14 +1241,14 @@ figcaption {
   justify-content: center;
   margin: 0;
   padding: 1px;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
 
 }
 .footer-menu ul {
   list-style: none;
   margin: 0;
   padding: 1px;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
 }
 .footer-menu:first-child ul {
   padding-left: 25px;
@@ -1255,7 +1264,7 @@ figcaption {
 .footer-menu li {
   margin: 0;
   padding: 1px;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
 }
 .footer-menu a {
   display: inline-block;
@@ -1290,10 +1299,11 @@ figcaption {
   font-weight: normal;
   font-size: 12px;
   line-height: 1.5;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   position: relative;
   margin: 0;
   margin-top: 25px;
+  margin-right: 13px;
   padding: 1px;
   min-height: 12px;
 }
@@ -1302,6 +1312,7 @@ figcaption {
   color: #ffffff;
   margin: 0;
   padding: 1px;
+  box-sizing: border-box;
 }
 .footer-bottom img {
   position: absolute;
@@ -1379,6 +1390,7 @@ figcaption {
   left: 445px;
   cursor: pointer;
 }
+.clform:active {outline: none;}
 
 @keyframes bounce { /*анимация появления формы*/
   0% {
@@ -1441,14 +1453,14 @@ figcaption {
   min-height: 17px;
   box-sizing: border-box;
   position: relative;
-  left: -935px;
+  left: -908px;
   /*border: 1px solid green; /*убрать после*/
 }
 .tosts li {
   margin: 0;
   padding: 0;
   padding-right: 4px;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
 }
 .linetosts {
   background-image: linear-gradient(to bottom, rgba(229,229,229, 0.2) 50%, transparent 50%);
@@ -1471,7 +1483,7 @@ figcaption {
   width: 1200px;
   margin: 0 auto;
   margin-top: -7px;
-  padding: 1px;
+  padding: 0px 27px;
   font-family: Roboto;
   font-size: 35px;
   font-weight: bold;
@@ -1484,20 +1496,6 @@ figcaption {
 /*1 Страница каталога мороженого*/
 .slider-catalog {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2); /*  */
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 27px;
-}
-.card-file-2 {
-  z-index: 290;
-  margin-top: 40px;
-}
-.card-file-3 {
-  z-index: 280;
-  margin-top: 40px;
 }
 
 /*переключатели*/
@@ -1576,7 +1574,7 @@ figcaption {
   width: 1200px;
   margin: 20px auto;
   margin-bottom: 35px;
-  padding: 0px;
+  padding: 0px 27px;
   box-sizing: border-box;
 }
 .form-menu label, .form-menu legend {
@@ -1610,7 +1608,7 @@ figcaption {
   width: 10px;
   height: 11px;
   pointer-events: none;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 .sorting select {
   display: inline-block;
@@ -1777,7 +1775,7 @@ input[type="radio"] + span::before {
   text-align: center;
   width: 22px;
   height: 22px;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 input[type="radio"]:checked + span::before {
   content: url('../img/radio-on.png');
@@ -1807,7 +1805,7 @@ input[type="checkbox"] + span::before {
   text-align: center;
   width: 20px;
   height: 20px;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 input[type="checkbox"]:checked + span::before {
   content: url('../img/checkbox-on.png');
