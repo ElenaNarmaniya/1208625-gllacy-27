@@ -828,7 +828,7 @@ figcaption {
   /*box-sizing: border-box;*/
 }
 .profile:hover, .profile:active {
-  color: #e84d37;
+  color: #ffbc9e;
 }
 .under {
   background-image: linear-gradient(to bottom, rgba(229,229,229, 0.2) 50%, transparent 50%);
@@ -837,7 +837,7 @@ figcaption {
   background-size: 1px 5px;
 }
 .under:hover, .under:active {
-  background-image: linear-gradient(to bottom, rgba(232, 77, 55, 0.2) 50%, transparent 50%);
+  background-image: linear-gradient(to bottom, rgba(255, 188, 158, 0.2) 50%, transparent 50%);
 }
 .back_screen {
   display: none;
@@ -1261,7 +1261,6 @@ figcaption {
 .footer-top-social {
   /*border: 1px solid green; /*убрать после*/
   width: 185px;
-  /*margin-left: 22px;*/
   font-size: 0;
 }
 .social {
@@ -1275,6 +1274,7 @@ figcaption {
   border-radius: 50%;
   border: 3px solid rgba(255, 255, 255, 0.5);
   box-sizing: border-box;
+  opacity: 0.8;
 }
 .twit {
   background: #849d8f url('../img/twitter.png') no-repeat;
@@ -1293,7 +1293,12 @@ figcaption {
   background-position: -1px -1px;
   margin-right: 0px;
 }
-
+.social:hover {opacity: 1;}
+.social:active {
+  border: 3px solid #e9e9e9;
+  opacity: 1;
+  background-position: 0px 0px;
+}
 
 .footer-middle {
   /*border: 1px solid green; /*убрать после*/
@@ -1346,7 +1351,7 @@ figcaption {
   /*border: 1px solid blue; /* убрать*/
 }
 .footer-menu a:hover, .footer-menu a:active, .footer-bottom a:hover, .footer-bottom a:active { /*!!!*/
-  color: #e84d37;
+  color: #ffbc9e;
 }
 
 .big {
@@ -1359,7 +1364,7 @@ figcaption {
   background-size: 1px 15px; /*1px 5px*/
 }
 .line:hover, .line:active, .small:hover, .small:active {
-  background-image: linear-gradient(to bottom, rgba(232, 77, 55, 0.2) 50%, transparent 50%);
+  background-image: linear-gradient(to bottom, rgba(255, 188, 158, 0.2) 50%, transparent 50%);
 }
 
 .footer-bottom {
@@ -1547,10 +1552,10 @@ figcaption {
   line-height: 1.14;
 }
 .tosts a:hover, .tosts a:active {
-  color: #e84d37;
+  color: #ffbc9e;
 }
 .linetosts:hover, .linetosts:active {
-  background-image: linear-gradient(to bottom, rgba(232, 77, 55, 0.2) 50%, transparent 50%);
+  background-image: linear-gradient(to bottom, rgba(255, 188, 158, 0.2) 50%, transparent 50%);
 }
 
 .boldP {
@@ -1881,6 +1886,7 @@ input[type="checkbox"]:not(:checked) + span {
 
 input[type="radio"] + span::before {
   content: url('../img/radio-off.png');
+  opacity: 0.8;
   position: absolute;
   left: 3px;
   top: -2px;
@@ -1889,6 +1895,9 @@ input[type="radio"] + span::before {
   width: 22px;
   height: 22px;
   box-sizing: inherit;
+}
+input[type="radio"]:hover {
+  opacity: 1;
 }
 input[type="radio"]:checked + span::before {
   content: url('../img/radio-on.png');
