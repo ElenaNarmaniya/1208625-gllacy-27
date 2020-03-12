@@ -25,7 +25,7 @@
                 <a href="gllacy-catalog.html" title="Переход на страницу каталога" class="active">Каталог</a>
                   <ul class="sub-menu">
                     <li><a href="javascript: void(0)" title="Переход на страницу Новинки">Новинки</a></li>
-                    <li><a href="gllacy-catalog.html" title="Переход на страницу Сливочное">Сливочное</a></li>
+                    <li class="glaccy"><a href="gllacy-catalog.html" title="Переход на страницу Сливочное">Сливочное</a></li>
                     <li><a href="javascript: void(0)" title="Переход на страницу Щербеты">Щербеты</a></li>
                     <li><a href="javascript: void(0)" title="Переход на страницу Фруктовый лед">Фруктовый лед</a></li>
                     <li><a href="javascript: void(0)" title="Переход на страницу Мелорин">Мелорин</a></li>
@@ -64,8 +64,8 @@
               </svg>Вход
             </button>
             <form action="#" method="post" class="entrance">
-              <input type="email" placeholder="email@example.com" name="e-mail" required autocomplete="on">
-              <input type="password" name="password" placeholder="........" required>
+              <input type="email" placeholder="email@example.com" name="e-mail" required autocomplete="on" class="black-text">
+              <input type="password" name="password" placeholder="........" required class="black-text">
               <button type="submit">Войти</button>
               <a href="javascript: void(0)">Забыли пароль?</a>
               <a href="javascript: void(0)">Новая регистрация</a>
@@ -125,8 +125,11 @@
     <!-- Блок сортировки select-->
       <div class="sorting">
         <label for="topic">Сортировка:</label>
-        <select name="sorting" id="topic" required>
-          <option value="popular" selected>по популярности</option>
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" class="black-hidden">
+          <path fill="#231F20" d="M5.5 10L0 0h11"/>
+        </svg>
+        <select name="sorting" id="topic">
+          <option value="popular">по популярности</option>
           <option value="min-price">сначала недорогие</option>
           <option value="max-price">сначала дорогие</option>
           <option value="fat">по жирности</option>
@@ -142,22 +145,22 @@
       </div>
 
       <div class="fat">
-        <label for="fat_s" class="label-fat">Жирность:</label>
+        <label class="label-fat">Жирность:</label>
         <div class="radio_fat">
           <label>
-            <input type="radio" name="fat" value="0" id="fat_s">
+            <input class="visually-hidden" type="radio" name="fat" value="0">
             <span>0%</span>
           </label>
           <label>
-            <input type="radio" name="fat" value="< 10" id="fat_s" checked>
+            <input class="visually-hidden" type="radio" name="fat" value="< 10" checked>
             <span>до 10%</span>
           </label>
           <label>
-            <input type="radio" name="fat" value="< 30" id="fat_s">
+            <input class="visually-hidden" type="radio" name="fat" value="< 30">
             <span>до 30%</span>
           </label>
           <label>
-            <input type="radio" name="fat" value=">= 30" id="fat_s">
+            <input class="visually-hidden" type="radio" name="fat" value=">= 30">
             <span>выше 30%</span>
           </label>
         </div>
@@ -165,26 +168,26 @@
 
       <!-- Наполнители -->
       <div class="filler">
-        <legend>Наполнители:</legend>
+        <p>Наполнители:</p>
           <div class="checkbox_filler">
             <label>
-              <input type="checkbox" value="chocolate" name="filler" checked>
+              <input class="visually-hidden" type="checkbox" value="chocolate" name="filler" checked>
               <span>шоколадные</span>
             </label>
             <label>
-              <input type="checkbox" value="sugar" name="filler" checked>
+              <input class="visually-hidden" type="checkbox" value="sugar" name="filler" checked>
               <span>сахарные присыпки</span>
             </label>
             <label>
-              <input type="checkbox" name="filler" value="fruits">
+              <input class="visually-hidden" type="checkbox" name="filler" value="fruits">
               <span>фрукты</span>
             </label>
             <label>
-              <input type="checkbox" name="filler" value="syrup">
+              <input class="visually-hidden" type="checkbox" name="filler" value="syrup">
               <span>сиропы</span>
             </label>
             <label>
-              <input type="checkbox" name="filler" value="jam">
+              <input class="visually-hidden" type="checkbox" name="filler" value="jam">
               <span>джемы</span>
             </label>
           </div>

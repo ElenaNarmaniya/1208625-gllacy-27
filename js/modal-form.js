@@ -1,5 +1,3 @@
-﻿<meta charset="utf-8">
-<script>
     var link = document.querySelector(".back_form");
     var popup = document.querySelector(".modal-form");
     var close = popup.querySelector(".clform");
@@ -64,5 +62,3 @@
         }
       }
     });
-
-  </script>
