@@ -5,7 +5,7 @@
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:700,900,500&subset=latin,cyrillic" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-min.css">
   </head>
   <body>
     <input class="visually_hidden" type="radio" id="btn-1" name="toggle" checked>
@@ -46,7 +46,7 @@
         <div class="right-buttons">
           <!-- блок поиска -->
           <div class="search-button">
-            <button type="search" class="search-btn">
+            <button type="button" class="search-btn">
               <svg class="icon_menu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17">
                 <g fill="#ffffff">
                   <path fill="#FFF" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/>
@@ -78,7 +78,7 @@
           <!-- корзинa -->
           <div class="basket-buttons">
             <a class="basket" href="javascript: void(0)" title="Переход в корзину">
-              <svg class="icon_menu" xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" class="icon_menu">
+              <svg class="icon_menu" xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
                 <g fill="#ffffff">
                     <path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/>
                     <circle cx="6.984" cy="18" r="2"/>
@@ -148,25 +148,25 @@
     <div class="catalog">
       <div class="catalog-item hit">
         <img src="img/1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
-        <p class="cost1">310<p class="cost_2"> ₽/кг</p></p>
+        <p class="cost1">310<span class="cost_2"> ₽/кг</span></p>
         <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
-        <div class="back_screen"><a href="#javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
+        <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
       </div>
       <div class="catalog-item hit">
         <img src="img/2.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
-        <p class="cost1">380<p class="cost_2"> ₽/кг</p></p>
+        <p class="cost1">380<span class="cost_2"> ₽/кг</span></p>
         <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочно-кофейное с кусочками шоколада</span></a>
         <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
       </div>
       <div class="catalog-item hit">
         <img src="img/3.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
-        <p class="cost1">355<p class="cost_2"> ₽/кг</p></p>
+        <p class="cost1">355<span class="cost_2"> ₽/кг</span></p>
         <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочно-клубничное с присыпкой из белого шоколада</span></a>
         <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
       </div>
       <div class="catalog-item hit">
         <img src="img/4.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
-        <p class="cost1">415<p class="cost_2"> ₽/кг</p></p>
+        <p class="cost1">415<span class="cost_2"> ₽/кг</span></p>
         <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочное крем-брюле с карамельной подливкой</span></a>
         <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
       </div>
@@ -209,7 +209,7 @@
 
     <!-- Контейнер для изображения карты и блока адреса с кнопкой "Форма обратной связи" -->
     <section class="map">
-      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A116ee1e9c4e5fed8ddabddb279cfa304176cb1557b112b4a71785a8ce3a7b751&amp;source=constructor" width="1200" height="430" frameborder="0">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A116ee1e9c4e5fed8ddabddb279cfa304176cb1557b112b4a71785a8ce3a7b751&amp;source=constructor" width="1200" height="430">
       </iframe>
       <div class="pin"></div>
       <div class="feedback">
@@ -272,7 +272,7 @@
       </form>
     </section>
     </div>
-    <script src="js/modal-form.js"></script>
+    <script src="js/modal-form-min.js"></script>
 
   </body>
 </html>

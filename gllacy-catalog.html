@@ -5,7 +5,7 @@
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:700,900,500&subset=latin,cyrillic" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-min.css">
   </head>
   <body>
 
@@ -42,7 +42,7 @@
         <div class="cat right-buttons">
           <!-- блок поиска -->
           <div class="search-button">
-            <button type="search" class="search-btn">
+            <button type="button" class="search-btn">
               <svg class="icon_menu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17">
                 <g fill="#ffffff">
                   <path fill="#FFF" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/>
@@ -83,7 +83,7 @@
             </a>
             <!-- выпадающая таблица полной корзины -->
             <div class="basket-table">
-              <table cellpadding="9" class="basket-full">
+              <table class="basket-full">
                 <tr class="table-rows">
                   <td class="close"></td>
                   <td class="image"></td>
@@ -92,11 +92,11 @@
                   <td class="full-price">300 руб.</td>
                 </tr>
                 <tr class="table-rows">
-                  <td class="close"></td>
-                  <td class="image"></td>
-                  <td class="text-wrap">Клубничный пломбир с присыпкой из белого шоколада</td>
-                  <td class="price">1,5 кг * 300 руб.</td>
-                  <td class="full-price">450 руб.</td>
+                  <td class="close2 close"></td>
+                  <td class="image2 image"></td>
+                  <td class="text2 text-wrap">Клубничный пломбир с присыпкой из белого шоколада</td>
+                  <td class="price2 price">1,5 кг * 300 руб.</td>
+                  <td class="full2 full-price">450 руб.</td>
                 </tr>
               </table>
               <p>Итого: 750 руб.</p>
@@ -128,7 +128,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" class="black-hidden">
           <path fill="#231F20" d="M5.5 10L0 0h11"/>
         </svg>
-        <select name="sorting" id="topic">
+        <select name="sorting">
           <option value="popular">по популярности</option>
           <option value="min-price">сначала недорогие</option>
           <option value="max-price">сначала дорогие</option>
@@ -137,12 +137,18 @@
       </div>
 
       <div class="cost">
-        <label>Цена: 100 руб. – 500 руб.
-          <div clss="cost_range">
-            <input type="range" name="full_cost" min="100" max="500" step="5" value="385">
+        <p>Цена: 100 руб. – 500 руб.</p>
+        <div class="cost_range">
+          <!-- <input type="range" name="full_cost" min="100" max="500" step="5" value="385"> -->
+          <div class="cost_line">
           </div>
-        </label>
+          <div class="cost_controls">
+            <button class="cost_control" type="button" aria-label="range control"></button>
+            <button class="cost_control" type="button" aria-label="range control"></button>
+          </div>
+        </div>
       </div>
+
 
       <div class="fat">
         <label class="label-fat">Жирность:</label>
@@ -201,79 +207,79 @@
       <div class="slider-catalog catalog">
         <div class="catalog-item">
           <img src="img/1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
-          <p class="cost1">310<p class="cost_2"> ₽/кг</p></p>
+          <p class="cost1">310<span class="cost_2"> ₽/кг</span></p>
           <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
-          <div class="back_screen"><a href="#javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
+          <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
         </div>
         <div class="catalog-item">
           <img src="img/2.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
-          <p class="cost1">380<p class="cost_2"> ₽/кг</p></p>
+          <p class="cost1">380<span class="cost_2"> ₽/кг</span></p>
           <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочно-кофейное с кусочками шоколада</span></a>
           <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
         </div>
         <div class="catalog-item">
           <img src="img/3.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
-          <p class="cost1">355<p class="cost_2"> ₽/кг</p></p>
+          <p class="cost1">355<span class="cost_2"> ₽/кг</span></p>
           <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочно-клубничное с присыпкой из белого шоколада</span></a>
           <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
         </div>
         <div class="catalog-item">
           <img src="img/4.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
-          <p class="cost1">415<p class="cost_2"> ₽/кг</p></p>
+          <p class="cost1">415<span class="cost_2"> ₽/кг</span></p>
           <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочное крем-брюле с карамельной подливкой</span></a>
           <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
         </div>
         <div class="catalog-item">
           <img src="img/5.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
-          <p class="cost1">325<p class="cost_2"> ₽/кг</p></p>
+          <p class="cost1">325<span class="cost_2"> ₽/кг</span></p>
           <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочное с брусничным джемом</span></a>
-          <div class="back_screen"><a href="#javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
+          <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
         </div>
         <div class="catalog-item">
           <img src="img/6.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
-          <p class="cost1">410<p class="cost_2"> ₽/кг</p></p>
+          <p class="cost1">410<span class="cost_2"> ₽/кг</span></p>
           <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочно-черничное с цельными ягодами черники</span></a>
           <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
         </div>
         <div class="catalog-item">
           <img src="img/7.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
-          <p class="cost1">375<p class="cost_2"> ₽/кг</p></p>
+          <p class="cost1">375<span class="cost_2"> ₽/кг</span></p>
           <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочно-лимонное с карамельной присыпкой</span></a>
           <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
         </div>
         <div class="catalog-item">
           <img src="img/8.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
-          <p class="cost1">320<p class="cost_2"> ₽/кг</p></p>
+          <p class="cost1">320<span class="cost_2"> ₽/кг</span></p>
           <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочное с шоколадной стружкой</span></a>
           <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
         </div>
         <div class="catalog-item">
           <img src="img/9.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
-          <p class="cost1">440<p class="cost_2"> ₽/кг</p></p>
+          <p class="cost1">440<span class="cost_2"> ₽/кг</span></p>
           <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочно-ванильное  с кусочками шоколада</span></a>
-          <div class="back_screen"><a href="#javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
+          <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
         </div>
         <div class="catalog-item">
           <img src="img/10.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
-          <p class="cost1">435<p class="cost_2"> ₽/кг</p></p>
+          <p class="cost1">435<span class="cost_2"> ₽/кг</span></p>
           <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочноe с ментоловым сиропом</span></a>
           <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
         </div>
         <div class="catalog-item">
           <img src="img/11.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
-          <p class="cost1">355<p class="cost_2"> ₽/кг</p></p>
+          <p class="cost1">355<span class="cost_2"> ₽/кг</span></p>
           <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочное с кусочками черного шоколада</span></a>
           <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
         </div>
         <div class="catalog-item">
           <img src="img/12.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
-          <p class="cost1">420<p class="cost_2"> ₽/кг</p></p>
+          <p class="cost1">420<span class="cost_2"> ₽/кг</span></p>
           <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочное с мятным сиропом</span></a>
           <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
         </div>
      <!-- Переключатели исправлены >-&gt; <-&lt; -->
       <ul class="pagination-catalog">
-        <li><a href="#prev" title="Назад" class="prev disabled">Назад</a>
+        <li><a href="#prev" title="Назад" class="prev disabled"><span class="visually-hidden">Назад</span></a>
         </li>
         <li><a href="gllacy-catalog.html"  title="Переход на 1 страницу каталога" class="first">1</a>
         </li>
@@ -285,7 +291,7 @@
         </li>
         <li><a href="javascript: void(0)" title="Переход на 5 страницу каталога" class="fifth">5</a>
         </li>
-        <li><a href="#next" title="Вперед" class="next">Вперед</a>
+        <li><a href="#next" title="Вперед" class="next"><span class="visually-hidden">Вперед</span></a>
         </li>
       </ul>
     </div>
