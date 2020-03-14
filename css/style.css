@@ -883,17 +883,16 @@ button[type="submit"] { /*кнопка "Войти" в форме*/
 
 .profile {
   display: inline-block;
-  position: absolute;
+  position: relative;
   z-index: 50;
   font-weight: 500;
   line-height: 1.38;
   text-align: center;
   color: #ffffff;
   text-decoration: none;
-  min-height: 39px;
   padding: 1px;
   margin: 0;
-  margin-top: 278px;
+  margin-top: 23px;
   vertical-align: middle;
   /*box-sizing: border-box;/**/
 }
@@ -1684,7 +1683,7 @@ button[type="submit"] { /*кнопка "Войти" в форме*/
 }
 .catalog-item:nth-child(9) .profile {
   margin-left: 44px;
-  margin-top: 280px;
+  margin-top: 25px;
   width: 175px;
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
