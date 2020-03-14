@@ -1778,7 +1778,7 @@ tr:nth-child(2) {
   min-height: 60px;
   box-sizing: border-box;
 }
-.sorting label, .cost p {
+.sorting p, .cost p {
   padding-left: 15px;
   margin: 0;
   margin-bottom: 6px;
@@ -1786,6 +1786,10 @@ tr:nth-child(2) {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14;
+}
+.topic {
+  margin: 0;
+  margin-bottom: 5px;
 }
 .sorting::after {
   content: url('../img/icon-down-dir.png');
