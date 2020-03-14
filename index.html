@@ -5,7 +5,7 @@
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:700,900,500&subset=latin,cyrillic" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/style-min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <input class="visually_hidden" type="radio" id="btn-1" name="toggle" checked>
@@ -25,19 +25,19 @@
           <nav>
             <ul class="main-nav">
             <!-- Раскрывающееся меню Каталога -->
-              <li>
-                <a href="gllacy-catalog.html" title="Переход на страницу каталога"><span class="under">Каталог</span></a>
+              <li class="hover-menu">
+                <a href="gllacy-catalog.html" title="Переход на страницу каталога" class="main-link"><span class="under">Каталог</span></a>
                   <ul class="sub-menu">
-                    <li><a href="javascript: void(0)" title="Переход на страницу Новинки">Новинки</a></li>
-                    <li><a href="gllacy-catalog.html" title="Переход на страницу Сливочное">Сливочное</a></li>
-                    <li><a href="javascript: void(0)" title="Переход на страницу Щербеты">Щербеты</a></li>
-                    <li><a href="javascript: void(0)" title="Переход на страницу Фруктовый лед">Фруктовый лед</a></li>
-                    <li><a href="javascript: void(0)" title="Переход на страницу Мелорин">Мелорин</a></li>
+                    <li class="menu-bold"><a href="javascript: void(0)" title="Переход на страницу Новинки" class="sub-bold sub-link">Новинки</a></li>
+                    <li><a href="gllacy-catalog.html" title="Переход на страницу Сливочное" class="sub-link">Сливочное</a></li>
+                    <li><a href="javascript: void(0)" title="Переход на страницу Щербеты" class="sub-link">Щербеты</a></li>
+                    <li><a href="javascript: void(0)" title="Переход на страницу Фруктовый лед" class="sub-link">Фруктовый лед</a></li>
+                    <li><a href="javascript: void(0)" title="Переход на страницу Мелорин" class="sub-link">Мелорин</a></li>
                   </ul>
               </li>
-              <li><a href="javascript: void(0)" title="Переход на страницу Доставки и оплаты"><span class="under">Доставка и оплата</span></a>
+              <li><a href="javascript: void(0)" title="Переход на страницу Доставки и оплаты" class="main-link"><span class="under">Доставка и оплата</span></a>
               </li>
-              <li><a href="javascript: void(0)" title="Переход на страницу О компании"><span class="under">О Компании</span></a>
+              <li><a href="javascript: void(0)" title="Переход на страницу О компании" class="main-link"><span class="under">О Компании</span></a>
               </li>
             </ul>
           </nav>
@@ -61,7 +61,7 @@
           <div class="entrance-form">
             <button type="button" class="entrance-btn">
               <svg class="icon_menu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19">
-                  <g fill="#FFF">
+                  <g fill="#FFF" class="color">
                     <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/>
                     <path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/>
                   </g>
@@ -79,7 +79,7 @@
           <div class="basket-buttons">
             <a class="basket" href="javascript: void(0)" title="Переход в корзину">
               <svg class="icon_menu" xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
-                <g fill="#ffffff">
+                <g fill="#ffffff" class="color">
                     <path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/>
                     <circle cx="6.984" cy="18" r="2"/>
                     <circle cx="15.984" cy="18" r="2"/>
@@ -108,21 +108,21 @@
         <div class="slider-inner">
           <div class="slider-slides">
             <div class="figure">
-            <img src="img/ice-cream-1.png" alt="Крем-брюле и пломбир с малиновым джемом">
+            <img src="img/ice-cream-1.png" alt="Крем-брюле и пломбир с малиновым джемом" width="1045" height="881">
             <p class="caption">Крем-брюле и пломбир с малиновым джемом</p>
             <a href="javascript: void(0)" title="Добавление в корзину" class="slider-btn">Давайте оба!</a>
             </div>
           </div>
           <div class="slider-slides">
             <div class="figure">
-            <img src="img/ice-cream-2.png" alt="Шоколадный пломбир и лимонный сорбет">
+            <img src="img/ice-cream-2.png" alt="Шоколадный пломбир и лимонный сорбет" width="1065" height="859">
             <p class="caption">Шоколадный пломбир и лимонный сорбет</p>
             <a href="javascript: void(0)" title="Добавление в корзину" class="slider-btn">Давайте оба!</a>
             </div>
           </div>
           <div class="slider-slides">
             <div class="figure">
-            <img src="img/ice-cream-3.png" alt="Пломбир с помадкой и клубничный щербет">
+            <img src="img/ice-cream-3.png" alt="Пломбир с помадкой и клубничный щербет" width="1079" height="854">
             <p class="caption">Пломбир с помадкой и клубничный щербет</p>
             <a href="javascript: void(0)" title="Добавление в корзину" class="slider-btn">Давайте оба!</a>
             </div>
@@ -147,25 +147,25 @@
 
     <div class="catalog">
       <div class="catalog-item hit">
-        <img src="img/1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
+        <img src="img/1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
         <p class="cost1">310<span class="cost_2"> ₽/кг</span></p>
         <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
         <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
       </div>
       <div class="catalog-item hit">
-        <img src="img/2.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
+        <img src="img/2.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
         <p class="cost1">380<span class="cost_2"> ₽/кг</span></p>
         <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочно-кофейное с кусочками шоколада</span></a>
         <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
       </div>
       <div class="catalog-item hit">
-        <img src="img/3.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
+        <img src="img/3.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
         <p class="cost1">355<span class="cost_2"> ₽/кг</span></p>
         <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочно-клубничное с присыпкой из белого шоколада</span></a>
         <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
       </div>
       <div class="catalog-item hit">
-        <img src="img/4.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
+        <img src="img/4.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
         <p class="cost1">415<span class="cost_2"> ₽/кг</span></p>
         <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочное крем-брюле с карамельной подливкой</span></a>
         <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>

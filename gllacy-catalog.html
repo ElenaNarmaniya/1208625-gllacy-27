@@ -5,7 +5,7 @@
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:700,900,500&subset=latin,cyrillic" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/style-min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
@@ -21,14 +21,14 @@
           <nav>
             <ul class="main-nav">
             <!-- Раскрывающееся меню Каталога -->
-              <li>
+              <li class="hover-menu">
                 <a href="gllacy-catalog.html" title="Переход на страницу каталога" class="active">Каталог</a>
                   <ul class="sub-menu">
-                    <li><a href="javascript: void(0)" title="Переход на страницу Новинки">Новинки</a></li>
-                    <li class="glaccy"><a href="gllacy-catalog.html" title="Переход на страницу Сливочное">Сливочное</a></li>
-                    <li><a href="javascript: void(0)" title="Переход на страницу Щербеты">Щербеты</a></li>
-                    <li><a href="javascript: void(0)" title="Переход на страницу Фруктовый лед">Фруктовый лед</a></li>
-                    <li><a href="javascript: void(0)" title="Переход на страницу Мелорин">Мелорин</a></li>
+                    <li><a href="javascript: void(0)" title="Переход на страницу Новинки" class="sub-bold sub-link">Новинки</a></li>
+                    <li class="glaccy"><a href="gllacy-catalog.html" title="Переход на страницу Сливочное" class="a-glaccy sub-link">Сливочное</a></li>
+                    <li><a href="javascript: void(0)" title="Переход на страницу Щербеты" class="sub-link">Щербеты</a></li>
+                    <li><a href="javascript: void(0)" title="Переход на страницу Фруктовый лед" class="sub-link">Фруктовый лед</a></li>
+                    <li><a href="javascript: void(0)" title="Переход на страницу Мелорин" class="sub-link">Мелорин</a></li>
                   </ul>
               </li>
               <li><a href="javascript: void(0)" title="Переход на страницу Доставки и оплаты"><span class="under">Доставка и оплата</span></a>
@@ -91,7 +91,7 @@
                   <td class=price>1,5 кг * 200 руб.</td>
                   <td class="full-price">300 руб.</td>
                 </tr>
-                <tr class="table-rows">
+                <tr class="rows table-rows">
                   <td class="close2 close"></td>
                   <td class="image2 image"></td>
                   <td class="text2 text-wrap">Клубничный пломбир с присыпкой из белого шоколада</td>
@@ -137,7 +137,7 @@
       </div>
 
       <div class="cost">
-        <p>Цена: 100 руб. – 500 руб.</p>
+        <p>Цена: <input type="number" value="100" class="numb"> руб. – <input type="number" value="500" class="numb"> руб.</p>
         <div class="cost_range">
           <!-- <input type="range" name="full_cost" min="100" max="500" step="5" value="385"> -->
           <div class="cost_line">
@@ -206,73 +206,73 @@
     <!-- 1 Страница каталога мороженого -->
       <div class="slider-catalog catalog">
         <div class="catalog-item">
-          <img src="img/1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
+          <img src="img/1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
           <p class="cost1">310<span class="cost_2"> ₽/кг</span></p>
-          <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
+          <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочное с апельсиновым джемом и цитрусовой стружкой Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
           <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
         </div>
         <div class="catalog-item">
-          <img src="img/2.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
+          <img src="img/2.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
           <p class="cost1">380<span class="cost_2"> ₽/кг</span></p>
           <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочно-кофейное с кусочками шоколада</span></a>
           <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
         </div>
         <div class="catalog-item">
-          <img src="img/3.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
+          <img src="img/3.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
           <p class="cost1">355<span class="cost_2"> ₽/кг</span></p>
           <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочно-клубничное с присыпкой из белого шоколада</span></a>
           <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
         </div>
         <div class="catalog-item">
-          <img src="img/4.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
+          <img src="img/4.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
           <p class="cost1">415<span class="cost_2"> ₽/кг</span></p>
           <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочное крем-брюле с карамельной подливкой</span></a>
           <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
         </div>
         <div class="catalog-item">
-          <img src="img/5.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
+          <img src="img/5.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
           <p class="cost1">325<span class="cost_2"> ₽/кг</span></p>
           <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочное с брусничным джемом</span></a>
           <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
         </div>
         <div class="catalog-item">
-          <img src="img/6.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
+          <img src="img/6.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
           <p class="cost1">410<span class="cost_2"> ₽/кг</span></p>
           <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочно-черничное с цельными ягодами черники</span></a>
           <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
         </div>
         <div class="catalog-item">
-          <img src="img/7.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
+          <img src="img/7.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
           <p class="cost1">375<span class="cost_2"> ₽/кг</span></p>
           <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочно-лимонное с карамельной присыпкой</span></a>
           <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
         </div>
         <div class="catalog-item">
-          <img src="img/8.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
+          <img src="img/8.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
           <p class="cost1">320<span class="cost_2"> ₽/кг</span></p>
           <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочное с шоколадной стружкой</span></a>
           <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
         </div>
         <div class="catalog-item">
-          <img src="img/9.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
+          <img src="img/9.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
           <p class="cost1">440<span class="cost_2"> ₽/кг</span></p>
           <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочно-ванильное  с кусочками шоколада</span></a>
           <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
         </div>
         <div class="catalog-item">
-          <img src="img/10.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
+          <img src="img/10.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
           <p class="cost1">435<span class="cost_2"> ₽/кг</span></p>
           <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочноe с ментоловым сиропом</span></a>
           <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
         </div>
         <div class="catalog-item">
-          <img src="img/11.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
+          <img src="img/11.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
           <p class="cost1">355<span class="cost_2"> ₽/кг</span></p>
           <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочное с кусочками черного шоколада</span></a>
           <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>
         </div>
         <div class="catalog-item">
-          <img src="img/12.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
+          <img src="img/12.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267" class="ice">
           <p class="cost1">420<span class="cost_2"> ₽/кг</span></p>
           <a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="profile"><span class="under">Сливочное с мятным сиропом</span></a>
           <div class="back_screen"><a href="javascript: void(0)" title="Переход на страницу Карточки товара" class="fast_screen">Быстрый просмотр</a></div>

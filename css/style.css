@@ -48,6 +48,7 @@ body { /*обнуляем внешние и внутренние отступы 
   margin: 0;
   padding: 0;
   text-decoration:  none;
+  vertical-align: middle;
 }
 
 /*СТИЛИ ДЛЯ МЕНЮ*/
@@ -70,6 +71,7 @@ body { /*обнуляем внешние и внутренние отступы 
   margin: 0;
   padding: 0;
   position: relative;
+  vertical-align: middle;
 }
 .main-nav a {
   display: inline-block;
@@ -82,15 +84,16 @@ body { /*обнуляем внешние и внутренние отступы 
   text-decoration:  none;
   font-weight: bold;
   box-sizing: border-box;
+  vertical-align: middle;
 }
 
-.main-nav a:hover {
+.main-nav .main-link:hover {
   color: #323232;
   background-color: #f7f6f3;
   border-radius: 20px;
   font-weight: bold;
 }
-.main-nav a:active {
+.main-nav .main-link:active {
   color: #323232;
   background-color: #ededed;
   box-shadow: inset 0px 2px 1px 0 #696969;
@@ -118,7 +121,7 @@ body { /*обнуляем внешние и внутренние отступы 
   border-radius: 5px;
   box-sizing: border-box;
 }
-.main-nav .sub-menu a {
+.main-nav .sub-link { /*.main-nav .sub-menu a*/
   margin: 0;
   padding: 9px 18px;
   color: #323232;
@@ -130,16 +133,25 @@ body { /*обнуляем внешние и внутренние отступы 
   vertical-align:  middle;
   box-shadow: none;
   border-radius: 0px;
+  box-shadow: none;
   }
-.sub-menu li:first-child a {
+.main-nav .sub-bold { /*.sub-menu li:first-child*/
   font-weight: bold;
 }
-.glaccy {background-color: #e84d37;}
-.sub-menu .glaccy a {color: #ffffff;}
+.glaccy {
+  background-color: #e84d37;
+}
+.main-nav .a-glaccy { /*.sub-menu*/
+  color: #ffffff;
+}
 
-.sub-menu li:hover, .sub-menu a:hover {background-color: #fdded8;}
-.sub-menu li:active, .sub-menu a:active {background-color: #f6b5a5;}
-.main-nav > li:hover .sub-menu {
+.sub-menu li:hover, .sub-menu a:hover {
+  background-color: #fdded8;
+}
+.sub-menu li:active, .sub-menu a:active {
+  background-color: #f6b5a5;
+}
+.hover-menu:hover .sub-menu { /*.main-nav > li:hover .sub-menu*/
   display: inline-block;/*при наведении на пункт главного меню открыть подменю*/
 }
 
@@ -171,6 +183,7 @@ body { /*обнуляем внешние и внутренние отступы 
   box-sizing: border-box;
   padding: 1px;
   margin-right: 5px;
+  vertical-align: middle;
 }
 .search-button input[type="search"] {
   display: none;
@@ -304,7 +317,7 @@ input[type="email"]:focus, input[type="password"]:focus {
   color: #323232;
   background-color: #f8f7f4;
 }
-.entrance-btn:hover .icon_menu g {
+.entrance-btn:hover .color { /*.icon_menu*/
   fill: #323232;
 }
 .entrance a {
@@ -319,6 +332,7 @@ input[type="email"]:focus, input[type="password"]:focus {
   font-weight: 500;
   font-size: 13px;
   text-decoration: underline;
+  vertical-align: middle;
 }
 .entrance a:nth-of-type(2) {
   top: -20px;
@@ -382,6 +396,7 @@ button[type="submit"] { /*кнопка "Войти" в форме*/
   min-width: 100px;
   height: 33px;
   box-sizing: border-box;
+  vertical-align: middle;
 }
 .bas {
   background-color: #ffffff;
@@ -397,7 +412,7 @@ button[type="submit"] { /*кнопка "Войти" в форме*/
   color: #323232;
   background-color: #f8f7f4;
 }
-.basket:hover .icon_menu g {
+.basket:hover .color {
   fill: #323232;
 }
 .basket-table {
@@ -454,14 +469,14 @@ button[type="submit"] { /*кнопка "Войти" в форме*/
   box-shadow: inset 0px 2px 2px 0 #942718;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to top, #e74a35, #f26843);
 }
-table {
+.basket-full {
   border-collapse: collapse;
   margin-left: 16px;
   margin-top: 6px;
   min-height: 130px;
 }
 
-td {
+.table-rows td {
   margin: 0;
   font-size: 13px;
   font-weight: normal;
@@ -521,7 +536,7 @@ td {
   margin: 0;
   padding: 0;
 }
-tr:nth-child(2) {
+.rows {
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
 .basket-buttons:hover .basket-table {
@@ -626,12 +641,15 @@ tr:nth-child(2) {
   cursor: pointer; /*вид курсора - рука*/
   transition: background-color 0.2s; /*время переключения со светлой на темную кнопку*/
   box-sizing: border-box;
+  vertical-align: middle;
 }
 .slider-controls label:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.visually_hidden {display: none;} /*скрыли радио-кнопки*/
+.visually_hidden {
+  display: none;
+} /*скрыли радио-кнопки*/
 
 #btn-1:checked ~ .gllacy-wrapper label[for="btn-1"],
 #btn-2:checked ~ .gllacy-wrapper label[for="btn-2"],
@@ -669,6 +687,7 @@ tr:nth-child(2) {
   line-height: 1.38;
   font-weight: bold;
   font-size: 32px;
+  vertical-align: middle;
 }
 .slider-slides a:hover {
   box-shadow: 0px 2px 2px 0 #ac1000;
@@ -712,7 +731,7 @@ tr:nth-child(2) {
   margin-left: -2px;
   min-width: 269px;
   height: 32px;
-  font-family: Roboto;
+  font-family: Roboto, Georgia, sans-serif;
   font-size: 35px;
   font-weight: bold;
   line-height: 1.17;
@@ -772,7 +791,7 @@ tr:nth-child(2) {
 .catalog {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 1200px;
   margin: 0 auto;
@@ -788,6 +807,7 @@ tr:nth-child(2) {
   width: 267px;
   min-height: 330px;
   z-index: 300;
+  /*box-sizing: border-box; /**/
   /*border: 1px solid blue; /*убрать после*/
 }
 .catalog-item:nth-child(4n-3) {
@@ -817,6 +837,7 @@ tr:nth-child(2) {
   height: 267px;
   position: relative;
   z-index: 20;
+  border-radius: 50%;
 }
 
 .cost1  {
@@ -854,22 +875,27 @@ tr:nth-child(2) {
   letter-spacing: normal;
   text-align: left;
   color: #ffffff;
+  vertical-align: middle;
 }
-.cost_2::first-letter {font-size: 45px;}
+.cost_2::first-letter {
+  font-size: 45px;
+}
 
 .profile {
   display: inline-block;
   position: absolute;
-  z-index: 30;
+  z-index: 50;
   font-weight: 500;
   line-height: 1.38;
   text-align: center;
   color: #ffffff;
   text-decoration: none;
+  min-height: 39px;
   padding: 1px;
   margin: 0;
   margin-top: 278px;
-  /*box-sizing: border-box;*/
+  vertical-align: middle;
+  /*box-sizing: border-box;/**/
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .profile {
@@ -891,23 +917,25 @@ tr:nth-child(2) {
 }
 .back_screen {
   display: none;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   position: absolute;
   top: -7px;
+  bottom: 0;
   left: -16px;
   z-index: 5;
   width: 295px;
-  min-height: 416px;
+  height: 123%;
   padding: 1px;
-  /*box-sizing: border-box;*/
+  box-sizing: border-box;/**/
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   background-color: rgba(229,229,229, 0.2);
 }
 .fast_screen {
   display: inline-block;
-  margin: 0;
-  margin-top: 339px;
-  margin-left: 45px;
-  padding: 13px 17px;
+  margin: auto auto 22px;
+  padding: 11px 17px;
   text-decoration: none;
   border-radius: 50px;
   background-image: linear-gradient(to top, #e74a35, #f26843);
@@ -916,13 +944,13 @@ tr:nth-child(2) {
   color: #ffffff;
   opacity: 0.99;
   text-align: center;
-  vertical-align: top;
   line-height: 1.33;
   font-weight: bold;
   font-size: 18px;
+  vertical-align: middle;
 }
 .catalog-item:hover .back_screen {
-  display: inline-block;
+  display: flex;
 }
 .fast_screen:hover {
   box-shadow: 0px 2px 2px 0 #ac1000;
@@ -958,7 +986,7 @@ tr:nth-child(2) {
   position: relative;
   height: 54px;
   margin: 0px;
-  margin-top: 17px;
+  margin-top: 18px;
   margin-left: -9px;
   margin-bottom: 12px; /*для IE*/
   padding: 1px;
@@ -1016,6 +1044,7 @@ tr:nth-child(2) {
   display: inline-block;
   /*border: 1px solid green; /**/
   box-sizing: border-box;
+  vertical-align: middle;
 }
 .milk {
   padding-left: 23px;
@@ -1095,6 +1124,7 @@ tr:nth-child(2) {
   line-height: 1.25;
   letter-spacing: normal;
   color: #323232;
+  vertical-align: middle;
   /*box-sizing: border-box;*/
 }
 .blog a:hover, .blog a:active {
@@ -1182,6 +1212,7 @@ tr:nth-child(2) {
   font-weight: bold;
   font-size: 18px;
   box-sizing: border-box;
+  vertical-align: middle;
 }
 .subscribe button:hover, .btn-form:hover {
   box-shadow: 0px 2px 2px 0 #ac1000;
@@ -1227,6 +1258,7 @@ tr:nth-child(2) {
   box-sizing: border-box;
   background-color: #ffffff;
   border-radius: 20px;
+  vertical-align: middle;
 }
 .address, .order, .time {
   width: 152px;
@@ -1258,6 +1290,7 @@ tr:nth-child(2) {
   margin-top: 4px;
   text-decoration: none;
   color: #323232;
+  vertical-align: middle;
 }
 .time {
   width: 160px;
@@ -1266,6 +1299,7 @@ tr:nth-child(2) {
 }
 .back_form {
   display: inline-block;
+  vertical-align: middle;
   width: 252px;
   min-height: 44px;
   margin: 0 auto;
@@ -1328,6 +1362,7 @@ tr:nth-child(2) {
   border: 3px solid rgba(255, 255, 255, 0.5);
   box-sizing: border-box;
   opacity: 0.8;
+  vertical-align: middle;
 }
 .twit {
   background: #849d8f url('../img/twitter.png') no-repeat;
@@ -1400,6 +1435,7 @@ tr:nth-child(2) {
   padding: 1px;
   min-height: 14px;
   box-sizing: border-box;
+  vertical-align: middle;
 
   /*border: 1px solid blue; /* убрать*/
 }
@@ -1491,7 +1527,9 @@ tr:nth-child(2) {
   border-radius: 5px;
   box-sizing: border-box;
 }
-.modal-form textarea {padding: 14px 15px;}
+.modal-form textarea {
+  padding: 14px 15px;
+}
 
 .form-post input[type="email"]:hover, input[type="text"]:hover {
   border: 2px solid rgba(154, 154, 154, 0.52);
@@ -1567,6 +1605,7 @@ tr:nth-child(2) {
 .modal-show {
   display: inline-block;
   animation: bounce 0.6s;
+  vertical-align: middle;
 }
 .modal-error {
   animation: shake 0.6s;
@@ -1704,6 +1743,7 @@ tr:nth-child(2) {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.13;
+  vertical-align: middle;
 }
 .pagination-catalog .first {
   background-color: #ffffff;
@@ -1767,6 +1807,7 @@ tr:nth-child(2) {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14;
+  vertical-align: middle;
 }
   /*Блок сортировки select*/
 .sorting {
@@ -1805,6 +1846,7 @@ tr:nth-child(2) {
 }
 .sorting select {
   display: inline-block;
+  vertical-align: middle;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1855,6 +1897,29 @@ select:hover, select:focus {
   padding: 1px;
   box-sizing: border-box;
 }
+.numb {
+  -moz-appearance:textfield;
+}
+
+.numb::-webkit-outer-spin-button,
+.numb::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.numb {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: #849d8f;
+  font-family: Roboto, Georgia, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  color: #ffffff;
+  appearance: none;
+  width: 25px;
+}
+
 .cost_range {
   /*фон за инпутом*/
   position: relative;
@@ -2018,6 +2083,7 @@ input[type="checkbox"]:not(:checked) + span {
   position: relative;
   padding-left: 35px;
   cursor: pointer;
+  vertical-align: middle;
 }
 
 input[type="radio"] + span::before {
@@ -2035,9 +2101,11 @@ input[type="radio"] + span::before {
 input[type="radio"]:hover + span::before, input[type="radio"]:focus + span::before {
   opacity: 1;
 }
+input[type="radio"]:disabled + span::before {
+  opacity: 0.4;
+}
 input[type="radio"]:checked + span::before {
   content: url('../img/radio-on.png');
-  opacity: 0.4;
 }
 /*Наполнители*/
 
@@ -2067,12 +2135,14 @@ input[type="checkbox"] + span::before {
   height: 20px;
   box-sizing: inherit;
 }
-input[type="checkbox"]:hover + span::before {
+input[type="checkbox"]:hover + span::before, input[type="checkbox"]:focus + span::before {
   opacity: 1;
+}
+input[type="checkbox"]:disabled + span::before {
+  opacity: 0.4;
 }
 input[type="checkbox"]:checked + span::before {
   content: url('../img/checkbox-on.png');
-  opacity: 0.4;
 }
 
 /*Кнопка "Применить"*/
