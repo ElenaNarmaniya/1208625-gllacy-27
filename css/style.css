@@ -948,6 +948,13 @@ button[type="submit"] { /*кнопка "Войти" в форме*/
   font-size: 18px;
   vertical-align: middle;
 }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .fast_screen {
+    margin-bottom: 22px;
+    margin-top: 0px;
+  }
+}
 .catalog-item:hover .back_screen {
   display: flex;
 }
